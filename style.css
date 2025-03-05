@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Load Fonts */
+@layer base {
+  @font-face {
+    font-family: "HSSanTokki";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSSanTokki20-Regular.woff2")
+      format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "WooJu";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2")
+      format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@layer utilities {
+  /* #region HomeCover */
+  /* #endregion */
+
+  /* Custom Card Ingredients */
+  .custom-card {
+    @apply rounded-lg font-highlight transition-transform duration-300 hover:scale-105 hover:shadow-lg;
+  }
+
+  /* Popular contents cards */
+  .custom-card-popular {
+    @apply w-[160px] h-[160px] md:w-[200px] md:h-[200px] lg:w-[220px] lg:h-[220px] flex flex-col items-center text-center justify-center bg-gray-700 shadow-md shadow-black p-6;
+  }
+
+  /* Recent contents cards */
+  .custom-card-recent {
+    @apply max-w-screen-lg min-h-[200px] bg-gray-100;
+  }
+
+  /* #region Post Ingredients */
+  .content-details h1,
+  h2 {
+    @apply font-highlight text-3xl mt-5 mb-4 text-yellow-200;
+  }
+  .content-details h3 {
+    @apply font-highlight text-2xl mt-5 mb-4 text-yellow-300;
+  }
+  .content-details h4 {
+    @apply font-highlight text-xl mt-3 mb-2 text-pink-200;
+  }
+  .content-details h5 {
+    @apply font-highlight text-base mt-3 mb-2 text-pink-200;
+  }
+  .content-details p {
+    @apply ml-3 mr-3;
+  }
+  .content-details p b {
+    @apply rounded-md bg-cyan-900 text-gray-200 p-0.5;
+  }
+
+  .content-details pre {
+    @apply text-sm rounded-2xl bg-black p-6 mt-5 mb-5 shadow-md shadow-gray-700 text-wrap;
+  }
+  .content-details .hljs {
+    @apply bg-transparent;
+  }
+  .content-details ul {
+    @apply rounded-2xl text-gray-800 bg-gray-300 p-10 mt-3 shadow-inner shadow-gray-700;
+  }
+  /* #endregion */
+
+  /* #region Namecard Style Customize */
+  /* Namecard - main */
+  .tt_box_namecard {
+    @apply w-[95vw] sm:w-[90vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] flex justify-center items-center rounded-md bg-gray-800 shadow-lg shadow-yellow-700;
+  }
+  /* Namecard - contents div */
+  .tt_box_namecard .tt_cont {
+    @apply pt-0;
+  }
+  /* Namecard - contents title */
+  .tt_box_namecard .tt_tit_cont {
+    @apply font-ko font-bold text-2xl text-yellow-200;
+  }
+  /* Namecard - description */
+  .tt_box_namecard .tt_desc {
+    @apply text-gray-200 text-sm pr-10;
+  }
+  /* Namecard - subscribe button */
+  .tt_box_namecard .tt_btn_subscribe {
+    border: none;
+    @apply bg-gray-200 text-gray-800 font-ko font-bold rounded-3xl;
+  }
+  /* #endregion */
+
+  /* #region Comment Style Customize */
+
+  /* Comment - main */
+  .tt-comment-cont {
+    @apply w-[95vw] sm:w-[90vw] md:w-[80vw] justify-center items-center mt-10 mb-10 p-7 md:p-10 lg:p-16 rounded-t-3xl rounded-b-xl bg-gray-800 shadow-xl shadow-black;
+  }
+  /* Comment - remove border */
+  .tt-comment-cont *,
+  .tt-area-replay * {
+    border: none;
+  }
+  /* Comment - title */
+  .tt-comment-cont .tt-box-total * {
+    @apply font-highlight text-gray-200 text-xl;
+  }
+  /* Comment - comment area - user name */
+  .tt-comment-cont .tt-link-user {
+    @apply font-highlight text-yellow-800;
+  }
+  /* Comment - comment area - description */
+  .tt-comment-cont .tt_desc {
+    @apply text-gray-800 font-ko;
+  }
+  /* Comment - comment area */
+  .tt-comment-cont .tt-item-reply .tt-wrap-cmt {
+    @apply rounded-b-3xl rounded-tr-3xl bg-gray-300 p-5 shadow-lg shadow-black;
+  }
+  /* Comment - remove ::before tag */
+  .tt-comment-cont .tt-item-reply::before,
+  .tt-wrap-link-comment::before {
+    content: none;
+    display: none;
+  }
+  /* Comment - reply hamburger menu padding */
+  .tt-comment-cont .tt-box-modify {
+    @apply p-3;
+  }
+  /* Comment - comment reply area */
+  .tt-comment-cont .tt-list-reply-comment .tt-wrap-cmt {
+    @apply rounded-b-3xl rounded-tl-3xl rounded-tr-none bg-gray-400;
+  }
+  /* Comment - write Customize */
+  .tt-area-write .tt-inner-g {
+    border: none;
+    @apply text-white rounded-md bg-gray-500;
+  }
+  /* #endregion */
+
+  /* #region Hamburger Style Customize */
+  #menu-buttons {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    /* transform: translate(50%, 50%); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    z-index: 60;
+  }
+
+  .menu-button {
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 60;
+  }
+
+  .menu-button.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  #overlay {
+    z-index: 40;
+  }
+
+  #search-modal,
+  #category-modal {
+    z-index: 50;
+  }
+
+  #search-modal .relative {
+    height: 50px;
+  }
+  /* #endregion */
+}

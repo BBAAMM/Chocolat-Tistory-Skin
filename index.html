@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html
+  lang="ko"
+  class="snap-y overflow-x-hidden overflow-y-scroll snap-proximity scroll-smooth min-w-[320px]"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="referrer" content="always" />
+
+    <!-- #region Analysis Dependency -->
+    <meta
+      name="google-adsense-platform-account"
+      content="ca-pub-9700755749825783"
+    />
+    <meta name="google-adsense-platform-domain" content="tistory.com" />
+    <meta
+      name="google-site-verification"
+      content="7jeGq0Yf579ltMDFrM0FtYhFZV_BNN6T4exVnCaiWbY"
+    />
+    <meta
+      name="naver-site-verification"
+      content="552c4be52e89ef199bd7eded6307eac8f7741110"
+    />
+    <meta name="robots" content="index, follow" />
+    <!-- #endregion -->
+
+    <!-- #region Title & Description & RSS -->
+    <title>[##_page_title_##]</title>
+    <meta
+      name="description"
+      content="개발 시행착오, 그리고 프로젝트를를 다루는 블로그입니다. 초보자부터 전문가까지 모두를 위한 유용한 정보를 제공합니다."
+    />
+    <meta name="keywords" content="Python, Java, project, 자율주행, 프로젝트" />
+    <meta name="author" content="Seungbeom Kim" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="[##_title_##]"
+      href="[##_rss_url_##]"
+    />
+    <!-- #endregion -->
+
+    <!-- #region Font Dependency -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap&family=Moirai+One"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2394eff9da.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- #endregion -->
+
+    <!-- #region prefetch / preconnect -->
+    <link
+      rel="dns-prefetch"
+      href="https://img1.daumcdn.net/"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="dns-prefetch"
+      href="https://tistory1.daumcdn.net/"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="dns-prefetch"
+      href="https://tistory2.daumcdn.net/"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="dns-prefetch"
+      href="https://tistory3.daumcdn.net/"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="dns-prefetch"
+      href="https://tistory4.daumcdn.net/"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="dns-prefetch"
+      href="https://stat.tiara.tistory.com/track"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="dns-prefetch"
+      href="https://blog.kakaocdn.net/"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="dns-prefetch"
+      href="https://cdn.jsdelivr.net"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="dns-prefetch"
+      href="https://cdnjs.cloudflare.com"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="dns-prefetch"
+      href="https://images.pexels.com"
+      crossorigin="anonymous"
+    />
+
+    <!-- hreflang 태그 -->
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://codezaram.tistory.com"
+    />
+    <link
+      rel="alternate"
+      hreflang="ko"
+      href="https://codezaram.tistory.com/ko"
+    />
+    <!-- #endregion -->
+
+    <!-- #region Tailwind CSS Dependency -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- #endregion -->
+
+    <!-- #region JS & Gsap Dependency -->
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"
+    ></script>
+    <script defer src="./images/blink-type-writer.js"></script>
+    <script defer src="./images/slider-changer.js"></script>
+    <script defer src="./images/hamburger-button.js"></script>
+    <!-- #endregion -->
+
+    <!-- #region 카테고리url 제거 시작 -->
+    <script type="text/javascript">
+      if (typeof history.pushState == "function") {
+        var CatagoryURL = location.href;
+        CatagoryURL = CatagoryURL.replace(/\?category=([0-9]+)/gi, "");
+        history.pushState(null, null, CatagoryURL);
+      }
+    </script>
+    <!-- #endregion 카테고리url 제거 끝 -->
+  </head>
+  <body id="[##_body_id_##]" class="m-0 p-0 bg-[#121212]">
+    <!-- Floating Hamburger Menu -->
+    <div class="fixed bottom-5 right-5 md:bottom-10 md:right-10 z-50">
+      <button
+        id="hamburger-button"
+        class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-gray-600 transition duration-300"
+      >
+        <i class="fa fa-bars text-xl md:text-2xl"></i>
+      </button>
+      <div id="menu-buttons" class="hidden">
+        <button
+          id="search-button"
+          class="menu-button w-12 h-12 md:w-16 md:h-16 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-pink-600 transition duration-300"
+        >
+          <i class="fa fa-search text-xl md:text-2xl"></i>
+        </button>
+        <button
+          id="category-button"
+          class="menu-button w-12 h-12 md:w-16 md:h-16 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-pink-600 transition duration-300"
+        >
+          <i class="fa fa-list text-xl md:text-2xl"></i>
+        </button>
+        <button
+          class="menu-button w-12 h-12 md:w-16 md:h-16 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-yellow-600 transition duration-300"
+          onclick="location.href='/'"
+        >
+          <i class="fa fa-home text-xl md:text-2xl"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
+
+    <!-- Search Modal -->
+    <div
+      id="search-modal"
+      class="fixed inset-0 flex items-center justify-center hidden"
+    >
+      <div
+        class="relative w-3/4 md:w-1/2 lg:w-1/3 bg-gray-300 p-3 rounded-lg flex items-center"
+      >
+        <i class="fa fa-search text-gray-600 mr-3"></i>
+        <input
+          type="text"
+          class="w-full bg-transparent border-none outline-none"
+          placeholder="검색어를 입력하세요..."
+        />
+      </div>
+    </div>
+
+    <!-- Category Modal -->
+    <div id="category-modal" class="fixed inset-0 bg-white p-5 hidden">
+      <h2>Categories</h2>
+      <!-- Category content here -->
+    </div>
+
+    <s_t3>
+      <div id="wrap">
+        <!-- Home Cover -->
+        <s_cover_group>
+          <!-- Scrollable Container[Fin](1.5.2025) -->
+          <!-- Slider Container[Fin](1.5.2025) -->
+          <s_cover_rep>
+            <s_cover name="cover-slider">
+              <section
+                id="slider-container"
+                class="snap-start relative w-full h-screen justify-center items-center overflow-x-hidden"
+              >
+                <!-- Slider[60%] -->
+                <div id="slider" class="w-full h-screen flex">
+                  <!-- First Slide[Fin](1.6.2025) -->
+                  <div
+                    id="first-slider"
+                    class="w-full h-screen flex flex-shrink-0 justify-center p-5 bg-gradient-to-b from-gray-800 to-black text-white"
+                  >
+                    <div class="flex items-center space-x-6 select-none">
+                      <span
+                        id="typewriter"
+                        class="text font-welcome text-center break-words text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
+                      >
+                        [##_cover_title_##]
+                      </span>
+                      <span
+                        class="w-[2.5px] h-[6em] bg-pink-300 animate-blink"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <!-- Second Slide[30%](1.7.2025) -->
+                  <!-- TODO(1.14.2025) : Link to Tag Cloud -->
+                  <!-- TODO(1.14.2025) : Make a finding area -->
+                  <!-- TODO(1.14.2025) : Make a Category area -->
+                  <div
+                    id="second-slider"
+                    class="w-full h-screen flex flex-shrink-0 bg-gradient-to-b from-blue-950 to-black via-green-950 text-white bg-cover bg-center justify-center items-center"
+                  >
+                    <div class="font-highlight text-4xl">곧 오픈됩니다😉</div>
+                  </div>
+
+                  <!-- Third Slide[10%](1.7.2025) -->
+                  <!-- TODO(1.14.2025) : Make a Self Introducing slide -->
+                  <div
+                    id="third-slider"
+                    class="w-full h-screen flex flex-shrink-0 bg-emerald-300 bg-cover bg-center justify-center items-center"
+                  >
+                    <div class="font-highlight text-4xl">곧 오픈됩니다😉</div>
+                  </div>
+                </div>
+
+                <!-- Navigation[Fin](1.6.2025) -->
+                <div
+                  class="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between p-5"
+                >
+                  <i
+                    id="prev"
+                    class="fa-solid fa-angle-left text-white text-2xl lg:text-3xl cursor-pointer"
+                    onclick="prevAction()"
+                  ></i>
+                  <i
+                    id="next"
+                    class="fa-solid fa-angle-right text-white text-2xl lg:text-3xl cursor-pointer"
+                    onclick="nextAction()"
+                  ></i>
+                </div>
+              </section>
+            </s_cover>
+
+            <!-- Popular Contents Section[90%] -->
+            <!-- TODO(1.14.2025) : Add Custom Category link -->
+            <s_cover name="cover-categories">
+              <section
+                id="section-popular-contents"
+                class="snap-start w-full h-auto flex flex-col justify-center items-center p-5 bg-gray-800 text-gray-100"
+              >
+                <div class="text text-center py-6">
+                  <div class="font-highlight text-3xl py-2">
+                    [##_cover_title_##]
+                  </div>
+                  <div class="font-ko text-lg text-gray-200">
+                    인기 있는 콘텐츠를 둘러보세요
+                  </div>
+                </div>
+                <!-- Change it to Changer -->
+                <ul
+                  id="grid-popular"
+                  class="grid grid-cols-2 grid-rows-3 gap-8 md:grid-cols-3 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-2 pb-10 text-xl"
+                >
+                  <li class="custom-card custom-card-popular">
+                    <a
+                      class="flex flex-col h-full items-center justify-between"
+                      href="/category/팀%20프로젝트/자율주행%20개발%28baqu4%29"
+                    >
+                      <i
+                        class="flex-grow flex-shrink-0 fa-solid fa-tree h-12 w-12 text-gray-200"
+                      ></i>
+                      <h2
+                        class="font-ko text-md md:text-xl font-bold text-yellow-300"
+                      >
+                        자율주행 개발
+                      </h2>
+                    </a>
+                  </li>
+                  <li class="custom-card custom-card-popular">
+                    <a
+                      class="flex flex-col h-full items-center justify-between"
+                      href="/팀%20프로젝트/얼굴%20mbti%20테스트"
+                    >
+                      <i
+                        class="flex-grow flex-shrink-0 fa-solid fa-tree h-12 w-12 text-gray-200"
+                      ></i>
+                      <h2
+                        class="font-ko text-md md:text-xl font-bold text-yellow-300"
+                      >
+                        얼굴 MBTI
+                      </h2>
+                    </a>
+                  </li>
+                  <li class="custom-card custom-card-popular">
+                    <a
+                      class="flex flex-col h-full items-center justify-between"
+                      href="/팀%20프로젝트/얼굴%20mbti%20테스트"
+                    >
+                      <i
+                        class="flex-grow flex-shrink-0 fa-solid fa-tree h-12 w-12 text-gray-200"
+                      ></i>
+                      <h2
+                        class="font-ko text-md md:text-xl font-bold text-yellow-300"
+                      >
+                        자율주행 개발
+                      </h2>
+                    </a>
+                  </li>
+                  <li class="custom-card custom-card-popular">
+                    <a
+                      class="flex flex-col h-full items-center justify-between"
+                      href="/팀%20프로젝트/얼굴%20mbti%20테스트"
+                    >
+                      <i
+                        class="flex-grow flex-shrink-0 fa-solid fa-tree h-12 w-12 text-gray-200"
+                      ></i>
+                      <h2
+                        class="font-ko text-md md:text-xl font-bold text-yellow-300"
+                      >
+                        자율주행 개발
+                      </h2>
+                    </a>
+                  </li>
+                  <li class="custom-card custom-card-popular">
+                    <a
+                      class="flex flex-col h-full items-center justify-between"
+                      href="/팀%20프로젝트/얼굴%20mbti%20테스트"
+                    >
+                      <i
+                        class="flex-grow flex-shrink-0 fa-solid fa-tree h-12 w-12 text-gray-200"
+                      ></i>
+                      <h2
+                        class="font-ko text-md md:text-xl font-bold text-yellow-300"
+                      >
+                        자율주행 개발
+                      </h2>
+                    </a>
+                  </li>
+                  <li class="custom-card custom-card-popular">
+                    <a
+                      class="flex flex-col h-full items-center justify-between"
+                      href="/팀%20프로젝트/얼굴%20mbti%20테스트"
+                    >
+                      <i
+                        class="flex-grow flex-shrink-0 fa-solid fa-tree h-12 w-12 text-gray-200"
+                      ></i>
+                      <h2
+                        class="font-ko text-md md:text-xl font-bold text-yellow-300"
+                      >
+                        자율주행 개발
+                      </h2>
+                    </a>
+                  </li>
+                  <li class="custom-card custom-card-popular hidden lg:block">
+                    <a
+                      class="flex flex-col h-full items-center justify-between"
+                      href="/팀%20프로젝트/얼굴%20mbti%20테스트"
+                    >
+                      <i
+                        class="flex-grow flex-shrink-0 fa-solid fa-tree h-12 w-12 text-gray-200"
+                      ></i>
+                      <h2
+                        class="font-ko text-md md:text-xl font-bold text-yellow-300"
+                      >
+                        자율주행 개발
+                      </h2>
+                    </a>
+                  </li>
+                  <li class="custom-card custom-card-popular hidden lg:block">
+                    <a
+                      class="flex flex-col h-full items-center justify-between"
+                      href="/팀%20프로젝트/얼굴%20mbti%20테스트"
+                    >
+                      <i
+                        class="flex-grow flex-shrink-0 fa-solid fa-tree h-12 w-12 text-gray-200"
+                      ></i>
+                      <h2
+                        class="font-ko text-md md:text-xl font-bold text-yellow-300"
+                      >
+                        자율주행 개발
+                      </h2>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </s_cover>
+
+            <!-- Recent Posts Section(main)[90%] -->
+            <!-- TODO(1.14.2025) : Add Custom link -->
+            <!-- TODO(3.2.2025) : Make Grid Layout -->
+            <s_cover name="cover-grid">
+              <main
+                id="section-recent-contents"
+                class="snap-start w-full h-fit min-h-screen flex flex-col justify-center items-center p-5 bg-gray-200 text-gray-800 mb-10"
+              >
+                <div class="text-center py-6">
+                  <div class="font-highlight text-3xl py-2">
+                    [##_cover_title_##]
+                  </div>
+                </div>
+                <div class="w-full h-full flex flex-col lg:flex-row gap-5">
+                  <div class="custom-card w-full lg:w-1/2 grow-1 bg-gray-100">
+                    <a href="/example">
+                      <figure class="w-full h-[500px] lg:h-full flex flex-col">
+                        <div
+                          class="image w-full h-1/3 rounded-t-lg overflow-hidden"
+                        >
+                          <img
+                            class="w-full h-full object-cover rounded-t-lg"
+                            loading="lazy"
+                            src="//i1.daumcdn.net/thumb/C300x200.fwebp.q85/?fname=https://blog.kakaocdn.net/dn/dtYQSF/btrVEp4iJkg/IEHgmZu5KbqF9ZZKGDhyck/img.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="text w-full h-2/3">
+                          <div
+                            class="category w-fit font-ko font-bold text-sm rounded-3xl bg-pink-300 p-2 mt-3 ml-5"
+                          >
+                            카테고리
+                          </div>
+                          <div
+                            class="title w-fit h-fit font-highlight font-bold text-3xl p-5"
+                          >
+                            예시입니다.
+                          </div>
+                          <div class="desc font-ko text-sm lg:text-lg p-5">
+                            안녕하세요.
+                          </div>
+                        </div>
+                      </figure>
+                    </a>
+                  </div>
+                  <div class="w-full lg:w-1/2 grow-1">
+                    <ul class="flex flex-col gap-5 text-xl">
+                      <s_cover_item>
+                        <li class="custom-card custom-card-recent">
+                          <a href="[##_cover_item_url_##]">
+                            <figure class="flex">
+                              <div class="text w-full sm:w-3/4 p-2 sm:p-5">
+                                <s_cover_item_article_info>
+                                  <div
+                                    class="category w-fit font-ko font-bold text-sm rounded-3xl bg-pink-300 p-2 mt-3 ml-5"
+                                  >
+                                    [##_cover_item_category_##]
+                                  </div>
+                                </s_cover_item_article_info>
+                                <div
+                                  class="title w-full h-fit font-highlight font-bold text-md sm:text-2xl p-5"
+                                >
+                                  [##_cover_item_title_##]
+                                </div>
+                                <div
+                                  class="desc font-ko text-sm lg:text-md p-5"
+                                >
+                                  [##_cover_item_summary_##]
+                                </div>
+                              </div>
+                              <s_cover_item_thumbnail>
+                                <div class="image w-1/4 hidden sm:block">
+                                  <img
+                                    class="rounded-r-lg w-full h-full object-cover object-center"
+                                    loading="lazy"
+                                    src="//i1.daumcdn.net/thumb/C300x300.fwebp.q85/?fname=[##_cover_item_thumbnail_##]"
+                                    alt=""
+                                  />
+                                </div>
+                              </s_cover_item_thumbnail>
+                            </figure>
+                          </a>
+                        </li>
+                      </s_cover_item>
+                    </ul>
+                  </div>
+                </div>
+              </main>
+            </s_cover>
+          </s_cover_rep>
+        </s_cover_group>
+
+        <!-- Article Definition[90%](1.14.2025) -->
+        <article
+          class="w-full h-auto min-w-[320px] flex flex-col justify-center items-center tracking-wider font-ko bg-gray-700"
+        >
+          <s_page_rep>
+            <div class="hgroup">
+              <h1>[##_article_rep_title_##]</h1>
+            </div>
+            <div class="entry-content" id="article-view">
+              [##_article_rep_desc_##]
+            </div>
+          </s_page_rep>
+
+          <s_notice_rep>
+            <div class="hgroup">
+              <h1>[##_notice_rep_title_##]</h1>
+              <div class="post-meta">
+                <span class="author">[##__notice_rep_author_##]</span>
+                <span class="date">[##_notice_rep_date_##]</span>
+                [##_s_ad_isolation_##]
+              </div>
+            </div>
+            <div class="entry-content" id="article-view">
+              [##_notice_rep_desc_##]
+            </div>
+          </s_notice_rep>
+
+          <!-- Protected Article -->
+          <s_article_protected>
+            <s_index_article_rep>
+              <div class="post-item">
+                <a
+                  href="[##_article_rep_link_##]"
+                  data-tiara-action-name="블로그글_클릭"
+                  data-tiara-action-kind="ClickContent"
+                  data-tiara-copy="[##_article_rep_title_text_##]"
+                  data-tiara-image="[##_article_rep_thumbnail_url_##]"
+                  data-tiara-click_url="[##_blog_link_##][##_article_rep_link_##]"
+                  data-tiara-name="[##_article_rep_title_text_##]"
+                  data-tiara-provider="[##_title_##]"
+                  data-tiara-plink="[##_article_rep_link_##]"
+                  data-tiara-id="[##_article_rep_link_##]"
+                >
+                  <span class="thum"></span>
+                  <span class="title">[##_article_rep_title_##]</span>
+                  <span class="excerpt protected">보호되어 있는 글입니다.</span>
+                </a>
+              </div>
+            </s_index_article_rep>
+            <s_permalink_article_rep>
+              <div class="hgroup">
+                <div class="category">보호글</div>
+                <h1>[##_article_rep_title_##]</h1>
+                <div class="post-meta">
+                  <span class="author">[##_article_rep_author_##]</span>
+                  <span class="date">[##_article_rep_date_##]</span>
+                </div>
+              </div>
+              <div class="entry-content">
+                [##_article_rep_desc_##]
+                <form
+                  class="protected_form"
+                  onsubmit="[##_article_dissolve_##]"
+                >
+                  <p>
+                    보호되어 있는 글입니다.<br />
+                    내용을 보시려면 비밀번호를 입력하세요.
+                  </p>
+                  <fieldset>
+                    <input
+                      type="password"
+                      id="[##_article_password_##]"
+                      name="[##_article_password_##]"
+                      value=""
+                      placeholder="비밀번호"
+                    />
+                    <button type="submit" class="btn">입력</button>
+                  </fieldset>
+                </form>
+              </div>
+            </s_permalink_article_rep>
+          </s_article_protected>
+
+          <!-- Normal Article[Fin](1.14.2025) -->
+          <s_article_rep>
+            <!-- <s_index_article_rep>
+              <div class="post-item flex-col">
+                <ul class="flex flex-col gap-5 px-5 py-3">
+                  <li class="custom-card custom-card-recent bg-gray-800">
+                    <a
+                      href="[##_article_rep_link_##]"
+                      data-tiara-action-name="블로그글_클릭"
+                      data-tiara-action-kind="ClickContent"
+                      data-tiara-copy="[##_article_rep_title_text_##]"
+                      data-tiara-image="[##_article_rep_thumbnail_url_##]"
+                      data-tiara-click_url="[##_blog_link_##][##_article_rep_link_##]"
+                      data-tiara-name="[##_article_rep_title_text_##]"
+                      data-tiara-provider="[##_title_##]"
+                      data-tiara-plink="[##_article_rep_link_##]"
+                      data-tiara-id="[##_article_rep_link_##]"
+                    >
+                      <figure class="flex">
+                        <div class="text w-full sm:w-3/4 p-2 sm:p-5">
+                          <div
+                            class="category w-fit font-ko font-bold text-sm rounded-3xl bg-pink-300 p-2 mt-3 ml-5 text-sm"
+                          >
+                            [##_article_rep_category_##]
+                          </div>
+                          <div
+                            class="title w-full h-fit font-highlight font-bold text-md sm:text-2xl p-5 text-yellow-300"
+                          >
+                            [##_article_rep_title_##]
+                          </div>
+                          <div
+                            class="desc font-ko text-sm lg:text-md p-5 text-gray-200"
+                          >
+                            [##_article_rep_summary_##]
+                          </div>
+                        </div>
+                        <s_article_rep_thumbnail>
+                          <div class="image w-1/4 hidden sm:block">
+                            <img
+                              class="rounded-r-lg w-full h-full object-cover object-center"
+                              loading="lazy"
+                              src="//i1.daumcdn.net/thumb/C300x300.fwebp.q85/?fname=[##_article_rep_thumbnail_raw_url_##]"
+                              alt=""
+                            />
+                          </div>
+                        </s_article_rep_thumbnail>
+                      </figure>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </s_index_article_rep> -->
+            <s_permalink_article_rep>
+              <main class="w-screen flex flex-col justify-center items-center">
+                <div
+                  class="title-header w-full h-[70vh] flex flex-col justify-center items-center gap-5 bg-yellow-300"
+                >
+                  <a
+                    class="w-fit text-center p-2 rounded-3xl text-sm md:text-base text-gray-200 font-semibold bg-gray-800 hover:text-gray-900 hover:bg-pink-300 transition duration-200 ease-in-out"
+                    href="[##_article_rep_category_link_##]"
+                    >[##_article_rep_category_##]</a
+                  >
+                  <h1 class="text-center text-responsive font-bold">
+                    [##_article_rep_title_##]
+                  </h1>
+                  <div class="text-center text-base font-semibold">
+                    <span class="author">[##_article_rep_author_##]</span>
+                    <span class="date">[##_article_rep_date_##]</span>
+                  </div>
+                </div>
+                <section
+                  class="w-[95vw] sm:w-[90vw] md:w-[80vw] justify-center items-center mt-10 mb-10 p-7 md:p-10 lg:p-16 rounded-t-3xl rounded-b-xl bg-gray-800 text-gray-200 shadow-2xl shadow-black"
+                >
+                  <div
+                    class="post-content content-details text-base lg:text-lg"
+                    id="article-view"
+                  >
+                    [##_article_rep_desc_##]
+                  </div>
+                  <s_tag_label>
+                    <div class="tags">
+                      <h2>태그</h2>
+                      <div class="items">[##_tag_label_rep_##]</div>
+                    </div>
+                  </s_tag_label>
+                </section>
+
+                <s_article_related>
+                  <section
+                    class="w-[95vw] sm:w-[90vw] md:w-[80vw] mt-10 mb-10 p-7 md:p-10 lg:p-16 rounded-t-3xl rounded-b-xl bg-gray-800 text-gray-200 shadow-2xl shadow-black"
+                  >
+                    <div class="related-articles">
+                      <h2>
+                        <strong class="text-xl font-highlight"
+                          >'[##_article_rep_category_##]'</strong
+                        >
+                      </h2>
+                      <ul class="flex flex-col gap-3">
+                        <s_article_related_rep>
+                          <li
+                            class="w-full flex flex-col justify-center items-center rounded-2xl bg-gray-700"
+                          >
+                            <a
+                              class="w-full flex text-md items-center justify-between p-5 font-ko text-gray-200"
+                              href="[##_article_related_rep_link_##]"
+                            >
+                              <span class="text-md font-ko font-bold"
+                                >[##_article_related_rep_title_##]</span
+                              >
+                              <span class="thum">
+                                <s_article_related_rep_thumbnail>
+                                  <img
+                                    class="rounded-3xl"
+                                    loading="lazy"
+                                    src="//i1.daumcdn.net/thumb/C50x50.fwebp.q85/?fname=[##_article_related_rep_thumbnail_link_##]"
+                                    alt=""
+                                  />
+                                </s_article_related_rep_thumbnail>
+                              </span>
+                            </a>
+                          </li>
+                        </s_article_related_rep>
+                      </ul>
+                    </div>
+                  </section>
+                </s_article_related>
+
+                <s_rp>
+                  <section class="w-full h-fit flex flex-col">
+                    [##_comment_group_##]
+                  </section>
+                </s_rp>
+              </main>
+            </s_permalink_article_rep>
+          </s_article_rep>
+
+          <!-- Category page[Fin](3.2.2025) -->
+          <!-- (3.2.2025)[Fin] : Edit <h1> -->
+          <s_list>
+            <section
+              class="list"
+              data-mode="[##_list_style_##]"
+              data-image-mode="[##_var_list-image-mode_##]"
+            >
+              <header>
+                <div class="heading justify-center">
+                  <h1
+                    class="title font-highlight text-center text-2xl md:text-3xl xl:text-4xl text-pink-200 p-5 xl:p-7"
+                  >
+                    [##_list_conform_##]
+                  </h1>
+                </div>
+              </header>
+              <ul class="flex flex-col gap-5 px-5 py-3">
+                <s_list_rep>
+                  <li class="custom-card custom-card-recent bg-gray-800">
+                    <a
+                      href="[##_list_rep_link_##]"
+                      data-tiara-action-name="블로그글_클릭"
+                      data-tiara-action-kind="ClickContent"
+                      data-tiara-copy="[##_list_rep_title_text_##]"
+                      data-tiara-image="[##_list_rep_thumbnail_url_##]"
+                      data-tiara-click_url="[##_blog_link_##][##_list_rep_link_##]"
+                      data-tiara-name="[##_list_rep_title_text_##]"
+                      data-tiara-provider="[##_title_##]"
+                      data-tiara-plink="[##_list_rep_link_##]"
+                      data-tiara-id="[##_list_rep_link_##]"
+                    >
+                      <figure class="flex">
+                        <div class="text w-full sm:w-3/4 p-2 sm:p-5">
+                          <div
+                            class="category w-fit font-ko font-bold text-sm rounded-3xl bg-pink-300 p-2 mt-3 ml-5"
+                          >
+                            [##_list_rep_category_##]
+                          </div>
+                          <div
+                            class="title w-full h-fit font-highlight font-bold text-md sm:text-2xl p-5 text-yellow-300"
+                          >
+                            [##_list_rep_title_##]
+                          </div>
+                          <div
+                            class="desc font-ko text-sm lg:text-md p-5 text-gray-200"
+                          >
+                            [##_list_rep_summary_##]
+                          </div>
+                        </div>
+                        <s_list_rep_thumbnail>
+                          <div class="image w-1/4 hidden sm:block">
+                            <img
+                              class="rounded-r-lg w-full h-full object-cover object-center"
+                              loading="lazy"
+                              src="//i1.daumcdn.net/thumb/C300x300.fwebp.q85/?fname=[##_list_rep_thumbnail_raw_url_##]"
+                              alt=""
+                            />
+                          </div>
+                        </s_list_rep_thumbnail>
+                      </figure>
+                    </a>
+                  </li>
+                </s_list_rep>
+              </ul>
+            </section>
+          </s_list>
+        </article>
+
+        <!-- Tag Definition[0%] -->
+        <!-- TODO(1.14.2025) : Making Tag area -->
+        <!-- TODO(1.14.2025) : Link to Slide 2 -->
+      </div>
+    </s_t3>
+  </body>
+</html>
