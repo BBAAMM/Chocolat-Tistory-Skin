@@ -144,7 +144,7 @@
   }
   /* #endregion */
 
-  /* #region Hamburger Style Customize */
+  /* #region Hamburger Button Style Customize */
   #menu-buttons {
     position: absolute;
     bottom: 100%;
@@ -155,14 +155,14 @@
     align-items: center;
     gap: 10px;
     padding-bottom: 10px;
-    z-index: 60;
   }
 
   .menu-button {
     opacity: 0;
     transform: scale(0);
     transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 60;
+    z-index: 30;
+    @apply mx-1;
   }
 
   .menu-button.show {
@@ -171,12 +171,12 @@
   }
 
   #overlay {
-    z-index: 40;
+    z-index: 10;
   }
 
   #search-modal,
   #category-modal {
-    z-index: 50;
+    z-index: 20;
   }
 
   #search-modal .relative {
