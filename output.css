@@ -972,8 +972,16 @@ video {
   height: 33.333333%;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .h-12 {
   height: 3rem;
+}
+
+.h-14 {
+  height: 3.5rem;
 }
 
 .h-16 {
@@ -1041,12 +1049,20 @@ video {
   width: 25%;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
 .w-11 {
   width: 2.75rem;
 }
 
 .w-12 {
   width: 3rem;
+}
+
+.w-14 {
+  width: 3.5rem;
 }
 
 .w-16 {
@@ -3648,7 +3664,7 @@ video {
 
 /* #endregion */
 
-/* #region Hamburger Style Customize */
+/* #region Hamburger Button Style Customize */
 
 #menu-buttons {
   position: absolute;
@@ -3660,14 +3676,15 @@ video {
   align-items: center;
   gap: 10px;
   padding-bottom: 10px;
-  z-index: 60;
 }
 
 .menu-button {
   opacity: 0;
   transform: scale(0);
   transition: transform 0.3s ease, opacity 0.3s ease;
-  z-index: 60;
+  z-index: 30;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .menu-button.show {
@@ -3676,12 +3693,12 @@ video {
 }
 
 #overlay {
-  z-index: 40;
+  z-index: 10;
 }
 
 #search-modal,
   #category-modal {
-  z-index: 50;
+  z-index: 20;
 }
 
 #search-modal .relative {
@@ -3760,6 +3777,10 @@ video {
     right: 2.5rem;
   }
 
+  .md\:h-14 {
+    height: 3.5rem;
+  }
+
   .md\:h-16 {
     height: 4rem;
   }
@@ -3770,6 +3791,10 @@ video {
 
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:w-14 {
+    width: 3.5rem;
   }
 
   .md\:w-16 {
