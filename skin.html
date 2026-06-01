@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html
   lang="ko"
-  class="snap-y overflow-x-hidden overflow-y-scroll snap-proximity scroll-smooth min-w-[320px]"
+  class="overflow-x-hidden overflow-y-scroll scroll-smooth min-w-[320px]"
 >
   <head>
     <meta charset="UTF-8" />
@@ -135,8 +135,10 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"
     ></script>
     <script defer src="./images/blink-type-writer.js"></script>
-    <script defer src="./images/slider-changer.js"></script>
-    <script defer src="./images/hamburger-button.js"></script>
+    <script defer src="./images/sticky-nav.js"></script>
+    <script defer src="./images/reading-progress.js"></script>
+    <script defer src="./images/reading-time.js"></script>
+    <script defer src="./images/toc-generator.js"></script>
     <!-- #endregion -->
 
     <!-- #region 카테고리url 제거 시작 -->
@@ -150,37 +152,8 @@
     <!-- #endregion 카테고리url 제거 끝 -->
   </head>
   <body id="[##_body_id_##]" class="m-0 p-0 bg-[#121212]">
-    <!-- Floating Hamburger Menu -->
-    <div class="fixed bottom-5 right-5 md:bottom-10 md:right-10 z-50">
-      <button
-        id="hamburger-button"
-        class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-gray-600 transition duration-300"
-      >
-        <i class="fa fa-bars text-xl md:text-2xl"></i>
-      </button>
-      <div id="menu-buttons" class="hidden">
-        <button
-          id="search-button"
-          class="menu-button w-10 h-10 md:w-14 md:h-14 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-pink-600 transition duration-300"
-        >
-          <i class="fa fa-search text-xl md:text-2xl"></i>
-        </button>
-        <button
-          id="category-button"
-          class="menu-button w-10 h-10 md:w-14 md:h-14 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-pink-600 transition duration-300"
-        >
-          <i class="fa fa-list text-xl md:text-2xl"></i>
-        </button>
-        <button
-          class="menu-button w-10 h-10 md:w-14 md:h-14 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-yellow-600 transition duration-300"
-          onclick="location.href='/'"
-        >
-          <i class="fa fa-home text-xl md:text-2xl"></i>
-        </button>
-      </div>
-    </div>
-    <!-- Overlay -->
-    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
+
+
 
     <!-- Search Modal -->
     <div
@@ -199,19 +172,7 @@
       </div>
     </div>
 
-    <!-- Category Modal -->
-    <div id="category-modal" class="fixed inset-0 bg-gray-900 text-gray-200 p-6 hidden">
-      <div class="flex justify-between items-center mb-6">
-        <h2 class="font-highlight text-2xl text-pink-200">Categories</h2>
-        <button
-          id="category-close"
-          class="w-10 h-10 rounded-full bg-gray-800 text-gray-200 flex items-center justify-center hover:bg-gray-700 transition duration-200"
-        >
-          <i class="fa fa-xmark text-xl"></i>
-        </button>
-      </div>
-      <!-- Category content here -->
-    </div>
+
 
     <s_t3>
       <div id="wrap">
@@ -245,197 +206,10 @@
                     </div>
                   </div>
 
-                  <!-- Second Slide[30%](1.7.2025) -->
-                  <!-- TODO(1.14.2025) : Link to Tag Cloud -->
-                  <!-- TODO(1.14.2025) : Make a finding area -->
-                  <!-- TODO(1.14.2025) : Make a Category area -->
-                  <div
-                    id="second-slider"
-                    class="w-full h-screen flex flex-shrink-0 bg-gradient-to-b from-blue-950 to-black via-green-950 text-white bg-cover bg-center justify-center items-center"
-                  >
-                    <div class="font-highlight text-4xl">곧 오픈됩니다😉</div>
-                  </div>
-
-                  <!-- Third Slide[10%](1.7.2025) -->
-                  <!-- TODO(1.14.2025) : Make a Self Introducing slide -->
-                  <div
-                    id="third-slider"
-                    class="w-full h-screen flex flex-shrink-0 bg-emerald-300 bg-cover bg-center justify-center items-center"
-                  >
-                    <div class="font-highlight text-4xl">곧 오픈됩니다😉</div>
-                  </div>
-                </div>
-
-                <!-- Navigation[Fin](1.6.2025) -->
-                <div
-                  class="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between p-5"
-                >
-                  <i
-                    id="prev"
-                    class="fa-solid fa-angle-left text-white text-2xl lg:text-3xl cursor-pointer"
-                    onclick="prevAction()"
-                  ></i>
-                  <i
-                    id="next"
-                    class="fa-solid fa-angle-right text-white text-2xl lg:text-3xl cursor-pointer"
-                    onclick="nextAction()"
-                  ></i>
-                </div>
-
-                <!-- Slide Indicator[NEW] -->
-                <div
-                  class="absolute bottom-6 w-full flex justify-center items-center gap-2 pointer-events-none select-none"
-                >
-                  <span id="current-slide" class="text-pink-300 font-bold font-english">01</span>
-                  <span class="text-gray-400 font-english">/</span>
-                  <span id="total-slides" class="text-gray-400 font-english">03</span>
                 </div>
               </section>
             </s_cover>
 
-            <!-- Popular Contents Section[90%] -->
-            <!-- TODO(1.14.2025) : Add Custom Category link -->
-            <s_cover name="cover-categories">
-              <section
-                id="section-popular-contents"
-                class="snap-start w-full h-auto flex flex-col justify-center items-center p-5 bg-gray-800 text-gray-100"
-              >
-                <div class="text text-center py-6">
-                  <div class="font-highlight text-3xl py-2">
-                    [##_cover_title_##]
-                  </div>
-                  <div class="font-ko text-lg text-gray-200">
-                    인기 있는 콘텐츠를 둘러보세요
-                  </div>
-                </div>
-                <!-- Change it to Changer -->
-                <ul
-                  id="grid-popular"
-                  class="grid grid-cols-2 grid-rows-3 gap-8 md:grid-cols-3 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-2 pb-10 text-xl"
-                >
-                  <li class="custom-card custom-card-popular">
-                    <a
-                      class="flex flex-col h-full items-center justify-between"
-                      href="/category/팀%20프로젝트/자율주행%20개발%28baqu4%29"
-                    >
-                      <i
-                        class="flex-grow flex-shrink-0 fa-solid fa-tree h-12 w-12 text-gray-200"
-                      ></i>
-                      <h2
-                        class="font-ko text-md md:text-xl font-bold text-yellow-300"
-                      >
-                        자율주행 개발
-                      </h2>
-                    </a>
-                  </li>
-                  <li class="custom-card custom-card-popular">
-                    <a
-                      class="flex flex-col h-full items-center justify-between"
-                      href="/팀%20프로젝트/얼굴%20mbti%20테스트"
-                    >
-                      <i
-                        class="flex-grow flex-shrink-0 fa-solid fa-tree h-12 w-12 text-gray-200"
-                      ></i>
-                      <h2
-                        class="font-ko text-md md:text-xl font-bold text-yellow-300"
-                      >
-                        얼굴 MBTI
-                      </h2>
-                    </a>
-                  </li>
-                  <li class="custom-card custom-card-popular">
-                    <a
-                      class="flex flex-col h-full items-center justify-between"
-                      href="/팀%20프로젝트/얼굴%20mbti%20테스트"
-                    >
-                      <i
-                        class="flex-grow flex-shrink-0 fa-solid fa-tree h-12 w-12 text-gray-200"
-                      ></i>
-                      <h2
-                        class="font-ko text-md md:text-xl font-bold text-yellow-300"
-                      >
-                        자율주행 개발
-                      </h2>
-                    </a>
-                  </li>
-                  <li class="custom-card custom-card-popular">
-                    <a
-                      class="flex flex-col h-full items-center justify-between"
-                      href="/팀%20프로젝트/얼굴%20mbti%20테스트"
-                    >
-                      <i
-                        class="flex-grow flex-shrink-0 fa-solid fa-tree h-12 w-12 text-gray-200"
-                      ></i>
-                      <h2
-                        class="font-ko text-md md:text-xl font-bold text-yellow-300"
-                      >
-                        자율주행 개발
-                      </h2>
-                    </a>
-                  </li>
-                  <li class="custom-card custom-card-popular">
-                    <a
-                      class="flex flex-col h-full items-center justify-between"
-                      href="/팀%20프로젝트/얼굴%20mbti%20테스트"
-                    >
-                      <i
-                        class="flex-grow flex-shrink-0 fa-solid fa-tree h-12 w-12 text-gray-200"
-                      ></i>
-                      <h2
-                        class="font-ko text-md md:text-xl font-bold text-yellow-300"
-                      >
-                        자율주행 개발
-                      </h2>
-                    </a>
-                  </li>
-                  <li class="custom-card custom-card-popular">
-                    <a
-                      class="flex flex-col h-full items-center justify-between"
-                      href="/팀%20프로젝트/얼굴%20mbti%20테스트"
-                    >
-                      <i
-                        class="flex-grow flex-shrink-0 fa-solid fa-tree h-12 w-12 text-gray-200"
-                      ></i>
-                      <h2
-                        class="font-ko text-md md:text-xl font-bold text-yellow-300"
-                      >
-                        자율주행 개발
-                      </h2>
-                    </a>
-                  </li>
-                  <li class="custom-card custom-card-popular hidden lg:block">
-                    <a
-                      class="flex flex-col h-full items-center justify-between"
-                      href="/팀%20프로젝트/얼굴%20mbti%20테스트"
-                    >
-                      <i
-                        class="flex-grow flex-shrink-0 fa-solid fa-tree h-12 w-12 text-gray-200"
-                      ></i>
-                      <h2
-                        class="font-ko text-md md:text-xl font-bold text-yellow-300"
-                      >
-                        자율주행 개발
-                      </h2>
-                    </a>
-                  </li>
-                  <li class="custom-card custom-card-popular hidden lg:block">
-                    <a
-                      class="flex flex-col h-full items-center justify-between"
-                      href="/팀%20프로젝트/얼굴%20mbti%20테스트"
-                    >
-                      <i
-                        class="flex-grow flex-shrink-0 fa-solid fa-tree h-12 w-12 text-gray-200"
-                      ></i>
-                      <h2
-                        class="font-ko text-md md:text-xl font-bold text-yellow-300"
-                      >
-                        자율주행 개발
-                      </h2>
-                    </a>
-                  </li>
-                </ul>
-              </section>
-            </s_cover>
 
             <!-- Recent Posts Section(main)[90%] -->
             <!-- TODO(1.14.2025) : Add Custom link -->

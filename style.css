@@ -30,11 +30,6 @@
     @apply rounded-lg font-highlight transition-transform duration-300 hover:scale-105 hover:shadow-lg;
   }
 
-  /* Popular contents cards */
-  .custom-card-popular {
-    @apply w-[160px] h-[160px] md:w-[200px] md:h-[200px] lg:w-[220px] lg:h-[220px] flex flex-col items-center text-center justify-center bg-gray-700 shadow-md shadow-black p-6;
-  }
-
   /* Recent contents cards */
   .custom-card-recent {
     @apply max-w-screen-lg min-h-[200px] bg-gray-700;
@@ -144,43 +139,6 @@
   }
   /* #endregion */
 
-  /* #region Hamburger Button Style Customize */
-  #menu-buttons {
-    position: absolute;
-    bottom: 100%;
-    right: 0;
-    /* transform: translate(50%, 50%); */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding-bottom: 10px;
-  }
-
-  .menu-button {
-    opacity: 0;
-    transform: scale(0);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 30;
-    @apply mx-1;
-  }
-
-  .menu-button.show {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  #overlay {
-    z-index: 10;
-  }
-
-  #search-modal,
-  #category-modal {
-    z-index: 20;
-  }
-
-  #search-modal .relative {
-    height: 50px;
-  }
-  /* #endregion */
+  /* Modal z-index */
+  #search-modal { z-index: 20; }
 }
