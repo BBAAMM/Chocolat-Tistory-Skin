@@ -5,6 +5,13 @@ const slides = document.querySelectorAll("#slider > div");
 let currentIndex = 0;
 let startpos = 0;
 let endpos = 0;
+
+// Update slide number indicator
+function updateIndicator(index) {
+  const current = document.getElementById("current-slide");
+  if (current) current.textContent = String(index + 1).padStart(2, "0");
+}
+
 // Scroll
 
 // Slide with button by GSAP
@@ -27,6 +34,9 @@ function gsapSnapToSlide(index, duration = 0.8) {
       slide.classList.add("inactive");
     }
   });
+
+  // 슬라이드 인디케이터 업데이트
+  updateIndicator(index);
 }
 
 // "prev" Action Listener
