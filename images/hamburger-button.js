@@ -35,4 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
     searchModal.classList.add("hidden");
     categoryModal.classList.add("hidden");
   });
+
+  const categoryClose = document.getElementById("category-close");
+  categoryClose.addEventListener("click", function () {
+    overlay.classList.add("hidden");
+    categoryModal.classList.add("hidden");
+  });
 });
