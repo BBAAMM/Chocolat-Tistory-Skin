@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+  <information>
+    <name>Chocolat</name>
+    <version>1.0.0</version>
+    <description><![CDATA[Dark Minimal × Warm Accent 개발 기술 블로그 스킨]]></description>
+    <license><![CDATA[MIT]]></license>
+  </information>
+  <author>
+    <name>Seungbeom Kim</name>
+    <homepage>https://codezaram.tistory.com</homepage>
+    <email>developer.ksb@gmail.com</email>
+  </author>
+  <cover>
+    <item>
+      <name>cover-hero</name>
+      <label><![CDATA[히어로]]></label>
+      <description><![CDATA[하프 히어로 + 인라인 네비게이션]]></description>
+    </item>
+    <item>
+      <name>cover-grid</name>
+      <label><![CDATA[홈 메인]]></label>
+      <description><![CDATA[TOP POSTS 2×2 + LATEST 피드 + 사이드바]]></description>
+    </item>
+  </cover>
+  <default>
+    <recentEntries>5</recentEntries>
+    <recentComments>5</recentComments>
+    <recentTrackbacks>5</recentTrackbacks>
+    <tagsInCloud>50</tagsInCloud>
+    <sortInCloud>0</sortInCloud>
+  </default>
+</skin>
