@@ -701,31 +701,22 @@
                 <!-- 필터 사이드바 (홈 사이드바와 동일 컴포넌트, 프로필 제외) -->
                 <aside class="hidden lg:flex flex-col gap-6 w-64 flex-shrink-0">
 
-                  <!-- 카테고리 필터 ([##_blog_menu_##]) -->
-                  <div>
-                    <div class="flex items-center gap-3 mb-3">
-                      <span class="font-english text-xs font-bold tracking-widest text-yellow-300">CATEGORIES</span>
-                      <div class="flex-1 h-px bg-gray-800"></div>
-                    </div>
-                    <div class="sidebar-menu">
-                      [##_blog_menu_##]
-                    </div>
-                  </div>
-
-                  <!-- 태그 필터 -->
-                  <div>
-                    <div class="flex items-center gap-3 mb-3">
-                      <span class="font-english text-xs font-bold tracking-widest text-yellow-300">TAGS</span>
-                      <div class="flex-1 h-px bg-gray-800"></div>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                      <a href="/tag/Python" class="border border-gray-700 rounded-lg px-2 py-0.5 text-xs text-gray-400 hover:text-yellow-300 hover:border-yellow-300 transition duration-200">#Python</a>
-                      <a href="/tag/자율주행" class="border border-gray-700 rounded-lg px-2 py-0.5 text-xs text-gray-400 hover:text-pink-300 hover:border-pink-300 transition duration-200">#자율주행</a>
-                      <a href="/tag/Java" class="border border-gray-700 rounded-lg px-2 py-0.5 text-xs text-gray-400 hover:text-gray-200 hover:border-gray-500 transition duration-200">#Java</a>
-                      <a href="/tag/딥러닝" class="border border-gray-700 rounded-lg px-2 py-0.5 text-xs text-gray-400 hover:text-yellow-300 hover:border-yellow-300 transition duration-200">#딥러닝</a>
-                      <a href="/tag/프로젝트" class="border border-gray-700 rounded-lg px-2 py-0.5 text-xs text-gray-400 hover:text-pink-300 hover:border-pink-300 transition duration-200">#프로젝트</a>
-                    </div>
-                  </div>
+                  <!-- s_sidebar 위젯 -->
+                  <s_sidebar>
+                    <s_sidebar_element>
+                      <div class="sidebar-widget" data-type="[##_sidebar_element_type_##]">
+                        <div class="flex items-center gap-3 mb-3">
+                          <span class="font-english text-xs font-bold tracking-widest text-yellow-300 uppercase">
+                            [##_sidebar_element_title_##]
+                          </span>
+                          <div class="flex-1 h-px bg-gray-800"></div>
+                        </div>
+                        <div class="sidebar-widget-body">
+                          [##_sidebar_element_content_##]
+                        </div>
+                      </div>
+                    </s_sidebar_element>
+                  </s_sidebar>
 
                 </aside>
 
