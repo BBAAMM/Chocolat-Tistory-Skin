@@ -1,0 +1,52 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build)",
+      "Bash(npm run watch)",
+      "Bash(npm install *)",
+      "Bash(cat *)",
+      "Bash(echo *)",
+      "Bash(grep *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git diff *)",
+      "Bash(git status)",
+      "Bash(git log *)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file=$(jq -r '.tool_input.file_path // empty'); if [[ \"$file\" == *.css && \"$file\" != *output.css ]]; then echo '📦 CSS 변경 감지 → Tailwind 빌드 필요'; echo '   실행: npx tailwindcss -i ./style.css -o ./output.css --minify'; fi",
+            "timeout": 3
+          },
+          {
+            "type": "command",
+            "command": "file=$(jq -r '.tool_input.file_path // empty'); if [[ \"$file\" == *output.css ]]; then echo '🚨 WARNING: output.css는 직접 편집 금지!'; echo '   style.css를 편집하고 npx tailwindcss를 실행하세요.'; fi",
+            "timeout": 3
+          },
+          {
+            "type": "command",
+            "command": "file=$(jq -r '.tool_input.file_path // empty'); if [[ \"$file\" == *.html ]]; then open=$(grep -oP '<s_[^>]+>' \"$file\" 2>/dev/null | wc -l); close=$(grep -oP '</s_\\w+>' \"$file\" 2>/dev/null | wc -l); if [ \"$open\" != \"$close\" ]; then echo \"🚨 치환자 쌍 불일치! 열림: $open, 닫힘: $close\"; else echo \"✅ 치환자 쌍 OK ($open/$close)\"; fi; fi",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '=== Chocolat 빌드 체크 ===' && if [ -f index.html ]; then open=$(grep -oP '<s_[^>]+>' index.html | wc -l); close=$(grep -oP '</s_\\w+>' index.html | wc -l); echo \"치환자 쌍: $open/$close $([ \\\"$open\\\" = \\\"$close\\\" ] && echo '✅' || echo '❌ 불일치!')\"; (grep -q 's_t3' index.html && echo 's_t3 래퍼: ✅' || echo 's_t3 래퍼: ❌ 누락!'); (grep -q 'body_id' index.html && echo 'body_id: ✅' || echo 'body_id: ⚠️ 미사용'); echo ''; echo '📋 구현 현황:'; (grep -q 's_cover_group' index.html && echo '  커버 섹션: ✅') || true; (grep -q 's_list' index.html && echo '  리스트: ✅') || true; (grep -q 's_permalink_article_rep' index.html && echo '  퍼머링크: ✅') || true; (grep -q 's_index_article_rep' index.html && ! grep -q '<!--.*s_index_article_rep' index.html && echo '  인덱스 목록: ✅' || echo '  인덱스 목록: ⚠️ 주석처리됨') || true; fi",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
