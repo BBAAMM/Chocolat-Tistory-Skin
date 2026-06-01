@@ -14,7 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   hamburgerButton.addEventListener("click", function () {
+    const icon = hamburgerButton.querySelector("i");
     menuButtons.classList.toggle("hidden");
+    icon.classList.toggle("fa-bars");
+    icon.classList.toggle("fa-xmark");
     buttons.forEach((button, index) => {
       setTimeout(() => {
         button.classList.toggle("show");
