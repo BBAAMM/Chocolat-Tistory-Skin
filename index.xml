@@ -18,9 +18,14 @@
       <description><![CDATA[하프 히어로 + 인라인 네비게이션]]></description>
     </item>
     <item>
-      <name>cover-grid</name>
-      <label><![CDATA[홈 메인]]></label>
-      <description><![CDATA[TOP POSTS 2×2 + LATEST 피드 + 사이드바]]></description>
+      <name>cover-featured</name>
+      <label><![CDATA[피처드]]></label>
+      <description><![CDATA[TOP POSTS 2×2 그리드]]></description>
+    </item>
+    <item>
+      <name>cover-latest</name>
+      <label><![CDATA[최신 피드]]></label>
+      <description><![CDATA[최신 글 피드 + 사이드바]]></description>
     </item>
   </cover>
   <default>
