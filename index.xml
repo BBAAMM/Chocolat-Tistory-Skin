@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin version="2.0">
+
+  <information>
+    <title>Chocolat</title>
+    <description>Dark Minimal × Warm Accent 개발 기술 블로그 스킨</description>
+    <author>
+      <name>Seungbeom Kim</name>
+      <homepage>https://codezaram.tistory.com</homepage>
+    </author>
+    <version>1.0.0</version>
+  </information>
+
+  <cover>
+    <item name="cover-slider" title="슬라이더" />
+    <item name="cover-categories" title="카테고리 그리드" />
+    <item name="cover-grid" title="최근 글 목록" />
+  </cover>
+
+  <variables>
+    <variable name="list-image-mode" title="목록 이미지 모드" type="text" default="" />
+  </variables>
+
+</skin>
