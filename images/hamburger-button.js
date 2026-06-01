@@ -40,8 +40,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const categoryClose = document.getElementById("category-close");
-  categoryClose.addEventListener("click", function () {
-    overlay.classList.add("hidden");
-    categoryModal.classList.add("hidden");
-  });
+  if (categoryClose) {
+    categoryClose.addEventListener("click", function () {
+      overlay.classList.add("hidden");
+      categoryModal.classList.add("hidden");
+    });
+  }
 });

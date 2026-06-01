@@ -94,6 +94,9 @@ window.addEventListener("resize", handleResize);
 
 gsapSnapToSlide(currentIndex);
 
+const totalEl = document.getElementById("total-slides");
+if (totalEl) totalEl.textContent = String(slides.length).padStart(2, "0");
+
 // // Previous version
 // function snapToSlide(index) {
 //   const slideWidth = slides[0].offsetWidth;
