@@ -37,12 +37,12 @@
 
   /* Recent contents cards */
   .custom-card-recent {
-    @apply max-w-screen-lg min-h-[200px] bg-gray-100;
+    @apply max-w-screen-lg min-h-[200px] bg-gray-700;
   }
 
   /* #region Post Ingredients */
   .content-details h1,
-  h2 {
+  .content-details h2 {
     @apply font-highlight text-3xl mt-5 mb-4 text-yellow-200;
   }
   .content-details h3 {
