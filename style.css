@@ -141,4 +141,9 @@
 
   /* Modal z-index */
   #search-modal { z-index: 20; }
+
+  /* TOC 현재 섹션 하이라이트 */
+  .toc-nav .toc-link.active {
+    @apply text-pink-300 font-semibold;
+  }
 }

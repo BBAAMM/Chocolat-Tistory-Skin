@@ -647,45 +647,66 @@
                     </span>
                   </div>
                 </div>
-                <section
-                  class="w-[95vw] sm:w-[90vw] md:w-[80vw] justify-center items-center mt-10 mb-10 p-7 md:p-10 lg:p-16 rounded-t-3xl rounded-b-xl bg-gray-800 text-gray-200 shadow-2xl shadow-black"
-                >
-                  <div
-                    class="post-content content-details text-base lg:text-lg"
-                    id="article-view"
-                  >
-                    [##_article_rep_desc_##]
-                  </div>
-                  <s_tag_label>
-                    <div class="tags">
-                      <h2>태그</h2>
-                      <div class="items">[##_tag_label_rep_##]</div>
-                    </div>
-                  </s_tag_label>
-                </section>
+                <!-- 2컬럼: 본문 + 스티키 TOC -->
+                <div class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 flex gap-8 mt-10 mb-10 items-start">
 
+                  <!-- 본문 컬럼 -->
+                  <div class="flex-1 min-w-0 flex flex-col gap-6">
+
+                    <!-- 모바일 접이식 TOC (lg 미만에서 표시) -->
+                    <details id="toc-mobile-container" class="lg:hidden bg-gray-800 rounded-xl p-4 border border-gray-700">
+                      <summary class="font-english text-xs font-bold tracking-widest text-yellow-300 cursor-pointer select-none">
+                        목차
+                      </summary>
+                      <nav id="toc-mobile-nav" class="mt-3 flex flex-col gap-1"></nav>
+                    </details>
+
+                    <!-- 아티클 본문 -->
+                    <section class="p-7 md:p-10 lg:p-16 rounded-t-3xl rounded-b-xl bg-gray-800 text-gray-200 shadow-2xl shadow-black">
+                      <div
+                        class="post-content content-details text-base lg:text-lg"
+                        id="article-view"
+                      >
+                        [##_article_rep_desc_##]
+                      </div>
+                      <s_tag_label>
+                        <div class="tags mt-8 pt-6 border-t border-gray-700">
+                          <div class="flex flex-wrap gap-2 items-center">
+                            [##_tag_label_rep_##]
+                          </div>
+                        </div>
+                      </s_tag_label>
+                    </section>
+
+                  </div>
+                  <!-- 본문 컬럼 끝 -->
+
+                  <!-- 스티키 TOC (lg 이상에서 표시) -->
+                  <aside id="article-toc" class="hidden lg:block w-56 flex-shrink-0">
+                    <div class="sticky top-20">
+                      <div class="font-english text-xs font-bold tracking-widest text-yellow-300 mb-4">목차</div>
+                      <nav id="toc-desktop-nav" class="toc-nav flex flex-col gap-1"></nav>
+                    </div>
+                  </aside>
+
+                </div>
+                <!-- 2컬럼 끝 -->
+
+                <!-- 관련 글 -->
                 <s_article_related>
-                  <section
-                    class="w-[95vw] sm:w-[90vw] md:w-[80vw] mt-10 mb-10 p-7 md:p-10 lg:p-16 rounded-t-3xl rounded-b-xl bg-gray-800 text-gray-200 shadow-2xl shadow-black"
-                  >
-                    <div class="related-articles">
+                  <div class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 mb-10">
+                    <div class="related-articles p-7 md:p-10 rounded-t-3xl rounded-b-xl bg-gray-800 text-gray-200 shadow-2xl shadow-black">
                       <h2>
-                        <strong class="text-xl font-highlight"
-                          >'[##_article_rep_category_##]'</strong
-                        >
+                        <strong class="text-xl font-highlight">'[##_article_rep_category_##]'</strong>
                       </h2>
-                      <ul class="flex flex-col gap-3">
+                      <ul class="flex flex-col gap-3 mt-4">
                         <s_article_related_rep>
-                          <li
-                            class="w-full flex flex-col justify-center items-center rounded-2xl bg-gray-700"
-                          >
+                          <li class="w-full flex flex-col justify-center items-center rounded-2xl bg-gray-700">
                             <a
                               class="w-full flex text-md items-center justify-between p-5 font-ko text-gray-200"
                               href="[##_article_related_rep_link_##]"
                             >
-                              <span class="text-md font-ko font-bold"
-                                >[##_article_related_rep_title_##]</span
-                              >
+                              <span class="text-md font-ko font-bold">[##_article_related_rep_title_##]</span>
                               <span class="thum">
                                 <s_article_related_rep_thumbnail>
                                   <img
@@ -701,11 +722,12 @@
                         </s_article_related_rep>
                       </ul>
                     </div>
-                  </section>
+                  </div>
                 </s_article_related>
 
+                <!-- 댓글 -->
                 <s_rp>
-                  <section class="w-full h-fit flex flex-col">
+                  <section class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 mb-10">
                     [##_comment_group_##]
                   </section>
                 </s_rp>
