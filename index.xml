@@ -11,6 +11,23 @@
     <homepage>https://codezaram.tistory.com</homepage>
     <email>developer.ksb@gmail.com</email>
   </author>
+  <cover>
+    <item>
+      <name>cover-slider</name>
+      <label><![CDATA[슬라이더]]></label>
+      <description><![CDATA[히어로 슬라이더 (타이프라이터 애니메이션)]]></description>
+    </item>
+    <item>
+      <name>cover-categories</name>
+      <label><![CDATA[카테고리 그리드]]></label>
+      <description><![CDATA[인기 카테고리를 그리드로 표시]]></description>
+    </item>
+    <item>
+      <name>cover-grid</name>
+      <label><![CDATA[최근 글 목록]]></label>
+      <description><![CDATA[최근 글을 그리드 형태로 표시]]></description>
+    </item>
+  </cover>
   <default>
     <recentEntries>5</recentEntries>
     <recentComments>5</recentComments>
