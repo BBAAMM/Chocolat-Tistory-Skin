@@ -9,13 +9,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 개발 명령어
 ```bash
-npx tailwindcss -i ./style.css -o ./output.css --watch    # 개발
-npx tailwindcss -i ./style.css -o ./output.css --minify   # 빌드
+npx tailwindcss -i ./input.css -o ./style.css --watch    # 개발
+npx tailwindcss -i ./input.css -o ./style.css --minify   # 빌드
 ```
-빌드 후 `output.css` 내용을 Tistory 스킨 편집기 CSS 필드에 붙여넣기. `output.css` 직접 편집 금지.
+빌드 후 `style.css` 내용을 Tistory 스킨 편집기 CSS 필드에 붙여넣기. `style.css` 직접 편집 금지.
 
 ## 스택
-- **CSS**: `style.css` → Tailwind 소스. 커스텀은 `@layer utilities`에 추가. `index.html`은 CDN(`cdn.tailwindcss.com`) 병용 — 클래스 불일치 주의.
+- **CSS**: `input.css` → Tailwind 소스. 커스텀은 `@layer utilities`에 추가. `style.css` → 컴파일 출력 (`skin.html`이 참조). `index.html`은 CDN(`cdn.tailwindcss.com`) 병용 — 클래스 불일치 주의.
 - **JS**: Vanilla ES6, `defer` 로드. `import/export` 사용 불가(Tistory 제약). GSAP·FontAwesome CDN 사용.
 - **폰트** (`tailwind.config.js`): `font-welcome`=Moirai One, `font-highlight`=HSSanTokki, `font-ko`=WooJu, `font-english`=Montserrat Alternates
 
@@ -26,9 +26,8 @@ npx tailwindcss -i ./style.css -o ./output.css --minify   # 빌드
 ```
 <s_t3> > #wrap
 ├── <s_cover_group> > <s_cover_rep>
-│   ├── <s_cover name="cover-slider">      슬라이더 (구현됨)
-│   ├── <s_cover name="cover-categories">  카테고리 그리드 (구현됨)
-│   └── <s_cover name="cover-grid">        최근 글 목록 (구현됨)
+│   ├── <s_cover name="cover-hero">         히어로 (구현됨)
+│   └── <s_cover name="cover-grid">        홈 메인 (구현됨)
 ├── <article>
 │   ├── <s_page_rep> / <s_notice_rep> / <s_article_protected>
 │   ├── <s_article_rep> > <s_permalink_article_rep>  글 본문 (구현됨)
@@ -61,6 +60,6 @@ npx tailwindcss -i ./style.css -o ./output.css --minify   # 빌드
 - 프로필 페이지, 태그 영역
 
 ## 체크리스트
-- [ ] 빌드 후 `output.css` 업데이트
+- [ ] 빌드 후 `style.css` 업데이트 (`npx tailwindcss -i ./input.css -o ./style.css --minify`)
 - [ ] `<s_t3>` 래퍼 유지, 치환자 태그 쌍 누락 없는지 확인
 - [ ] 새 JS 파일 → `images/` + `<head>`에 `defer` 추가
