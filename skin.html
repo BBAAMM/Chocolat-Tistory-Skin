@@ -617,21 +617,34 @@
               </div>
             </s_index_article_rep> -->
             <s_permalink_article_rep>
-              <main class="w-screen flex flex-col justify-center items-center">
+              <main class="w-screen flex flex-col">
                 <div
-                  class="title-header w-full h-[70vh] flex flex-col justify-center items-center gap-5 bg-gradient-to-br from-yellow-900 via-gray-800 to-gray-900"
+                  class="title-header w-full min-h-[40vh] flex flex-col justify-end pb-8 px-5 md:px-10 bg-gradient-to-br from-yellow-900 via-gray-800 to-gray-900"
                 >
-                  <a
-                    class="w-fit text-center p-2 rounded-3xl text-sm md:text-base text-gray-200 font-semibold bg-gray-800 hover:text-yellow-200 hover:bg-pink-300 transition duration-200 ease-in-out"
-                    href="[##_article_rep_category_link_##]"
-                    >[##_article_rep_category_##]</a
-                  >
-                  <h1 class="text-center text-responsive font-bold text-yellow-300">
+                  <!-- 브레드크럼 -->
+                  <nav class="flex items-center gap-2 text-xs text-gray-500 mb-4 font-ko" aria-label="breadcrumb">
+                    <a href="/" class="hover:text-gray-300 transition duration-200">홈</a>
+                    <span class="text-gray-700">/</span>
+                    <a href="[##_article_rep_category_link_##]" class="hover:text-pink-300 transition duration-200">
+                      [##_article_rep_category_##]
+                    </a>
+                  </nav>
+                  <!-- 제목 -->
+                  <h1 class="text-responsive font-bold text-yellow-300 mb-4 leading-tight">
                     [##_article_rep_title_##]
                   </h1>
-                  <div class="text-center text-base font-semibold text-gray-400">
-                    <span class="author">[##_article_rep_author_##]</span>
-                    <span class="date">[##_article_rep_date_##]</span>
+                  <!-- 메타 -->
+                  <div class="flex flex-wrap items-center gap-3">
+                    <a
+                      class="w-fit p-2 rounded-3xl text-sm text-gray-200 font-semibold bg-gray-800 hover:text-yellow-200 hover:bg-pink-300 transition duration-200"
+                      href="[##_article_rep_category_link_##]"
+                    >[##_article_rep_category_##]</a>
+                    <span class="font-ko text-sm text-gray-400">[##_article_rep_author_##]</span>
+                    <span class="font-ko text-sm text-gray-400">[##_article_rep_date_##]</span>
+                    <span class="font-ko text-sm text-gray-500 flex items-center gap-1">
+                      <i class="fa fa-clock text-xs"></i>
+                      <span id="reading-time">--</span> 읽기
+                    </span>
                   </div>
                 </div>
                 <section
