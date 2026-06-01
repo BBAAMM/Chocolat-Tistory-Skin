@@ -153,7 +153,29 @@
   </head>
   <body id="[##_body_id_##]" class="m-0 p-0 bg-[#121212]">
 
+    <!-- 읽기 진행 바 (아티클 페이지에서만 표시) -->
+    <div
+      id="reading-progress"
+      class="fixed top-0 left-0 h-0.5 z-50 w-0 hidden"
+      style="background: linear-gradient(to right, #f9a8d4, #fde047); transition: width 0.1s linear;"
+    ></div>
 
+    <!-- Sticky Navigation (히어로 스크롤 후 등장) -->
+    <nav
+      id="sticky-nav"
+      class="fixed top-0 left-0 right-0 z-40 h-12 flex items-center justify-between px-5 border-b border-gray-800"
+      style="background: rgba(17,17,17,0.97); backdrop-filter: blur(8px); transform: translateY(-100%); opacity: 0; transition: transform 0.3s ease, opacity 0.3s ease;"
+    >
+      <a href="/" class="font-english font-bold text-pink-300 tracking-widest text-sm">CHOCOLAT</a>
+      <div class="flex items-center gap-5">
+        <a href="/" class="font-ko text-gray-400 hover:text-gray-200 text-sm transition duration-200">홈</a>
+        <a href="/category" class="font-ko text-gray-400 hover:text-gray-200 text-sm transition duration-200">카테고리</a>
+        <a href="/tag" class="font-ko text-gray-400 hover:text-gray-200 text-sm transition duration-200">태그</a>
+        <button id="sticky-search-btn" class="text-gray-400 hover:text-pink-300 transition duration-200" aria-label="검색">
+          <i class="fa fa-search text-sm"></i>
+        </button>
+      </div>
+    </nav>
 
     <!-- Search Modal -->
     <div
