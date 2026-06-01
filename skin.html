@@ -181,31 +181,38 @@
           <!-- Scrollable Container[Fin](1.5.2025) -->
           <!-- Slider Container[Fin](1.5.2025) -->
           <s_cover_rep>
-            <s_cover name="cover-slider">
+            <s_cover name="cover-hero">
               <section
-                id="slider-container"
-                class="relative w-full h-screen justify-center items-center overflow-x-hidden"
+                id="hero-section"
+                class="relative w-full h-[50vh] flex flex-col justify-between p-5 bg-gradient-to-b from-gray-800 to-black"
               >
-                <!-- Slider[60%] -->
-                <div id="slider" class="w-full h-screen flex">
-                  <!-- First Slide[Fin](1.6.2025) -->
-                  <div
-                    id="first-slider"
-                    class="w-full h-screen flex flex-shrink-0 justify-center p-5 bg-gradient-to-b from-gray-800 to-black text-white"
+                <!-- 인라인 네비게이션 -->
+                <div class="flex items-center justify-between">
+                  <a href="/" class="font-english font-bold text-pink-300 tracking-widest text-sm select-none">
+                    CHOCOLAT
+                  </a>
+                  <nav class="flex items-center gap-5">
+                    <a href="/" class="font-ko text-gray-400 hover:text-gray-200 text-sm transition duration-200">홈</a>
+                    <a href="/category" class="font-ko text-gray-400 hover:text-gray-200 text-sm transition duration-200">카테고리</a>
+                    <a href="/tag" class="font-ko text-gray-400 hover:text-gray-200 text-sm transition duration-200">태그</a>
+                    <button id="hero-search-btn" class="text-gray-400 hover:text-pink-300 transition duration-200" aria-label="검색">
+                      <i class="fa fa-search text-sm"></i>
+                    </button>
+                  </nav>
+                </div>
+                <!-- 타이프라이터 -->
+                <div class="flex items-center gap-4 select-none">
+                  <span
+                    id="typewriter"
+                    class="font-welcome text-white break-words text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
                   >
-                    <div class="flex items-center space-x-6 select-none">
-                      <span
-                        id="typewriter"
-                        class="text font-welcome text-center break-words text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
-                      >
-                        [##_cover_title_##]
-                      </span>
-                      <span
-                        class="w-[2.5px] h-[6em] bg-pink-300 animate-blink"
-                      ></span>
-                    </div>
-                  </div>
-
+                    [##_cover_title_##]
+                  </span>
+                  <span class="w-[2.5px] h-[1.1em] bg-pink-300 animate-blink flex-shrink-0"></span>
+                </div>
+                <!-- 서브 태그라인 -->
+                <div class="font-ko text-gray-500 text-sm tracking-wider">
+                  Python · Java · 자율주행 · 프로젝트
                 </div>
               </section>
             </s_cover>
