@@ -204,35 +204,37 @@
             <s_cover name="cover-hero">
               <section
                 id="hero-section"
-                class="relative w-full min-h-[62vh] flex flex-col p-6 bg-gradient-to-b from-gray-800 to-[#0d0d0d]"
+                class="relative w-full min-h-[62vh] flex flex-col py-6 bg-gradient-to-b from-gray-800 to-[#0d0d0d]"
               >
-                <!-- 인라인 네비게이션 -->
-                <div class="flex items-center justify-between">
-                  <a href="/" class="font-english font-bold text-pink-300 tracking-widest text-sm select-none">
-                    CHOCOLAT
-                  </a>
-                  <nav class="flex items-center gap-5">
-                    <div class="blog-nav">[##_blog_menu_##]</div>
-                    <button id="hero-search-btn" class="text-gray-400 hover:text-pink-300 transition duration-200" aria-label="검색">
-                      <i class="fa fa-search text-sm"></i>
-                    </button>
-                  </nav>
-                </div>
-                <!-- 가운데 텍스트 블록 -->
-                <div class="flex-1 flex flex-col items-center justify-center text-center gap-5 py-8">
-                  <!-- 타이프라이터 -->
-                  <div class="flex items-center gap-4 select-none">
-                    <span
-                      id="typewriter"
-                      class="font-welcome text-white break-words text-6xl sm:text-7xl md:text-8xl lg:text-9xl"
-                    >
-                      [##_cover_title_##]
-                    </span>
-                    <span class="w-[3px] h-[1.1em] bg-pink-300 animate-blink flex-shrink-0"></span>
+                <div class="page-container flex flex-col flex-1">
+                  <!-- 인라인 네비게이션 -->
+                  <div class="flex items-center justify-between">
+                    <a href="/" class="font-english font-bold text-pink-300 tracking-widest text-sm select-none">
+                      CHOCOLAT
+                    </a>
+                    <nav class="flex items-center gap-5">
+                      <div class="blog-nav">[##_blog_menu_##]</div>
+                      <button id="hero-search-btn" class="text-gray-400 hover:text-pink-300 transition duration-200" aria-label="검색">
+                        <i class="fa fa-search text-sm"></i>
+                      </button>
+                    </nav>
                   </div>
-                  <!-- 서브 태그라인 -->
-                  <div class="font-ko text-gray-400 text-sm tracking-[0.25em]">
-                    Python · Java · 자율주행 · 프로젝트
+                  <!-- 가운데 텍스트 블록 -->
+                  <div class="flex-1 flex flex-col items-center justify-center text-center gap-5 py-8">
+                    <!-- 타이프라이터 -->
+                    <div class="flex items-center gap-4 select-none">
+                      <span
+                        id="typewriter"
+                        class="font-welcome text-white break-words text-6xl sm:text-7xl md:text-8xl lg:text-9xl"
+                      >
+                        [##_cover_title_##]
+                      </span>
+                      <span class="w-[3px] h-[1.1em] bg-pink-300 animate-blink flex-shrink-0"></span>
+                    </div>
+                    <!-- 서브 태그라인 -->
+                    <div class="font-ko text-gray-400 text-sm tracking-[0.25em]">
+                      Python · Java · 자율주행 · 프로젝트
+                    </div>
                   </div>
                 </div>
               </section>
@@ -240,7 +242,8 @@
 
 
             <s_cover name="cover-featured">
-              <section id="section-featured" class="bg-[#0d0d0d] px-6 py-10">
+              <section id="section-featured" class="bg-[#0d0d0d] py-10">
+                <div class="page-container">
                 <div class="flex gap-8 items-start">
 
                   <!-- 그리드 컬럼 -->
@@ -336,11 +339,13 @@
                   </aside>
 
                 </div>
+                </div>
               </section>
             </s_cover>
 
             <s_cover name="cover-latest">
-              <section id="section-latest" class="bg-[#0d0d0d] px-6 py-8">
+              <section id="section-latest" class="bg-[#0d0d0d] py-8">
+                <div class="page-container">
                 <div class="flex items-center gap-3 mb-5">
                   <span class="font-english text-sm font-bold tracking-widest text-yellow-300">LATEST</span>
                   <div class="flex-1 h-px bg-gray-800"></div>
@@ -378,6 +383,7 @@
                     </li>
                   </s_cover_item>
                 </ul>
+                </div>
               </section>
             </s_cover>
           </s_cover_rep>
