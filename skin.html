@@ -244,90 +244,148 @@
             <!-- TODO(1.14.2025) : Add Custom link -->
             <!-- TODO(3.2.2025) : Make Grid Layout -->
             <s_cover name="cover-grid">
-              <main
-                id="section-recent-contents"
-                class="w-full h-fit min-h-screen flex flex-col justify-center items-center p-5 bg-gradient-to-b from-[#1c1410] to-gray-800 text-gray-200 mb-10"
-              >
-                <div class="text-center py-6">
-                  <div class="font-highlight text-3xl py-2">
-                    [##_cover_title_##]
-                  </div>
-                </div>
-                <div class="w-full h-full flex flex-col lg:flex-row gap-5">
-                  <div class="custom-card w-full lg:w-1/2 grow-1 bg-gray-700">
-                    <a href="/example">
-                      <figure class="w-full h-[500px] lg:h-full flex flex-col">
-                        <div
-                          class="image w-full h-1/3 rounded-t-lg overflow-hidden"
-                        >
+              <div class="flex flex-col lg:flex-row gap-5 p-5 bg-[#0d0d0d]">
+
+                <!-- ── 피드 컬럼 ── -->
+                <div class="flex-1 min-w-0 flex flex-col gap-8">
+
+                  <!-- TOP POSTS 2×2 -->
+                  <section id="section-top-posts">
+                    <div class="flex items-center gap-3 mb-4">
+                      <span class="font-english text-xs font-bold tracking-widest text-yellow-300">TOP POSTS</span>
+                      <div class="flex-1 h-px bg-gray-800"></div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+
+                      <!-- ★ 핀 글 1 — URL·썸네일·카테고리·제목·조회수를 실제 값으로 교체 -->
+                      <a href="/글URL1" class="custom-card bg-gray-800 group overflow-hidden rounded-lg block">
+                        <div class="relative">
                           <img
-                            class="w-full h-full object-cover rounded-t-lg"
+                            class="w-full h-32 object-cover"
                             loading="lazy"
-                            src="//i1.daumcdn.net/thumb/C300x200.fwebp.q85/?fname=https://blog.kakaocdn.net/dn/dtYQSF/btrVEp4iJkg/IEHgmZu5KbqF9ZZKGDhyck/img.png"
+                            src="//i1.daumcdn.net/thumb/C300x200.fwebp.q85/?fname=썸네일URL1"
                             alt=""
                           />
+                          <span class="absolute top-2 right-2 bg-black/70 text-yellow-300 text-xs font-bold px-2 py-0.5 rounded-md">
+                            👁 1.2k
+                          </span>
                         </div>
-                        <div class="text w-full h-2/3">
-                          <div
-                            class="category w-fit font-ko font-bold text-sm rounded-3xl bg-pink-300 p-2 mt-3 ml-5"
-                          >
-                            카테고리
-                          </div>
-                          <div
-                            class="title w-fit h-fit font-highlight font-bold text-3xl p-5 text-yellow-300"
-                          >
-                            예시입니다.
-                          </div>
-                          <div class="desc font-ko text-sm lg:text-lg p-5 text-gray-300">
-                            안녕하세요.
-                          </div>
+                        <div class="p-3">
+                          <span class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2 py-0.5 mb-1">카테고리1</span>
+                          <div class="font-highlight font-bold text-sm text-yellow-300 line-clamp-2">글 제목1</div>
                         </div>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="w-full lg:w-1/2 grow-1">
-                    <ul class="flex flex-col gap-5 text-xl">
+                      </a>
+
+                      <!-- ★ 핀 글 2 -->
+                      <a href="/글URL2" class="custom-card bg-gray-800 group overflow-hidden rounded-lg block">
+                        <div class="relative">
+                          <img
+                            class="w-full h-32 object-cover"
+                            loading="lazy"
+                            src="//i1.daumcdn.net/thumb/C300x200.fwebp.q85/?fname=썸네일URL2"
+                            alt=""
+                          />
+                          <span class="absolute top-2 right-2 bg-black/70 text-yellow-300 text-xs font-bold px-2 py-0.5 rounded-md">
+                            👁 980
+                          </span>
+                        </div>
+                        <div class="p-3">
+                          <span class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2 py-0.5 mb-1">카테고리2</span>
+                          <div class="font-highlight font-bold text-sm text-yellow-300 line-clamp-2">글 제목2</div>
+                        </div>
+                      </a>
+
+                      <!-- ★ 핀 글 3 -->
+                      <a href="/글URL3" class="custom-card bg-gray-800 group overflow-hidden rounded-lg block">
+                        <div class="relative">
+                          <img
+                            class="w-full h-32 object-cover"
+                            loading="lazy"
+                            src="//i1.daumcdn.net/thumb/C300x200.fwebp.q85/?fname=썸네일URL3"
+                            alt=""
+                          />
+                          <span class="absolute top-2 right-2 bg-black/70 text-yellow-300 text-xs font-bold px-2 py-0.5 rounded-md">
+                            👁 741
+                          </span>
+                        </div>
+                        <div class="p-3">
+                          <span class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2 py-0.5 mb-1">카테고리3</span>
+                          <div class="font-highlight font-bold text-sm text-yellow-300 line-clamp-2">글 제목3</div>
+                        </div>
+                      </a>
+
+                      <!-- ★ 핀 글 4 -->
+                      <a href="/글URL4" class="custom-card bg-gray-800 group overflow-hidden rounded-lg block">
+                        <div class="relative">
+                          <img
+                            class="w-full h-32 object-cover"
+                            loading="lazy"
+                            src="//i1.daumcdn.net/thumb/C300x200.fwebp.q85/?fname=썸네일URL4"
+                            alt=""
+                          />
+                          <span class="absolute top-2 right-2 bg-black/70 text-yellow-300 text-xs font-bold px-2 py-0.5 rounded-md">
+                            👁 603
+                          </span>
+                        </div>
+                        <div class="p-3">
+                          <span class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2 py-0.5 mb-1">카테고리4</span>
+                          <div class="font-highlight font-bold text-sm text-yellow-300 line-clamp-2">글 제목4</div>
+                        </div>
+                      </a>
+
+                    </div>
+                  </section>
+
+                  <!-- LATEST 피드 -->
+                  <section id="section-latest">
+                    <div class="flex items-center gap-3 mb-4">
+                      <span class="font-english text-xs font-bold tracking-widest text-yellow-300">LATEST</span>
+                      <div class="flex-1 h-px bg-gray-800"></div>
+                    </div>
+                    <ul class="flex flex-col gap-3">
                       <s_cover_item>
-                        <li class="custom-card custom-card-recent">
+                        <li class="custom-card custom-card-recent hover:bg-gray-700 transition duration-200 rounded-lg overflow-hidden">
                           <a href="[##_cover_item_url_##]">
-                            <figure class="flex">
-                              <div class="text w-full sm:w-3/4 p-2 sm:p-5">
-                                <s_cover_item_article_info>
-                                  <div
-                                    class="category w-fit font-ko font-bold text-sm rounded-3xl bg-pink-300 p-2 mt-3 ml-5"
-                                  >
-                                    [##_cover_item_category_##]
-                                  </div>
-                                </s_cover_item_article_info>
-                                <div
-                                  class="title w-full h-fit font-highlight font-bold text-md sm:text-2xl p-5"
-                                >
-                                  [##_cover_item_title_##]
-                                </div>
-                                <div
-                                  class="desc font-ko text-sm lg:text-md p-5"
-                                >
-                                  [##_cover_item_summary_##]
-                                </div>
-                              </div>
+                            <figure class="flex gap-3 p-3 items-center">
                               <s_cover_item_thumbnail>
-                                <div class="image w-1/4 hidden sm:block">
+                                <div class="flex-shrink-0 w-16 h-16 rounded-md overflow-hidden">
                                   <img
-                                    class="rounded-r-lg w-full h-full object-cover object-center"
+                                    class="w-full h-full object-cover"
                                     loading="lazy"
-                                    src="//i1.daumcdn.net/thumb/C300x300.fwebp.q85/?fname=[##_cover_item_thumbnail_##]"
+                                    src="//i1.daumcdn.net/thumb/C200x200.fwebp.q85/?fname=[##_cover_item_thumbnail_##]"
                                     alt=""
                                   />
                                 </div>
                               </s_cover_item_thumbnail>
+                              <div class="flex-1 min-w-0">
+                                <s_cover_item_article_info>
+                                  <span class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2 py-0.5 mb-1">
+                                    [##_cover_item_category_##]
+                                  </span>
+                                </s_cover_item_article_info>
+                                <div class="font-highlight font-bold text-sm sm:text-base text-yellow-300 line-clamp-2 mb-1">
+                                  [##_cover_item_title_##]
+                                </div>
+                                <div class="font-ko text-xs text-gray-400 line-clamp-1">
+                                  [##_cover_item_summary_##]
+                                </div>
+                              </div>
                             </figure>
                           </a>
                         </li>
                       </s_cover_item>
                     </ul>
-                  </div>
+                  </section>
+
                 </div>
-              </main>
+                <!-- ── 피드 컬럼 끝 ── -->
+
+                <!-- ── 사이드바 (Task 7에서 채움) ── -->
+                <aside id="home-sidebar" class="hidden lg:flex flex-col gap-6 w-64 flex-shrink-0">
+                  <!-- placeholder: Task 7에서 내용 추가 -->
+                </aside>
+
+              </div>
             </s_cover>
           </s_cover_rep>
         </s_cover_group>
