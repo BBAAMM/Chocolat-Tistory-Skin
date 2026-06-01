@@ -13,19 +13,14 @@
   </author>
   <cover>
     <item>
-      <name>cover-slider</name>
-      <label><![CDATA[슬라이더]]></label>
-      <description><![CDATA[히어로 슬라이더 (타이프라이터 애니메이션)]]></description>
-    </item>
-    <item>
-      <name>cover-categories</name>
-      <label><![CDATA[카테고리 그리드]]></label>
-      <description><![CDATA[인기 카테고리를 그리드로 표시]]></description>
+      <name>cover-hero</name>
+      <label><![CDATA[히어로]]></label>
+      <description><![CDATA[하프 히어로 + 인라인 네비게이션]]></description>
     </item>
     <item>
       <name>cover-grid</name>
-      <label><![CDATA[최근 글 목록]]></label>
-      <description><![CDATA[최근 글을 그리드 형태로 표시]]></description>
+      <label><![CDATA[홈 메인]]></label>
+      <description><![CDATA[TOP POSTS 2×2 + LATEST 피드 + 사이드바]]></description>
     </item>
   </cover>
   <default>
