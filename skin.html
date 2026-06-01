@@ -240,143 +240,145 @@
 
 
             <s_cover name="cover-featured">
-              <section id="section-featured" class="bg-[#0d0d0d] px-5 pt-8 pb-2">
-                <div class="flex items-center gap-3 mb-4">
-                  <span class="font-english text-xs font-bold tracking-widest text-yellow-300">FEATURED</span>
-                  <div class="flex-1 h-px bg-gray-800"></div>
-                </div>
-                <div class="grid grid-cols-2 gap-4">
-                  <s_cover_item>
-                    <a href="[##_cover_item_url_##]" class="custom-card bg-gray-800 group overflow-hidden rounded-lg block">
-                      <s_cover_item_thumbnail>
+              <section id="section-featured" class="bg-[#0d0d0d] px-6 py-10">
+                <div class="flex gap-8 items-start">
+
+                  <!-- 그리드 컬럼 -->
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-3 mb-5">
+                      <span class="font-english text-sm font-bold tracking-widest text-yellow-300">FEATURED</span>
+                      <div class="flex-1 h-px bg-gray-800"></div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                      <s_cover_item>
+                        <a href="[##_cover_item_url_##]" class="custom-card bg-gray-800 group overflow-hidden rounded-xl block">
+                          <s_cover_item_thumbnail>
+                            <div class="aspect-square overflow-hidden">
+                              <img
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                                loading="lazy"
+                                src="//i1.daumcdn.net/thumb/C400x400.fwebp.q85/?fname=[##_cover_item_thumbnail_##]"
+                                alt=""
+                              />
+                            </div>
+                          </s_cover_item_thumbnail>
+                          <div class="p-4">
+                            <s_cover_item_article_info>
+                              <span class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2.5 py-0.5 mb-2">
+                                [##_cover_item_category_##]
+                              </span>
+                            </s_cover_item_article_info>
+                            <div class="font-highlight font-bold text-base text-yellow-300 line-clamp-2">
+                              [##_cover_item_title_##]
+                            </div>
+                          </div>
+                        </a>
+                      </s_cover_item>
+                    </div>
+                  </div>
+
+                  <!-- 사이드바 -->
+                  <aside id="home-sidebar" class="hidden lg:flex flex-col gap-5 w-72 flex-shrink-0">
+
+                    <!-- 프로필 카드 -->
+                    <div class="bg-gray-800 rounded-xl p-6 flex flex-col items-center gap-3 text-center border border-gray-700">
+                      <div class="w-20 h-20 rounded-full overflow-hidden bg-gradient-to-br from-pink-300 to-yellow-300 flex-shrink-0">
                         <img
-                          class="w-full h-40 object-cover"
-                          loading="lazy"
-                          src="//i1.daumcdn.net/thumb/C300x200.fwebp.q85/?fname=[##_cover_item_thumbnail_##]"
-                          alt=""
+                          src="https://github.com/BBAAMM.png"
+                          alt="프로필"
+                          class="w-full h-full object-cover"
+                          onerror="this.parentElement.innerHTML='<span style=\'font-size:2rem\'>🍫</span>'"
                         />
-                      </s_cover_item_thumbnail>
-                      <div class="p-3">
-                        <s_cover_item_article_info>
-                          <span class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2 py-0.5 mb-1">
-                            [##_cover_item_category_##]
-                          </span>
-                        </s_cover_item_article_info>
-                        <div class="font-highlight font-bold text-sm text-yellow-300 line-clamp-2">
-                          [##_cover_item_title_##]
+                      </div>
+                      <div>
+                        <div class="font-highlight font-bold text-gray-200 text-base">김승범</div>
+                        <div class="font-ko text-gray-400 text-sm mt-1 leading-relaxed">
+                          개발 시행착오와 프로젝트를 기록합니다
                         </div>
                       </div>
-                    </a>
-                  </s_cover_item>
+                      <div class="flex gap-3">
+                        <a
+                          href="https://github.com/BBAAMM"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="text-gray-400 hover:text-pink-300 transition duration-200"
+                          aria-label="GitHub"
+                        >
+                          <i class="fa-brands fa-github text-xl"></i>
+                        </a>
+                        <a
+                          href="mailto:developer.ksb@gmail.com"
+                          class="text-gray-400 hover:text-pink-300 transition duration-200"
+                          aria-label="이메일"
+                        >
+                          <i class="fa fa-envelope text-xl"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- s_sidebar 위젯 -->
+                    <s_sidebar>
+                      <s_sidebar_element>
+                        <div class="bg-gray-800 rounded-xl p-5 border border-gray-700 sidebar-widget" data-type="[##_sidebar_element_type_##]">
+                          <div class="flex items-center gap-3 mb-4">
+                            <span class="font-english text-xs font-bold tracking-widest text-yellow-300 uppercase">
+                              [##_sidebar_element_title_##]
+                            </span>
+                            <div class="flex-1 h-px bg-gray-700"></div>
+                          </div>
+                          <div class="sidebar-widget-body">
+                            [##_sidebar_element_content_##]
+                          </div>
+                        </div>
+                      </s_sidebar_element>
+                    </s_sidebar>
+
+                  </aside>
+
                 </div>
               </section>
             </s_cover>
 
             <s_cover name="cover-latest">
-              <div class="flex flex-col lg:flex-row gap-5 p-5 bg-[#0d0d0d]">
-
-                <!-- ── 피드 컬럼 ── -->
-                <div class="flex-1 min-w-0 flex flex-col gap-4">
-                  <div class="flex items-center gap-3 mb-1">
-                    <span class="font-english text-xs font-bold tracking-widest text-yellow-300">LATEST</span>
-                    <div class="flex-1 h-px bg-gray-800"></div>
-                  </div>
-                  <ul class="flex flex-col gap-3">
-                    <s_cover_item>
-                      <li class="custom-card custom-card-recent hover:bg-gray-700 transition duration-200 rounded-lg overflow-hidden">
-                        <a href="[##_cover_item_url_##]">
-                          <figure class="flex gap-4 p-4 items-center">
-                            <s_cover_item_thumbnail>
-                              <div class="flex-shrink-0 w-24 h-24 rounded-lg overflow-hidden">
-                                <img
-                                  class="w-full h-full object-cover"
-                                  loading="lazy"
-                                  src="//i1.daumcdn.net/thumb/C240x240.fwebp.q85/?fname=[##_cover_item_thumbnail_##]"
-                                  alt=""
-                                />
-                              </div>
-                            </s_cover_item_thumbnail>
-                            <div class="flex-1 min-w-0">
-                              <s_cover_item_article_info>
-                                <span class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2 py-0.5 mb-1">
-                                  [##_cover_item_category_##]
-                                </span>
-                              </s_cover_item_article_info>
-                              <div class="font-highlight font-bold text-sm sm:text-base text-yellow-300 line-clamp-2 mb-1">
-                                [##_cover_item_title_##]
-                              </div>
-                              <div class="font-ko text-xs text-gray-400 line-clamp-1">
-                                [##_cover_item_summary_##]
-                              </div>
-                            </div>
-                          </figure>
-                        </a>
-                      </li>
-                    </s_cover_item>
-                  </ul>
+              <section id="section-latest" class="bg-[#0d0d0d] px-6 py-8">
+                <div class="flex items-center gap-3 mb-5">
+                  <span class="font-english text-sm font-bold tracking-widest text-yellow-300">LATEST</span>
+                  <div class="flex-1 h-px bg-gray-800"></div>
                 </div>
-                <!-- ── 피드 컬럼 끝 ── -->
-
-                <!-- ── 사이드바 ── -->
-                <aside id="home-sidebar" class="hidden lg:flex flex-col gap-6 w-64 flex-shrink-0">
-
-                  <!-- 프로필 카드 (커스텀 고정) -->
-                  <div class="bg-gray-800 rounded-xl p-5 flex flex-col items-center gap-3 text-center border border-gray-700">
-                    <div class="w-16 h-16 rounded-full overflow-hidden bg-gradient-to-br from-pink-300 to-yellow-300 flex-shrink-0">
-                      <img
-                        src="https://github.com/BBAAMM.png"
-                        alt="프로필"
-                        class="w-full h-full object-cover"
-                        onerror="this.parentElement.innerHTML='<span style=\'font-size:2rem\'>🍫</span>'"
-                      />
-                    </div>
-                    <div>
-                      <div class="font-highlight font-bold text-gray-200 text-sm">김승범</div>
-                      <div class="font-ko text-gray-400 text-xs mt-1 leading-relaxed">
-                        개발 시행착오와 프로젝트를 기록합니다
-                      </div>
-                    </div>
-                    <div class="flex gap-3">
-                      <a
-                        href="https://github.com/BBAAMM"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-gray-400 hover:text-pink-300 transition duration-200"
-                        aria-label="GitHub"
-                      >
-                        <i class="fa-brands fa-github text-lg"></i>
+                <ul class="flex flex-col gap-4">
+                  <s_cover_item>
+                    <li class="custom-card custom-card-recent hover:bg-gray-700 transition duration-200 rounded-xl overflow-hidden">
+                      <a href="[##_cover_item_url_##]">
+                        <figure class="flex gap-5 p-5 items-center">
+                          <s_cover_item_thumbnail>
+                            <div class="flex-shrink-0 w-28 h-28 rounded-lg overflow-hidden">
+                              <img
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                                src="//i1.daumcdn.net/thumb/C280x280.fwebp.q85/?fname=[##_cover_item_thumbnail_##]"
+                                alt=""
+                              />
+                            </div>
+                          </s_cover_item_thumbnail>
+                          <div class="flex-1 min-w-0">
+                            <s_cover_item_article_info>
+                              <span class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2.5 py-0.5 mb-2">
+                                [##_cover_item_category_##]
+                              </span>
+                            </s_cover_item_article_info>
+                            <div class="font-highlight font-bold text-base sm:text-lg text-yellow-300 line-clamp-2 mb-1.5">
+                              [##_cover_item_title_##]
+                            </div>
+                            <div class="font-ko text-sm text-gray-400 line-clamp-2">
+                              [##_cover_item_summary_##]
+                            </div>
+                          </div>
+                        </figure>
                       </a>
-                      <a
-                        href="mailto:developer.ksb@gmail.com"
-                        class="text-gray-400 hover:text-pink-300 transition duration-200"
-                        aria-label="이메일"
-                      >
-                        <i class="fa fa-envelope text-lg"></i>
-                      </a>
-                    </div>
-                  </div>
-
-                  <!-- s_sidebar 위젯 -->
-                  <s_sidebar>
-                    <s_sidebar_element>
-                      <div class="sidebar-widget" data-type="[##_sidebar_element_type_##]">
-                        <div class="flex items-center gap-3 mb-3">
-                          <span class="font-english text-xs font-bold tracking-widest text-yellow-300 uppercase">
-                            [##_sidebar_element_title_##]
-                          </span>
-                          <div class="flex-1 h-px bg-gray-800"></div>
-                        </div>
-                        <div class="sidebar-widget-body">
-                          [##_sidebar_element_content_##]
-                        </div>
-                      </div>
-                    </s_sidebar_element>
-                  </s_sidebar>
-
-                </aside>
-                <!-- ── 사이드바 끝 ── -->
-
-              </div>
+                    </li>
+                  </s_cover_item>
+                </ul>
+              </section>
             </s_cover>
           </s_cover_rep>
         </s_cover_group>

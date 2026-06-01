@@ -159,9 +159,7 @@
   }
 
   /* s_sidebar 위젯 공통 */
-  .sidebar-widget {
-    @apply mb-2;
-  }
+  .sidebar-widget {}
   .sidebar-widget-body ul {
     display: flex;
     flex-direction: column;
