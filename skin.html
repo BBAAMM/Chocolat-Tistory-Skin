@@ -168,9 +168,7 @@
     >
       <a href="/" class="font-english font-bold text-pink-300 tracking-widest text-sm">CHOCOLAT</a>
       <div class="flex items-center gap-5">
-        <a href="/" class="font-ko text-gray-400 hover:text-gray-200 text-sm transition duration-200">홈</a>
-        <a href="/category" class="font-ko text-gray-400 hover:text-gray-200 text-sm transition duration-200">카테고리</a>
-        <a href="/tag" class="font-ko text-gray-400 hover:text-gray-200 text-sm transition duration-200">태그</a>
+        <div class="blog-nav">[##_blog_menu_##]</div>
         <button id="sticky-search-btn" class="text-gray-400 hover:text-pink-300 transition duration-200" aria-label="검색">
           <i class="fa fa-search text-sm"></i>
         </button>
@@ -206,7 +204,7 @@
             <s_cover name="cover-hero">
               <section
                 id="hero-section"
-                class="relative w-full h-[50vh] flex flex-col justify-between p-5 bg-gradient-to-b from-gray-800 to-black"
+                class="relative w-full min-h-[62vh] flex flex-col p-6 bg-gradient-to-b from-gray-800 to-[#0d0d0d]"
               >
                 <!-- 인라인 네비게이션 -->
                 <div class="flex items-center justify-between">
@@ -214,176 +212,115 @@
                     CHOCOLAT
                   </a>
                   <nav class="flex items-center gap-5">
-                    <a href="/" class="font-ko text-gray-400 hover:text-gray-200 text-sm transition duration-200">홈</a>
-                    <a href="/category" class="font-ko text-gray-400 hover:text-gray-200 text-sm transition duration-200">카테고리</a>
-                    <a href="/tag" class="font-ko text-gray-400 hover:text-gray-200 text-sm transition duration-200">태그</a>
+                    <div class="blog-nav">[##_blog_menu_##]</div>
                     <button id="hero-search-btn" class="text-gray-400 hover:text-pink-300 transition duration-200" aria-label="검색">
                       <i class="fa fa-search text-sm"></i>
                     </button>
                   </nav>
                 </div>
-                <!-- 타이프라이터 -->
-                <div class="flex items-center gap-4 select-none">
-                  <span
-                    id="typewriter"
-                    class="font-welcome text-white break-words text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
-                  >
-                    [##_cover_title_##]
-                  </span>
-                  <span class="w-[2.5px] h-[1.1em] bg-pink-300 animate-blink flex-shrink-0"></span>
-                </div>
-                <!-- 서브 태그라인 -->
-                <div class="font-ko text-gray-500 text-sm tracking-wider">
-                  Python · Java · 자율주행 · 프로젝트
+                <!-- 가운데 텍스트 블록 -->
+                <div class="flex-1 flex flex-col items-center justify-center text-center gap-5 py-8">
+                  <!-- 타이프라이터 -->
+                  <div class="flex items-center gap-4 select-none">
+                    <span
+                      id="typewriter"
+                      class="font-welcome text-white break-words text-6xl sm:text-7xl md:text-8xl lg:text-9xl"
+                    >
+                      [##_cover_title_##]
+                    </span>
+                    <span class="w-[3px] h-[1.1em] bg-pink-300 animate-blink flex-shrink-0"></span>
+                  </div>
+                  <!-- 서브 태그라인 -->
+                  <div class="font-ko text-gray-400 text-sm tracking-[0.25em]">
+                    Python · Java · 자율주행 · 프로젝트
+                  </div>
                 </div>
               </section>
             </s_cover>
 
 
-            <!-- Recent Posts Section(main)[90%] -->
-            <!-- TODO(1.14.2025) : Add Custom link -->
-            <!-- TODO(3.2.2025) : Make Grid Layout -->
-            <s_cover name="cover-grid">
+            <s_cover name="cover-featured">
+              <section id="section-featured" class="bg-[#0d0d0d] px-5 pt-8 pb-2">
+                <div class="flex items-center gap-3 mb-4">
+                  <span class="font-english text-xs font-bold tracking-widest text-yellow-300">FEATURED</span>
+                  <div class="flex-1 h-px bg-gray-800"></div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                  <s_cover_item>
+                    <a href="[##_cover_item_url_##]" class="custom-card bg-gray-800 group overflow-hidden rounded-lg block">
+                      <s_cover_item_thumbnail>
+                        <img
+                          class="w-full h-40 object-cover"
+                          loading="lazy"
+                          src="//i1.daumcdn.net/thumb/C300x200.fwebp.q85/?fname=[##_cover_item_thumbnail_##]"
+                          alt=""
+                        />
+                      </s_cover_item_thumbnail>
+                      <div class="p-3">
+                        <s_cover_item_article_info>
+                          <span class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2 py-0.5 mb-1">
+                            [##_cover_item_category_##]
+                          </span>
+                        </s_cover_item_article_info>
+                        <div class="font-highlight font-bold text-sm text-yellow-300 line-clamp-2">
+                          [##_cover_item_title_##]
+                        </div>
+                      </div>
+                    </a>
+                  </s_cover_item>
+                </div>
+              </section>
+            </s_cover>
+
+            <s_cover name="cover-latest">
               <div class="flex flex-col lg:flex-row gap-5 p-5 bg-[#0d0d0d]">
 
                 <!-- ── 피드 컬럼 ── -->
-                <div class="flex-1 min-w-0 flex flex-col gap-8">
-
-                  <!-- TOP POSTS 2×2 -->
-                  <section id="section-top-posts">
-                    <div class="flex items-center gap-3 mb-4">
-                      <span class="font-english text-xs font-bold tracking-widest text-yellow-300">TOP POSTS</span>
-                      <div class="flex-1 h-px bg-gray-800"></div>
-                    </div>
-                    <div class="grid grid-cols-2 gap-4">
-
-                      <!-- ★ 핀 글 1 — URL·썸네일·카테고리·제목·조회수를 실제 값으로 교체 -->
-                      <a href="/글URL1" class="custom-card bg-gray-800 group overflow-hidden rounded-lg block">
-                        <div class="relative">
-                          <img
-                            class="w-full h-32 object-cover"
-                            loading="lazy"
-                            src="//i1.daumcdn.net/thumb/C300x200.fwebp.q85/?fname=썸네일URL1"
-                            alt=""
-                          />
-                          <span class="absolute top-2 right-2 bg-black/70 text-yellow-300 text-xs font-bold px-2 py-0.5 rounded-md">
-                            👁 1.2k
-                          </span>
-                        </div>
-                        <div class="p-3">
-                          <span class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2 py-0.5 mb-1">카테고리1</span>
-                          <div class="font-highlight font-bold text-sm text-yellow-300 line-clamp-2">글 제목1</div>
-                        </div>
-                      </a>
-
-                      <!-- ★ 핀 글 2 -->
-                      <a href="/글URL2" class="custom-card bg-gray-800 group overflow-hidden rounded-lg block">
-                        <div class="relative">
-                          <img
-                            class="w-full h-32 object-cover"
-                            loading="lazy"
-                            src="//i1.daumcdn.net/thumb/C300x200.fwebp.q85/?fname=썸네일URL2"
-                            alt=""
-                          />
-                          <span class="absolute top-2 right-2 bg-black/70 text-yellow-300 text-xs font-bold px-2 py-0.5 rounded-md">
-                            👁 980
-                          </span>
-                        </div>
-                        <div class="p-3">
-                          <span class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2 py-0.5 mb-1">카테고리2</span>
-                          <div class="font-highlight font-bold text-sm text-yellow-300 line-clamp-2">글 제목2</div>
-                        </div>
-                      </a>
-
-                      <!-- ★ 핀 글 3 -->
-                      <a href="/글URL3" class="custom-card bg-gray-800 group overflow-hidden rounded-lg block">
-                        <div class="relative">
-                          <img
-                            class="w-full h-32 object-cover"
-                            loading="lazy"
-                            src="//i1.daumcdn.net/thumb/C300x200.fwebp.q85/?fname=썸네일URL3"
-                            alt=""
-                          />
-                          <span class="absolute top-2 right-2 bg-black/70 text-yellow-300 text-xs font-bold px-2 py-0.5 rounded-md">
-                            👁 741
-                          </span>
-                        </div>
-                        <div class="p-3">
-                          <span class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2 py-0.5 mb-1">카테고리3</span>
-                          <div class="font-highlight font-bold text-sm text-yellow-300 line-clamp-2">글 제목3</div>
-                        </div>
-                      </a>
-
-                      <!-- ★ 핀 글 4 -->
-                      <a href="/글URL4" class="custom-card bg-gray-800 group overflow-hidden rounded-lg block">
-                        <div class="relative">
-                          <img
-                            class="w-full h-32 object-cover"
-                            loading="lazy"
-                            src="//i1.daumcdn.net/thumb/C300x200.fwebp.q85/?fname=썸네일URL4"
-                            alt=""
-                          />
-                          <span class="absolute top-2 right-2 bg-black/70 text-yellow-300 text-xs font-bold px-2 py-0.5 rounded-md">
-                            👁 603
-                          </span>
-                        </div>
-                        <div class="p-3">
-                          <span class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2 py-0.5 mb-1">카테고리4</span>
-                          <div class="font-highlight font-bold text-sm text-yellow-300 line-clamp-2">글 제목4</div>
-                        </div>
-                      </a>
-
-                    </div>
-                  </section>
-
-                  <!-- LATEST 피드 -->
-                  <section id="section-latest">
-                    <div class="flex items-center gap-3 mb-4">
-                      <span class="font-english text-xs font-bold tracking-widest text-yellow-300">LATEST</span>
-                      <div class="flex-1 h-px bg-gray-800"></div>
-                    </div>
-                    <ul class="flex flex-col gap-3">
-                      <s_cover_item>
-                        <li class="custom-card custom-card-recent hover:bg-gray-700 transition duration-200 rounded-lg overflow-hidden">
-                          <a href="[##_cover_item_url_##]">
-                            <figure class="flex gap-3 p-3 items-center">
-                              <s_cover_item_thumbnail>
-                                <div class="flex-shrink-0 w-16 h-16 rounded-md overflow-hidden">
-                                  <img
-                                    class="w-full h-full object-cover"
-                                    loading="lazy"
-                                    src="//i1.daumcdn.net/thumb/C200x200.fwebp.q85/?fname=[##_cover_item_thumbnail_##]"
-                                    alt=""
-                                  />
-                                </div>
-                              </s_cover_item_thumbnail>
-                              <div class="flex-1 min-w-0">
-                                <s_cover_item_article_info>
-                                  <span class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2 py-0.5 mb-1">
-                                    [##_cover_item_category_##]
-                                  </span>
-                                </s_cover_item_article_info>
-                                <div class="font-highlight font-bold text-sm sm:text-base text-yellow-300 line-clamp-2 mb-1">
-                                  [##_cover_item_title_##]
-                                </div>
-                                <div class="font-ko text-xs text-gray-400 line-clamp-1">
-                                  [##_cover_item_summary_##]
-                                </div>
+                <div class="flex-1 min-w-0 flex flex-col gap-4">
+                  <div class="flex items-center gap-3 mb-1">
+                    <span class="font-english text-xs font-bold tracking-widest text-yellow-300">LATEST</span>
+                    <div class="flex-1 h-px bg-gray-800"></div>
+                  </div>
+                  <ul class="flex flex-col gap-3">
+                    <s_cover_item>
+                      <li class="custom-card custom-card-recent hover:bg-gray-700 transition duration-200 rounded-lg overflow-hidden">
+                        <a href="[##_cover_item_url_##]">
+                          <figure class="flex gap-4 p-4 items-center">
+                            <s_cover_item_thumbnail>
+                              <div class="flex-shrink-0 w-24 h-24 rounded-lg overflow-hidden">
+                                <img
+                                  class="w-full h-full object-cover"
+                                  loading="lazy"
+                                  src="//i1.daumcdn.net/thumb/C240x240.fwebp.q85/?fname=[##_cover_item_thumbnail_##]"
+                                  alt=""
+                                />
                               </div>
-                            </figure>
-                          </a>
-                        </li>
-                      </s_cover_item>
-                    </ul>
-                  </section>
-
+                            </s_cover_item_thumbnail>
+                            <div class="flex-1 min-w-0">
+                              <s_cover_item_article_info>
+                                <span class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2 py-0.5 mb-1">
+                                  [##_cover_item_category_##]
+                                </span>
+                              </s_cover_item_article_info>
+                              <div class="font-highlight font-bold text-sm sm:text-base text-yellow-300 line-clamp-2 mb-1">
+                                [##_cover_item_title_##]
+                              </div>
+                              <div class="font-ko text-xs text-gray-400 line-clamp-1">
+                                [##_cover_item_summary_##]
+                              </div>
+                            </div>
+                          </figure>
+                        </a>
+                      </li>
+                    </s_cover_item>
+                  </ul>
                 </div>
                 <!-- ── 피드 컬럼 끝 ── -->
 
-                <!-- ── 사이드바 (Task 7에서 채움) ── -->
+                <!-- ── 사이드바 ── -->
                 <aside id="home-sidebar" class="hidden lg:flex flex-col gap-6 w-64 flex-shrink-0">
 
-                  <!-- 프로필 카드 -->
+                  <!-- 프로필 카드 (커스텀 고정) -->
                   <div class="bg-gray-800 rounded-xl p-5 flex flex-col items-center gap-3 text-center border border-gray-700">
                     <div class="w-16 h-16 rounded-full overflow-hidden bg-gradient-to-br from-pink-300 to-yellow-300 flex-shrink-0">
                       <img
@@ -419,62 +356,25 @@
                     </div>
                   </div>
 
-                  <!-- 카테고리 (하드코딩) -->
-                  <div>
-                    <div class="flex items-center gap-3 mb-3">
-                      <span class="font-english text-xs font-bold tracking-widest text-yellow-300">CATEGORIES</span>
-                      <div class="flex-1 h-px bg-gray-800"></div>
-                    </div>
-                    <ul class="flex flex-col gap-1">
-                      <li>
-                        <a href="/category/팀%20프로젝트" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-800 text-gray-300 hover:text-gray-100 transition duration-200">
-                          <span class="w-2 h-2 rounded-full bg-pink-300 flex-shrink-0"></span>
-                          <span class="font-ko text-sm flex-1">팀 프로젝트</span>
-                          <span class="text-gray-600 text-xs">12</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/category/팀%20프로젝트/자율주행%20개발%28baqu4%29" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-800 text-gray-300 hover:text-gray-100 transition duration-200">
-                          <span class="w-2 h-2 rounded-full bg-yellow-300 flex-shrink-0"></span>
-                          <span class="font-ko text-sm flex-1">자율주행 개발</span>
-                          <span class="text-gray-600 text-xs">8</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/category/Python" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-800 text-gray-300 hover:text-gray-100 transition duration-200">
-                          <span class="w-2 h-2 rounded-full bg-gray-400 flex-shrink-0"></span>
-                          <span class="font-ko text-sm flex-1">Python</span>
-                          <span class="text-gray-600 text-xs">15</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/category/Java" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-800 text-gray-300 hover:text-gray-100 transition duration-200">
-                          <span class="w-2 h-2 rounded-full bg-gray-400 flex-shrink-0"></span>
-                          <span class="font-ko text-sm flex-1">Java</span>
-                          <span class="text-gray-600 text-xs">6</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <!-- 태그 (하드코딩) -->
-                  <div>
-                    <div class="flex items-center gap-3 mb-3">
-                      <span class="font-english text-xs font-bold tracking-widest text-yellow-300">TAGS</span>
-                      <div class="flex-1 h-px bg-gray-800"></div>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                      <a href="/tag/Python" class="border border-gray-700 rounded-lg px-2 py-0.5 text-xs text-gray-400 hover:text-yellow-300 hover:border-yellow-300 transition duration-200">#Python</a>
-                      <a href="/tag/자율주행" class="border border-gray-700 rounded-lg px-2 py-0.5 text-xs text-gray-400 hover:text-pink-300 hover:border-pink-300 transition duration-200">#자율주행</a>
-                      <a href="/tag/Java" class="border border-gray-700 rounded-lg px-2 py-0.5 text-xs text-gray-400 hover:text-gray-200 hover:border-gray-500 transition duration-200">#Java</a>
-                      <a href="/tag/딥러닝" class="border border-gray-700 rounded-lg px-2 py-0.5 text-xs text-gray-400 hover:text-yellow-300 hover:border-yellow-300 transition duration-200">#딥러닝</a>
-                      <a href="/tag/프로젝트" class="border border-gray-700 rounded-lg px-2 py-0.5 text-xs text-gray-400 hover:text-pink-300 hover:border-pink-300 transition duration-200">#프로젝트</a>
-                      <a href="/tag/MBTI" class="border border-gray-700 rounded-lg px-2 py-0.5 text-xs text-gray-400 hover:text-gray-200 hover:border-gray-500 transition duration-200">#MBTI</a>
-                      <a href="/tag/알고리즘" class="border border-gray-700 rounded-lg px-2 py-0.5 text-xs text-gray-400 hover:text-gray-200 hover:border-gray-500 transition duration-200">#알고리즘</a>
-                    </div>
-                  </div>
+                  <!-- s_sidebar 위젯 -->
+                  <s_sidebar>
+                    <s_sidebar_element>
+                      <div class="sidebar-widget" data-type="[##_sidebar_element_type_##]">
+                        <div class="flex items-center gap-3 mb-3">
+                          <span class="font-english text-xs font-bold tracking-widest text-yellow-300 uppercase">
+                            [##_sidebar_element_title_##]
+                          </span>
+                          <div class="flex-1 h-px bg-gray-800"></div>
+                        </div>
+                        <div class="sidebar-widget-body">
+                          [##_sidebar_element_content_##]
+                        </div>
+                      </div>
+                    </s_sidebar_element>
+                  </s_sidebar>
 
                 </aside>
+                <!-- ── 사이드바 끝 ── -->
 
               </div>
             </s_cover>
@@ -801,42 +701,15 @@
                 <!-- 필터 사이드바 (홈 사이드바와 동일 컴포넌트, 프로필 제외) -->
                 <aside class="hidden lg:flex flex-col gap-6 w-64 flex-shrink-0">
 
-                  <!-- 카테고리 필터 -->
+                  <!-- 카테고리 필터 ([##_blog_menu_##]) -->
                   <div>
                     <div class="flex items-center gap-3 mb-3">
                       <span class="font-english text-xs font-bold tracking-widest text-yellow-300">CATEGORIES</span>
                       <div class="flex-1 h-px bg-gray-800"></div>
                     </div>
-                    <ul class="flex flex-col gap-1">
-                      <li>
-                        <a href="/category/팀%20프로젝트" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-800 text-gray-300 hover:text-gray-100 transition duration-200">
-                          <span class="w-2 h-2 rounded-full bg-pink-300 flex-shrink-0"></span>
-                          <span class="font-ko text-sm flex-1">팀 프로젝트</span>
-                          <span class="text-gray-600 text-xs">12</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/category/팀%20프로젝트/자율주행%20개발%28baqu4%29" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-800 text-gray-300 hover:text-gray-100 transition duration-200">
-                          <span class="w-2 h-2 rounded-full bg-yellow-300 flex-shrink-0"></span>
-                          <span class="font-ko text-sm flex-1">자율주행 개발</span>
-                          <span class="text-gray-600 text-xs">8</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/category/Python" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-800 text-gray-300 hover:text-gray-100 transition duration-200">
-                          <span class="w-2 h-2 rounded-full bg-gray-400 flex-shrink-0"></span>
-                          <span class="font-ko text-sm flex-1">Python</span>
-                          <span class="text-gray-600 text-xs">15</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/category/Java" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-800 text-gray-300 hover:text-gray-100 transition duration-200">
-                          <span class="w-2 h-2 rounded-full bg-gray-400 flex-shrink-0"></span>
-                          <span class="font-ko text-sm flex-1">Java</span>
-                          <span class="text-gray-600 text-xs">6</span>
-                        </a>
-                      </li>
-                    </ul>
+                    <div class="sidebar-menu">
+                      [##_blog_menu_##]
+                    </div>
                   </div>
 
                   <!-- 태그 필터 -->
