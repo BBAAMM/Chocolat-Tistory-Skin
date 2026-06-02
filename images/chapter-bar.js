@@ -14,6 +14,17 @@
     var chapters = heads.filter(function (h) { return h.tagName === "H2"; });
     if (chapters.length === 0) { bar.remove(); return; }
 
+    // normalize headings: strip any leading markdown "#" so titles are consistent,
+    // whether the author wrote "# 제목" or just "제목".
+    function stripHash(node) {
+      if (!node) return;
+      var t = node.firstChild;
+      if (t && t.nodeType === 3) t.nodeValue = t.nodeValue.replace(/^\s*#+\s*/, "");
+    }
+    var titleH1 = document.querySelector("main h1");
+    stripHash(titleH1);
+    heads.forEach(stripHash);
+
     // stable ids
     var seen = {};
     heads.forEach(function (h) {
@@ -30,9 +41,16 @@
     var segs = chapters.map(function (h, i) {
       return '<button class="cb-seg" data-i="' + i + '" title="' + esc(h.textContent.trim()) + '"><span class="cb-seg-fill"></span></button>';
     }).join("");
+    // build a consistently-numbered table of contents: h2 -> 1,2,3 ; h3 -> 1.1,1.2
+    var chapNo = 0, subNo = 0;
     var menu = heads.map(function (h) {
       var sub = h.tagName === "H3";
-      return '<a href="#' + h.id + '" class="cb-menu-link' + (sub ? " sub" : "") + '" data-id="' + h.id + '">' + esc(h.textContent.trim()) + "</a>";
+      var num;
+      if (sub) { subNo++; num = chapNo + "." + subNo; }
+      else { chapNo++; subNo = 0; num = String(chapNo); }
+      return '<a href="#' + h.id + '" class="cb-menu-link' + (sub ? " sub" : "") + '" data-id="' + h.id + '">' +
+        '<span class="cb-menu-num">' + num + '</span>' +
+        '<span class="cb-menu-txt">' + esc(h.textContent.trim()) + '</span></a>';
     }).join("");
 
     bar.innerHTML =
@@ -46,14 +64,12 @@
         '<div class="cb-segs">' + segs + "</div>" +
         '<span class="cb-pct">0%</span>' +
       "</div>" +
-      '<div class="cb-progress"><span></span></div>' +
       '<div class="cb-menu">' + menu + "</div>";
     bar.hidden = false;
 
     var nowIdx = bar.querySelector(".cb-now-idx");
     var nowTitle = bar.querySelector(".cb-now-title");
     var pctEl = bar.querySelector(".cb-pct");
-    var lineEl = bar.querySelector(".cb-progress > span");
     var segEls = Array.prototype.slice.call(bar.querySelectorAll(".cb-seg"));
     var nowBtn = bar.querySelector(".cb-now");
     var menuEl = bar.querySelector(".cb-menu");
@@ -70,7 +86,6 @@
       p = Math.max(0, Math.min(1, p));
       var pct = Math.round(p * 100);
       pctEl.textContent = pct + "%";
-      lineEl.style.width = pct + "%";
 
       var probe = window.scrollY + 150;
       var ct = chapterTops();

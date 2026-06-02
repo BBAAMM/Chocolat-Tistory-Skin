@@ -2,8 +2,8 @@
 <skin>
   <information>
     <name>Chocolat</name>
-    <version>2.0.0</version>
-    <description><![CDATA[Dark Minimal × Warm Accent — 개발 기술 블로그 스킨 (리디자인)]]></description>
+    <version>2.1.0</version>
+    <description><![CDATA[Dark Minimal × Warm Accent — 개발 기술 블로그 스킨 (리디자인 · 태그/방명록/스킨옵션 포함)]]></description>
     <license><![CDATA[MIT]]></license>
   </information>
   <author>
@@ -33,11 +33,249 @@
       <description><![CDATA[브랜드·소셜·메뉴·저작권 푸터 (홈 최하단 배치 권장)]]></description>
     </item>
   </cover>
+
+  <!-- ════════════════════════════════════════════════════════════
+       스킨 옵션 (variables)
+       티스토리 [꾸미기 › 스킨편집 › 사이드바 옵션] 패널과
+       미리보기의 "스킨 편집" 탭에서 동일하게 노출/편집됩니다.
+       HTML 안에서는 [##_var_옵션이름_##] 으로 사용합니다.
+       ════════════════════════════════════════════════════════════ -->
+  <variables>
+    <!-- 블로그 정보 -->
+    <variablegroup name="블로그 정보">
+      <variable>
+        <name>brandName</name>
+        <label><![CDATA[브랜드명 (로고·푸터)]]></label>
+        <description><![CDATA[로고와 푸터에 표시되는 브랜드 이름입니다.]]></description>
+        <type>STRING</type>
+        <default><![CDATA[CHOCOLAT]]></default>
+      </variable>
+      <variable>
+        <name>blogger</name>
+        <label><![CDATA[블로거 이름]]></label>
+        <type>STRING</type>
+        <default><![CDATA[김승범]]></default>
+      </variable>
+      <variable>
+        <name>eyebrow</name>
+        <label><![CDATA[히어로 아이라벨]]></label>
+        <description><![CDATA[히어로 영역 상단의 작은 라벨 문구입니다.]]></description>
+        <type>STRING</type>
+        <default><![CDATA[Developer Notes]]></default>
+      </variable>
+      <variable>
+        <name>description</name>
+        <label><![CDATA[블로그 설명]]></label>
+        <type>STRING</type>
+        <default><![CDATA[삽질도 자산이 된다고 믿으며, 개발하며 만난 시행착오와 프로젝트를 차곡차곡 적어둡니다.]]></default>
+      </variable>
+      <variable>
+        <name>profileBio</name>
+        <label><![CDATA[프로필 한 줄 소개]]></label>
+        <type>STRING</type>
+        <default><![CDATA[개발 시행착오와 프로젝트를 기록합니다.]]></default>
+      </variable>
+    </variablegroup>
+
+    <!-- 히어로 타이프라이터 문구 -->
+    <variablegroup name="히어로 문구">
+      <variable>
+        <name>heroPhrase1</name>
+        <label><![CDATA[히어로 문구 1]]></label>
+        <description><![CDATA[타이프라이터 애니메이션에 순환 표시되는 문구입니다.]]></description>
+        <type>STRING</type>
+        <default><![CDATA[안녕, 세계]]></default>
+      </variable>
+      <variable>
+        <name>heroPhrase2</name>
+        <label><![CDATA[히어로 문구 2]]></label>
+        <type>STRING</type>
+        <default><![CDATA[Code, 자람]]></default>
+      </variable>
+      <variable>
+        <name>heroPhrase3</name>
+        <label><![CDATA[히어로 문구 3]]></label>
+        <type>STRING</type>
+        <default><![CDATA[기록하는 개발자]]></default>
+      </variable>
+    </variablegroup>
+
+    <!-- 포인트 색상 (스킨 편집 화면의 스와치 팔레트와 동일하게 선택) -->
+    <variablegroup name="포인트 색상">
+      <variable>
+        <name>colorPink</name>
+        <label><![CDATA[포인트 색상 1 (핑크 계열)]]></label>
+        <description><![CDATA[히어로·버튼 등 주요 포인트 색상입니다.]]></description>
+        <type>SELECT</type>
+        <option><![CDATA[
+  [
+    {"name":"f9a8d4", "label":"연핑크 #f9a8d4", "value":"#f9a8d4"},
+    {"name":"f472b6", "label":"핑크 #f472b6", "value":"#f472b6"},
+    {"name":"ec4899", "label":"진핑크 #ec4899", "value":"#ec4899"},
+    {"name":"fb7185", "label":"로즈 #fb7185", "value":"#fb7185"},
+    {"name":"e879f9", "label":"푸시아 #e879f9", "value":"#e879f9"},
+    {"name":"c084fc", "label":"퍼플 #c084fc", "value":"#c084fc"}
+  ]
+        ]]></option>
+        <default><![CDATA[#f9a8d4]]></default>
+      </variable>
+      <variable>
+        <name>colorAmber</name>
+        <label><![CDATA[포인트 색상 2 (앰버 계열)]]></label>
+        <description><![CDATA[강조·하이라이트에 쓰이는 보조 포인트 색상입니다.]]></description>
+        <type>SELECT</type>
+        <option><![CDATA[
+  [
+    {"name":"fde047", "label":"옐로우 #fde047", "value":"#fde047"},
+    {"name":"facc15", "label":"골드 #facc15", "value":"#facc15"},
+    {"name":"fbbf24", "label":"앰버 #fbbf24", "value":"#fbbf24"},
+    {"name":"f59e0b", "label":"오렌지 #f59e0b", "value":"#f59e0b"},
+    {"name":"a3e635", "label":"라임 #a3e635", "value":"#a3e635"},
+    {"name":"34d399", "label":"에메랄드 #34d399", "value":"#34d399"}
+  ]
+        ]]></option>
+        <default><![CDATA[#fde047]]></default>
+      </variable>
+    </variablegroup>
+
+    <!-- 소셜 / 링크 -->
+    <variablegroup name="소셜 · 링크">
+      <variable>
+        <name>github</name>
+        <label><![CDATA[GitHub URL]]></label>
+        <type>STRING</type>
+        <default><![CDATA[https://github.com/BBAAMM]]></default>
+      </variable>
+      <variable>
+        <name>email</name>
+        <label><![CDATA[이메일]]></label>
+        <type>STRING</type>
+        <default><![CDATA[developer.ksb@gmail.com]]></default>
+      </variable>
+    </variablegroup>
+
+    <!-- 푸터 -->
+    <variablegroup name="푸터">
+      <variable>
+        <name>footerDesc</name>
+        <label><![CDATA[푸터 소개문]]></label>
+        <type>STRING</type>
+        <default><![CDATA[삽질도 자산이 된다고 믿으며, 개발하며 만난 시행착오와 프로젝트를 차곡차곡 적어둡니다.]]></default>
+      </variable>
+      <variable>
+        <name>footerCopyright</name>
+        <label><![CDATA[푸터 저작권 문구]]></label>
+        <type>STRING</type>
+        <default><![CDATA[Developer Notes]]></default>
+      </variable>
+      <variable>
+        <name>footerPowered</name>
+        <label><![CDATA[푸터 우측 문구]]></label>
+        <type>STRING</type>
+        <default><![CDATA[Powered by TISTORY]]></default>
+      </variable>
+    </variablegroup>
+
+    <!-- 카테고리 (사이드바 · 푸터 메뉴에 노출 — 이름 + 링크를 직접 설정) -->
+    <variablegroup name="카테고리">
+      <variable>
+        <name>cat1Name</name>
+        <label><![CDATA[카테고리 1 · 이름]]></label>
+        <type>STRING</type>
+        <default><![CDATA[팀 프로젝트]]></default>
+      </variable>
+      <variable>
+        <name>cat1Url</name>
+        <label><![CDATA[카테고리 1 · 링크]]></label>
+        <type>STRING</type>
+        <default><![CDATA[/category/팀%20프로젝트]]></default>
+      </variable>
+      <variable>
+        <name>cat2Name</name>
+        <label><![CDATA[카테고리 2 · 이름]]></label>
+        <type>STRING</type>
+        <default><![CDATA[공부]]></default>
+      </variable>
+      <variable>
+        <name>cat2Url</name>
+        <label><![CDATA[카테고리 2 · 링크]]></label>
+        <type>STRING</type>
+        <default><![CDATA[/category/공부]]></default>
+      </variable>
+      <variable>
+        <name>cat3Name</name>
+        <label><![CDATA[카테고리 3 · 이름]]></label>
+        <type>STRING</type>
+        <default><![CDATA[딥러닝]]></default>
+      </variable>
+      <variable>
+        <name>cat3Url</name>
+        <label><![CDATA[카테고리 3 · 링크]]></label>
+        <type>STRING</type>
+        <default><![CDATA[/category/딥러닝]]></default>
+      </variable>
+      <variable>
+        <name>cat4Name</name>
+        <label><![CDATA[카테고리 4 · 이름]]></label>
+        <type>STRING</type>
+        <default><![CDATA[알고리즘]]></default>
+      </variable>
+      <variable>
+        <name>cat4Url</name>
+        <label><![CDATA[카테고리 4 · 링크]]></label>
+        <type>STRING</type>
+        <default><![CDATA[/category/알고리즘]]></default>
+      </variable>
+      <variable>
+        <name>cat5Name</name>
+        <label><![CDATA[카테고리 5 · 이름]]></label>
+        <type>STRING</type>
+        <default><![CDATA[대학수업]]></default>
+      </variable>
+      <variable>
+        <name>cat5Url</name>
+        <label><![CDATA[카테고리 5 · 링크]]></label>
+        <type>STRING</type>
+        <default><![CDATA[/category/대학수업]]></default>
+      </variable>
+    </variablegroup>
+  </variables>
+
   <default>
     <recentEntries>5</recentEntries>
     <recentComments>5</recentComments>
     <recentTrackbacks>5</recentTrackbacks>
-    <tagsInCloud>50</tagsInCloud>
+    <tagsInCloud>30</tagsInCloud>
     <sortInCloud>0</sortInCloud>
+    <!-- 홈 커버 기본값 — 스킨 적용 / 커버 추가 즉시 제작자 추천 구성이 적용됩니다.
+         dataType 은 RECENT(최신 글) / CUSTOM(직접 입력) 만 사용 가능. -->
+    <cover><![CDATA[
+[
+  {
+    "name": "cover-hero",
+    "title": "",
+    "dataType": "RECENT",
+    "data": { "category": "ALL", "size": 1 }
+  },
+  {
+    "name": "cover-featured",
+    "title": "Featured",
+    "dataType": "RECENT",
+    "data": { "category": "ALL", "size": 6 }
+  },
+  {
+    "name": "cover-latest",
+    "title": "Latest",
+    "dataType": "RECENT",
+    "data": { "category": "ALL", "size": 6 }
+  },
+  {
+    "name": "cover-footer",
+    "title": "",
+    "dataType": "RECENT",
+    "data": { "category": "ALL", "size": 1 }
+  }
+]
+    ]]></cover>
   </default>
 </skin>
