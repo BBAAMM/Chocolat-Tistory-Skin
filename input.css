@@ -2,148 +2,362 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Load Fonts */
-@layer base {
-  @font-face {
-    font-family: "HSSanTokki";
-    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSSanTokki20-Regular.woff2")
-      format("woff2");
-    font-weight: normal;
-    font-style: normal;
-  }
+/* ============================================================
+   input.css — Tailwind source for the Chocolat skin.
+   Build:  npx tailwindcss -i input.css -o style.css --minify
+   NOTE: the bulk below is plain CSS (no @apply) so it is portable
+   and renders identically whether compiled or loaded via the
+   Tailwind Play CDN that skin.html also includes.
+   ============================================================ */
 
-  @font-face {
-    font-family: "WooJu";
-    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2")
-      format("woff2");
-    font-weight: normal;
-    font-style: normal;
-  }
+/* ============================================================
+   Chocolat — Tistory Skin  ·  style.css
+   Dark Minimal × Warm Accent  (chocolate tones · pink + amber)
+   ------------------------------------------------------------
+   Loaded alongside the Tailwind Play CDN declared in skin.html.
+   Paste into the Tistory skin editor's "style.css" slot.
+   ============================================================ */
+
+/* ---------- Custom Korean fonts ---------- */
+@font-face {
+  font-family: "HSSanTokki";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSSanTokki20-Regular.woff2") format("woff2");
+  font-weight: normal; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "WooJu";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2") format("woff2");
+  font-weight: normal; font-style: normal; font-display: swap;
 }
 
-@layer utilities {
-  /* #region HomeCover */
-  /* #endregion */
-
-  /* Custom Card Ingredients */
-  .custom-card {
-    @apply rounded-lg font-highlight transition-transform duration-300 hover:scale-105 hover:shadow-lg;
-  }
-
-  /* Recent contents cards */
-  .custom-card-recent {
-    @apply max-w-screen-lg min-h-[200px] bg-gray-700;
-  }
-
-  /* #region Post Ingredients */
-  .content-details h1,
-  .content-details h2 {
-    @apply font-highlight text-3xl mt-5 mb-4 text-yellow-200;
-  }
-  .content-details h3 {
-    @apply font-highlight text-2xl mt-5 mb-4 text-yellow-300;
-  }
-  .content-details h4 {
-    @apply font-highlight text-xl mt-3 mb-2 text-pink-200;
-  }
-  .content-details h5 {
-    @apply font-highlight text-base mt-3 mb-2 text-pink-200;
-  }
-  .content-details p {
-    @apply ml-3 mr-3;
-  }
-  .content-details p b {
-    @apply rounded-md bg-cyan-900 text-gray-200 p-0.5;
-  }
-
-  .content-details pre {
-    @apply text-sm rounded-2xl bg-black p-6 mt-5 mb-5 shadow-md shadow-gray-700 text-wrap;
-  }
-  .content-details .hljs {
-    @apply bg-transparent;
-  }
-  .content-details ul {
-    @apply rounded-2xl text-gray-800 bg-gray-300 p-10 mt-3 shadow-inner shadow-gray-700;
-  }
-  /* #endregion */
-
-  /* #region Namecard Style Customize */
-  /* Namecard - main */
-  .tt_box_namecard {
-    @apply w-[95vw] sm:w-[90vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] flex justify-center items-center rounded-md bg-gray-800 shadow-lg shadow-yellow-700;
-  }
-  /* Namecard - contents div */
-  .tt_box_namecard .tt_cont {
-    @apply pt-0;
-  }
-  /* Namecard - contents title */
-  .tt_box_namecard .tt_tit_cont {
-    @apply font-ko font-bold text-2xl text-yellow-200;
-  }
-  /* Namecard - description */
-  .tt_box_namecard .tt_desc {
-    @apply text-gray-200 text-sm pr-10;
-  }
-  /* Namecard - subscribe button */
-  .tt_box_namecard .tt_btn_subscribe {
-    border: none;
-    @apply bg-gray-200 text-gray-800 font-ko font-bold rounded-3xl;
-  }
-  /* #endregion */
-
-  /* #region Comment Style Customize */
-
-  /* Comment - main */
-  .tt-comment-cont {
-    @apply w-[95vw] sm:w-[90vw] md:w-[80vw] justify-center items-center mt-10 mb-10 p-7 md:p-10 lg:p-16 rounded-t-3xl rounded-b-xl bg-gray-800 shadow-xl shadow-black;
-  }
-  /* Comment - remove border */
-  .tt-comment-cont *,
-  .tt-area-replay * {
-    border: none;
-  }
-  /* Comment - title */
-  .tt-comment-cont .tt-box-total * {
-    @apply font-highlight text-gray-200 text-xl;
-  }
-  /* Comment - comment area - user name */
-  .tt-comment-cont .tt-link-user {
-    @apply font-highlight text-yellow-800;
-  }
-  /* Comment - comment area - description */
-  .tt-comment-cont .tt_desc {
-    @apply text-gray-800 font-ko;
-  }
-  /* Comment - comment area */
-  .tt-comment-cont .tt-item-reply .tt-wrap-cmt {
-    @apply rounded-b-3xl rounded-tr-3xl bg-gray-300 p-5 shadow-lg shadow-black;
-  }
-  /* Comment - remove ::before tag */
-  .tt-comment-cont .tt-item-reply::before,
-  .tt-wrap-link-comment::before {
-    content: none;
-    display: none;
-  }
-  /* Comment - reply hamburger menu padding */
-  .tt-comment-cont .tt-box-modify {
-    @apply p-3;
-  }
-  /* Comment - comment reply area */
-  .tt-comment-cont .tt-list-reply-comment .tt-wrap-cmt {
-    @apply rounded-b-3xl rounded-tl-3xl rounded-tr-none bg-gray-400;
-  }
-  /* Comment - write Customize */
-  .tt-area-write .tt-inner-g {
-    border: none;
-    @apply text-white rounded-md bg-gray-500;
-  }
-  /* #endregion */
-
-  /* Modal z-index */
-  #search-modal { z-index: 20; }
-
-  /* TOC 현재 섹션 하이라이트 */
-  .toc-nav .toc-link.active {
-    @apply text-pink-300 font-semibold;
-  }
+/* ---------- Brand tokens ---------- */
+:root {
+  --ink: #0b0b0d;
+  --ink-2: #0e0e11;
+  --surface: #18181c;
+  --surface-2: #1f1f24;
+  --line: #2a2a30;
+  --pink: #f9a8d4;
+  --pink-deep: #ec4899;
+  --amber: #fde047;
+  --amber-deep: #f59e0b;
+  --cocoa: #c9a07a;
+  --text: #e8e6e3;
+  --muted: #9b9aa3;
 }
+
+* { -webkit-tap-highlight-color: transparent; }
+
+html { scrollbar-color: #34343c var(--ink); scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--text);
+  overflow-x: hidden;
+  font-family: "WooJu", "Pretendard", sans-serif;
+}
+
+/* Font utility classes (mirror tailwind.config fontFamily) */
+.font-welcome   { font-family: "Moirai One", cursive; }
+.font-highlight { font-family: "HSSanTokki", "Space Grotesk", sans-serif; }
+.font-ko        { font-family: "WooJu", "Pretendard", sans-serif; }
+.font-english   { font-family: "Montserrat Alternates", sans-serif; }
+.font-mono      { font-family: "Space Grotesk", ui-monospace, monospace; }
+
+/* ---------- Film grain + warm vignette ---------- */
+.grain::before {
+  content: "";
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 1; opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- Scrollbars / selection ---------- */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb { background: #34343c; border-radius: 999px; border: 2px solid var(--ink); }
+::-webkit-scrollbar-thumb:hover { background: #45454e; }
+::selection { background: var(--pink); color: #1a1a1a; }
+
+/* ---------- Eyebrow label ---------- */
+.eyebrow {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; font-size: 0.7rem;
+}
+
+/* ---------- Animations ---------- */
+@keyframes blink { 50% { opacity: 0; } }
+.animate-blink { animation: blink 0.7s step-end infinite; }
+
+@keyframes floaty { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-6px);} }
+.animate-floaty { animation: floaty 5s ease-in-out infinite; }
+
+/* Entrance: visible end-state is the BASE style; animate transform only,
+   so frozen/printed/reduced-motion states always show content. */
+@keyframes riseIn { from { transform: translateY(20px); } to { transform: translateY(0); } }
+.rise { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .rise { animation: riseIn 0.7s cubic-bezier(0.22,1,0.36,1) both; }
+}
+
+/* Marquee (alt hero) */
+@keyframes marquee { from { transform: translateX(0);} to { transform: translateX(-50%);} }
+.marquee-track { display: inline-flex; white-space: nowrap; animation: marquee 26s linear infinite; }
+
+/* ---------- Cards ---------- */
+.custom-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+.custom-card:hover { border-color: #3a3a42; }
+.custom-card-feature:hover { transform: translateY(-3px); }
+
+/* duotone cover wrapper — overlays a brand tint on any thumbnail */
+.duo { position: relative; overflow: hidden; background: #161619; }
+.duo > img {
+  position: relative; z-index: 1; width: 100%; height: 100%;
+  object-fit: cover; filter: grayscale(0.12);
+  transition: transform .7s cubic-bezier(.22,1,.36,1);
+}
+.group:hover .duo > img { transform: scale(1.06); }
+.duo::after {
+  content: ""; position: absolute; inset: 0; z-index: 2;
+  background: linear-gradient(125deg, var(--pink), var(--amber));
+  mix-blend-mode: soft-light; opacity: .55; pointer-events: none;
+}
+.duo.duo-strong::before {
+  content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none;
+  background: linear-gradient(180deg, rgba(11,11,13,.05) 0%, rgba(11,11,13,.55) 55%, rgba(11,11,13,.95) 100%);
+}
+
+/* Chips */
+.chip-solid {
+  display: inline-block; font-family: "HSSanTokki","Space Grotesk",sans-serif;
+  font-weight: 700; font-size: .72rem; line-height: 1;
+  background: var(--pink); color: #16141a; border-radius: 999px; padding: .35rem .6rem;
+}
+.chip-soft {
+  display: inline-block; font-family: "Montserrat Alternates",sans-serif;
+  font-weight: 600; font-size: .62rem; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--pink); background: rgba(255,255,255,.04);
+  border: 1px solid var(--line); border-radius: 999px; padding: .28rem .55rem;
+}
+
+/* ---------- Responsive display heading ---------- */
+.text-responsive { font-size: clamp(1.9rem, 5.5vw, 3.4rem); line-height: 1.12; }
+.break-keep { word-break: keep-all; }
+.line-clamp-1 { display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden; }
+.line-clamp-2 { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+
+/* ============================================================
+   Article prose — targets Tistory editor HTML inside #article-view
+   ============================================================ */
+.post-content {
+  font-family: "WooJu","Pretendard",sans-serif;
+  color: #d4d2cf; line-height: 1.9; font-size: 1.08rem;
+  word-break: keep-all;
+}
+.post-content > * + * { margin-top: 1.25em; }
+.post-content h2 {
+  font-family: "HSSanTokki","Space Grotesk",sans-serif;
+  font-size: clamp(1.5rem, 3.2vw, 2rem); color: #fff;
+  margin-top: 2.4rem; margin-bottom: .2rem; scroll-margin-top: 90px; letter-spacing: -0.01em;
+}
+.post-content h2::before { content: "#"; color: var(--pink); margin-right: .4rem; }
+.post-content h3 {
+  font-family: "HSSanTokki","Space Grotesk",sans-serif;
+  font-size: clamp(1.2rem, 2.6vw, 1.5rem); color: var(--amber);
+  margin-top: 1.8rem; scroll-margin-top: 90px;
+}
+.post-content p { color: #d4d2cf; }
+.post-content a { color: var(--pink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(249,168,212,.4); }
+.post-content strong { color: #fff; font-weight: 700; }
+.post-content blockquote {
+  border-left: 3px solid var(--pink); padding: .4rem 0 .4rem 1.4rem;
+  color: var(--muted); font-style: italic; margin-left: 0;
+}
+.post-content ul, .post-content ol { padding-left: 1.4rem; }
+.post-content li { margin-top: .5rem; color: #d4d2cf; }
+.post-content li::marker { color: var(--pink); }
+.post-content img { border-radius: 14px; max-width: 100%; height: auto; box-shadow: 0 18px 40px -24px rgba(0,0,0,.9); }
+.post-content code:not(pre code) {
+  font-family: "Space Grotesk", ui-monospace, monospace;
+  background: #26262c; color: var(--cocoa); padding: .12em .4em; border-radius: 6px; font-size: .9em;
+}
+.post-content pre {
+  background: #08080a; border: 1px solid var(--line); border-radius: 16px;
+  padding: 1.3rem 1.4rem; overflow-x: auto; font-size: .92rem; line-height: 1.7;
+  box-shadow: 0 18px 40px -24px rgba(0,0,0,.9);
+}
+.post-content pre code { font-family: "Space Grotesk", ui-monospace, monospace; color: #cfcfe0; background: none; }
+.post-content table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.post-content th, .post-content td { border: 1px solid var(--line); padding: .6rem .8rem; text-align: left; }
+.post-content th { background: var(--surface-2); color: #fff; }
+.post-content hr { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
+
+/* Drop cap on the first paragraph */
+.dropcap .post-content > p:first-of-type::first-letter {
+  font-family: "Moirai One", cursive; float: left; font-size: 3.4em; line-height: .78;
+  padding: .06em .12em 0 0; color: var(--pink);
+}
+
+/* code token colors (when highlighter applied) */
+.tok-key { color:#f9a8d4; } .tok-fn { color:#fde047; } .tok-str { color:#86efac; }
+.tok-com { color:#6b6b75; font-style:italic; } .tok-num { color:#c9a07a; }
+
+/* ============================================================
+   TOC  (sticky, scroll-spy) + reading progress
+   ============================================================ */
+.toc-nav .toc-link { position: relative; padding-left: 0; }
+.toc-link {
+  display: flex; align-items: center; gap: .55rem;
+  font-family: "WooJu","Pretendard",sans-serif; font-size: .85rem; line-height: 1.4;
+  color: var(--muted); padding: .35rem 0; transition: color .2s ease, transform .2s ease;
+}
+.toc-link::before {
+  content: ""; width: 6px; height: 6px; border-radius: 999px;
+  background: var(--line); flex-shrink: 0; transition: all .2s ease;
+}
+.toc-link.pl-4 { padding-left: 1rem; font-size: .8rem; }
+.toc-link:hover { color: #d4d2cf; }
+.toc-link.active { color: var(--pink); font-weight: 600; transform: translateX(3px); }
+.toc-link.active::before { background: var(--pink); transform: scale(1.5); }
+
+/* reading-progress top bar */
+#reading-progress { background: linear-gradient(90deg, var(--pink), var(--amber)); }
+
+/* reading % readout in the sticky TOC */
+.toc-meter-track { height: 4px; border-radius: 999px; background: var(--line); overflow: hidden; }
+.toc-meter-fill { height: 100%; background: var(--pink); width: 0%; transition: width .1s linear; }
+
+/* ============================================================
+   Search modal
+   ============================================================ */
+#search-modal { z-index: 60; background: rgba(5,5,7,.7); backdrop-filter: blur(6px); }
+#search-modal .search-card {
+  background: #141418; border: 1px solid var(--line); border-radius: 18px;
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,.8);
+}
+
+/* ============================================================
+   Floating action button
+   ============================================================ */
+#fab-root { z-index: 50; }
+.fab-main {
+  width: 56px; height: 56px; border-radius: 999px; display: grid; place-items: center;
+  background: var(--pink); color: #16141a; border: none; cursor: pointer;
+  box-shadow: 0 12px 30px -8px rgba(249,168,212,.55); transition: transform .2s ease;
+}
+.fab-main:active { transform: scale(.9); }
+.fab-action {
+  width: 40px; height: 40px; border-radius: 999px; display: grid; place-items: center;
+  background: #1a1a1f; border: 1px solid var(--line); color: var(--text); cursor: pointer;
+}
+
+/* ============================================================
+   Sticky nav (compact, after hero)
+   ============================================================ */
+#sticky-nav { background: rgba(11,11,13,.92); backdrop-filter: blur(14px) saturate(140%); border-color: var(--line); }
+
+/* Pagination */
+.paging-link {
+  display: grid; place-items: center; min-width: 40px; height: 40px; padding: 0 .6rem;
+  border: 1px solid var(--line); border-radius: 12px; color: var(--muted);
+  font-family: "Space Grotesk", monospace; font-size: .9rem; transition: all .2s ease;
+}
+.paging-link:hover { color: #fff; border-color: #3a3a42; }
+.paging-link.current { background: var(--pink); color: #16141a; border-color: var(--pink); font-weight: 700; }
+
+/* Tag cloud sizing (s_tag) */
+.cloud1 { font-size: .8rem; opacity: .7; }
+.cloud2 { font-size: .95rem; opacity: .8; }
+.cloud3 { font-size: 1.15rem; opacity: .9; }
+.cloud4 { font-size: 1.4rem; }
+.cloud5 { font-size: 1.7rem; color: var(--pink); }
+
+/* Utility */
+.z-2 { position: relative; z-index: 2; }
+
+/* ============================================================
+   Branch plumbing — Tistory-generated markup hooks
+   (page-container, blog menu, category list, sidebar widgets)
+   ============================================================ */
+
+/* Responsive gutters container
+   mobile 24px · tablet 32px · desktop 64px · ≥1440 max-width + center */
+.page-container { width: 100%; padding-left: 1.5rem; padding-right: 1.5rem; }
+@media (min-width: 480px)  { .page-container { padding-left: 2rem; padding-right: 2rem; } }
+@media (min-width: 1024px) { .page-container { padding-left: 4rem; padding-right: 4rem; } }
+@media (min-width: 1440px) { .page-container { max-width: 1440px; margin-left: auto; margin-right: auto; } }
+
+/* Blog menu ([##_blog_menu_##]) — horizontal */
+.blog-nav ul { display: flex; align-items: center; gap: 1.25rem; list-style: none; padding: 0; margin: 0; }
+.blog-nav ul li a {
+  font-family: "WooJu","Pretendard",sans-serif; font-size: .875rem; color: var(--muted);
+  transition: color .2s ease;
+}
+.blog-nav ul li a:hover { color: var(--text); }
+
+/* Category list + sidebar widgets ([##_category_list_##], <s_sidebar>) */
+.sidebar-widget-body ul { display: flex; flex-direction: column; gap: .15rem; list-style: none; padding: 0; margin: 0; }
+.sidebar-widget-body ul li a {
+  font-family: "WooJu","Pretendard",sans-serif; font-size: .875rem; color: #c7c6cd;
+  display: flex; align-items: center; gap: .25rem;
+  padding: .5rem .75rem .5rem 2rem; border-radius: .6rem; position: relative;
+  transition: background .2s ease, color .2s ease;
+}
+.sidebar-widget-body ul li a::before {
+  content: ""; position: absolute; left: .75rem; top: 50%; transform: translateY(-50%);
+  width: .5rem; height: .5rem; border-radius: 50%; background: var(--pink); transition: transform .2s ease;
+}
+.sidebar-widget-body ul li a:hover { background: rgba(255,255,255,.04); color: #fff; }
+.sidebar-widget-body ul li a:hover::before { transform: translateY(-50%) scale(1.25); }
+/* count badge if present */
+.sidebar-widget-body ul li a .c_cnt,
+.sidebar-widget-body ul li a span { color: #6b6b75; font-size: .75rem; margin-left: auto; }
+/* sub-category */
+.sidebar-widget-body ul ul { padding-left: .75rem; }
+.sidebar-widget-body ul ul li a { padding-left: 2.6rem; }
+.sidebar-widget-body ul ul li a::before { left: 1.25rem; width: .375rem; height: .375rem; background: var(--amber); }
+
+/* tag-type sidebar widget */
+.sidebar-widget[data-type="tag"] .sidebar-widget-body,
+.sidebar-widget[data-type="tags"] .sidebar-widget-body { display: flex; flex-wrap: wrap; gap: .5rem; }
+.sidebar-widget[data-type="tag"] .sidebar-widget-body a,
+.sidebar-widget[data-type="tags"] .sidebar-widget-body a {
+  border: 1px solid var(--line); border-radius: .5rem; padding: .12rem .5rem; font-size: .75rem; color: var(--muted);
+  transition: color .2s ease, border-color .2s ease;
+}
+.sidebar-widget[data-type="tag"] .sidebar-widget-body a:hover,
+.sidebar-widget[data-type="tags"] .sidebar-widget-body a:hover { color: var(--pink); border-color: var(--pink); }
+
+/* ============================================================
+   Tistory namecard ([##_btn_subscription_##] / .tt_box_namecard)
+   ============================================================ */
+.tt_box_namecard {
+  width: 100%; display: flex; justify-content: center; align-items: center;
+  border-radius: 16px; background: var(--surface); border: 1px solid var(--line);
+}
+.tt_box_namecard .tt_cont { padding-top: 0; }
+.tt_box_namecard .tt_tit_cont { font-family: "WooJu",sans-serif; font-weight: 700; font-size: 1.4rem; color: #fff; }
+.tt_box_namecard .tt_desc { color: #c7c6cd; font-size: .9rem; padding-right: 2rem; }
+.tt_box_namecard .tt_btn_subscribe { border: none; background: var(--pink); color: #16141a; font-family: "WooJu",sans-serif; font-weight: 700; border-radius: 999px; }
+
+/* ============================================================
+   Tistory comment widget (.tt-comment-cont) — dark restyle
+   ============================================================ */
+.tt-comment-cont * , .tt-area-reply * { border: none; }
+.tt-comment-cont .tt-box-total * { font-family: "HSSanTokki","Space Grotesk",sans-serif; color: #fff; font-size: 1.15rem; }
+.tt-comment-cont .tt-link-user { font-family: "HSSanTokki",sans-serif; color: var(--pink); }
+.tt-comment-cont .tt_desc { color: #d4d2cf; font-family: "WooJu",sans-serif; }
+.tt-comment-cont .tt-item-reply .tt-wrap-cmt { border-radius: 16px; background: var(--surface-2); padding: 1.1rem; }
+.tt-comment-cont .tt-item-reply::before, .tt-wrap-link-comment::before { content: none; display: none; }
+.tt-comment-cont .tt-list-reply-comment .tt-wrap-cmt { border-radius: 16px; background: #232329; }
+.tt-area-write .tt-inner-g { border: none; color: #fff; border-radius: 12px; background: var(--surface-2); }
+
+/* article body keeps both classes (post-content content-details); neutralize legacy */
+.content-details ul { background: transparent; color: inherit; padding: 0 0 0 1.4rem; box-shadow: none; }
+.content-details p { margin-left: 0; margin-right: 0; }
+.content-details p b { background: transparent; padding: 0; color: #fff; }

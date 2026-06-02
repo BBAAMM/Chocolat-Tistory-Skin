@@ -27,7 +27,8 @@ npx tailwindcss -i ./input.css -o ./style.css --minify   # 빌드
 <s_t3> > #wrap
 ├── <s_cover_group> > <s_cover_rep>
 │   ├── <s_cover name="cover-hero">         히어로 (구현됨)
-│   └── <s_cover name="cover-grid">        홈 메인 (구현됨)
+│   ├── <s_cover name="cover-featured">     피처드 2×2 그리드 (구현됨)
+│   └── <s_cover name="cover-latest">       최신 피드 + s_sidebar (구현됨)
 ├── <article>
 │   ├── <s_page_rep> / <s_notice_rep> / <s_article_protected>
 │   ├── <s_article_rep> > <s_permalink_article_rep>  글 본문 (구현됨)

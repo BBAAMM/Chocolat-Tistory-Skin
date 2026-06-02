@@ -1,76 +1,69 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const articleView = document.getElementById("article-view");
-  const tocDesktop = document.getElementById("toc-desktop-nav");
-  const tocMobile = document.getElementById("toc-mobile-nav");
-  const tocSidebar = document.getElementById("article-toc");
-  const tocMobileContainer = document.getElementById("toc-mobile-container");
+/* toc-generator.js — build TOC from h2/h3 in #article-view,
+   scroll-spy highlight, smooth-scroll on click (offset for fixed nav). */
+(function () {
+  function start() {
+    var view = document.getElementById("article-view");
+    var deskNav = document.getElementById("toc-desktop-nav");
+    var mobNav = document.getElementById("toc-mobile-nav");
+    var sidebar = document.getElementById("article-toc");
+    var mobBox = document.getElementById("toc-mobile-container");
+    if (!view) return;
 
-  if (!articleView) return;
-
-  const headings = articleView.querySelectorAll("h2, h3");
-
-  // 헤딩이 없으면 TOC 전체 숨김
-  if (headings.length === 0) {
-    tocSidebar?.remove();
-    tocMobileContainer?.remove();
-    return;
-  }
-
-  // 헤딩에 id가 없으면 자동 부여 (중복 방지)
-  const idCount = {};
-  headings.forEach((heading) => {
-    if (!heading.id) {
-      let base = heading.textContent
-        .trim()
-        .replace(/\s+/g, "-")
-        .toLowerCase()
-        .replace(/[^\w가-힣-]/g, "");
-      if (!base) base = "section";
-      idCount[base] = (idCount[base] || 0) + 1;
-      heading.id = idCount[base] > 1 ? `${base}-${idCount[base]}` : base;
+    var headings = view.querySelectorAll("h2, h3");
+    if (headings.length === 0) {
+      if (sidebar) sidebar.remove();
+      if (mobBox) mobBox.remove();
+      return;
     }
-  });
 
-  // TOC HTML 생성
-  function buildTocHTML() {
-    return Array.from(headings)
-      .map((h) => {
-        const isH3 = h.tagName === "H3";
-        return `<a
-          href="#${h.id}"
-          class="toc-link block text-sm py-1 truncate transition duration-150 ${
-            isH3
-              ? "pl-4 text-gray-500 hover:text-gray-300"
-              : "text-gray-400 hover:text-pink-300"
-          }"
-          data-id="${h.id}"
-        >${h.textContent.trim()}</a>`;
-      })
-      .join("");
-  }
+    // assign stable ids
+    var seen = {};
+    Array.prototype.forEach.call(headings, function (h) {
+      if (!h.id) {
+        var base = h.textContent.trim().replace(/\s+/g, "-").toLowerCase().replace(/[^\w가-힣-]/g, "");
+        if (!base) base = "section";
+        seen[base] = (seen[base] || 0) + 1;
+        h.id = seen[base] > 1 ? base + "-" + seen[base] : base;
+      }
+    });
 
-  const tocHTML = buildTocHTML();
-  if (tocDesktop) tocDesktop.innerHTML = tocHTML;
-  if (tocMobile) tocMobile.innerHTML = tocHTML;
+    function buildHTML() {
+      return Array.prototype.map.call(headings, function (h) {
+        var isH3 = h.tagName === "H3";
+        return '<a href="#' + h.id + '" class="toc-link' + (isH3 ? " pl-4" : "") +
+          '" data-id="' + h.id + '"><span>' + h.textContent.trim() + "</span></a>";
+      }).join("");
+    }
+    var html = buildHTML();
+    if (deskNav) deskNav.innerHTML = html;
+    if (mobNav) mobNav.innerHTML = html;
 
-  // IntersectionObserver: 현재 섹션 하이라이트
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          document.querySelectorAll(".toc-link.active").forEach((a) => {
-            a.classList.remove("active");
-          });
-          document
-            .querySelectorAll(`.toc-link[data-id="${entry.target.id}"]`)
-            .forEach((a) => {
-              a.classList.add("active");
-            });
+    // smooth scroll (no scrollIntoView)
+    function onClick(e) {
+      var a = e.target.closest(".toc-link");
+      if (!a) return;
+      e.preventDefault();
+      var id = a.getAttribute("data-id");
+      var el = document.getElementById(id);
+      if (!el) return;
+      var top = el.getBoundingClientRect().top + window.scrollY - 84;
+      window.scrollTo({ top: top, behavior: "smooth" });
+      if (mobBox && mobBox.open) mobBox.open = false;
+    }
+    if (deskNav) deskNav.addEventListener("click", onClick);
+    if (mobNav) mobNav.addEventListener("click", onClick);
+
+    // scroll-spy
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          document.querySelectorAll(".toc-link.active").forEach(function (a) { a.classList.remove("active"); });
+          document.querySelectorAll('.toc-link[data-id="' + en.target.id + '"]').forEach(function (a) { a.classList.add("active"); });
         }
       });
-    },
-    { rootMargin: "-80px 0px -60% 0px", threshold: 0 }
-  );
-
-  headings.forEach((h) => observer.observe(h));
-});
+    }, { rootMargin: "-90px 0px -65% 0px", threshold: 0 });
+    Array.prototype.forEach.call(headings, function (h) { obs.observe(h); });
+  }
+  if (document.readyState !== "loading") start();
+  else document.addEventListener("DOMContentLoaded", start);
+})();
