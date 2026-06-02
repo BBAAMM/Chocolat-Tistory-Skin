@@ -175,77 +175,13 @@
         <default><![CDATA[Powered by TISTORY]]></default>
       </variable>
     </variablegroup>
-
-    <!-- 카테고리 (사이드바 · 푸터 메뉴에 노출 — 이름 + 링크를 직접 설정) -->
-    <variablegroup name="카테고리">
-      <variable>
-        <name>cat1Name</name>
-        <label><![CDATA[카테고리 1 · 이름]]></label>
-        <type>STRING</type>
-        <default><![CDATA[팀 프로젝트]]></default>
-      </variable>
-      <variable>
-        <name>cat1Url</name>
-        <label><![CDATA[카테고리 1 · 링크]]></label>
-        <type>STRING</type>
-        <default><![CDATA[/category/팀%20프로젝트]]></default>
-      </variable>
-      <variable>
-        <name>cat2Name</name>
-        <label><![CDATA[카테고리 2 · 이름]]></label>
-        <type>STRING</type>
-        <default><![CDATA[공부]]></default>
-      </variable>
-      <variable>
-        <name>cat2Url</name>
-        <label><![CDATA[카테고리 2 · 링크]]></label>
-        <type>STRING</type>
-        <default><![CDATA[/category/공부]]></default>
-      </variable>
-      <variable>
-        <name>cat3Name</name>
-        <label><![CDATA[카테고리 3 · 이름]]></label>
-        <type>STRING</type>
-        <default><![CDATA[딥러닝]]></default>
-      </variable>
-      <variable>
-        <name>cat3Url</name>
-        <label><![CDATA[카테고리 3 · 링크]]></label>
-        <type>STRING</type>
-        <default><![CDATA[/category/딥러닝]]></default>
-      </variable>
-      <variable>
-        <name>cat4Name</name>
-        <label><![CDATA[카테고리 4 · 이름]]></label>
-        <type>STRING</type>
-        <default><![CDATA[알고리즘]]></default>
-      </variable>
-      <variable>
-        <name>cat4Url</name>
-        <label><![CDATA[카테고리 4 · 링크]]></label>
-        <type>STRING</type>
-        <default><![CDATA[/category/알고리즘]]></default>
-      </variable>
-      <variable>
-        <name>cat5Name</name>
-        <label><![CDATA[카테고리 5 · 이름]]></label>
-        <type>STRING</type>
-        <default><![CDATA[대학수업]]></default>
-      </variable>
-      <variable>
-        <name>cat5Url</name>
-        <label><![CDATA[카테고리 5 · 링크]]></label>
-        <type>STRING</type>
-        <default><![CDATA[/category/대학수업]]></default>
-      </variable>
-    </variablegroup>
   </variables>
 
   <default>
     <recentEntries>5</recentEntries>
     <recentComments>5</recentComments>
     <recentTrackbacks>5</recentTrackbacks>
-    <tagsInCloud>30</tagsInCloud>
+    <tagsInCloud>6</tagsInCloud>
     <sortInCloud>0</sortInCloud>
     <!-- 홈 커버 기본값 — 스킨 적용 / 커버 추가 즉시 제작자 추천 구성이 적용됩니다.
          dataType 은 RECENT(최신 글) / CUSTOM(직접 입력) 만 사용 가능. -->

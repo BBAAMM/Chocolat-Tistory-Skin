@@ -429,7 +429,7 @@ body {
    Home sidebar — show only top-level categories (.cat-top-only)
    hides every nested sub-category <ul> rendered by [##_category_list_##]
    ============================================================ */
-.cat-top-only ul ul { display: none !important; }
+.cat-top-only ul ul ul{ display: none !important; }
 
 /* ============================================================
    Direction C — sticky chapter bar (article pages)
