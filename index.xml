@@ -2,8 +2,8 @@
 <skin>
   <information>
     <name>Chocolat</name>
-    <version>1.0.0</version>
-    <description><![CDATA[Dark Minimal × Warm Accent 개발 기술 블로그 스킨]]></description>
+    <version>2.0.0</version>
+    <description><![CDATA[Dark Minimal × Warm Accent — 개발 기술 블로그 스킨 (리디자인)]]></description>
     <license><![CDATA[MIT]]></license>
   </information>
   <author>
@@ -15,17 +15,22 @@
     <item>
       <name>cover-hero</name>
       <label><![CDATA[히어로]]></label>
-      <description><![CDATA[하프 히어로 + 인라인 네비게이션]]></description>
+      <description><![CDATA[타이프라이터 히어로 + 인라인 네비게이션]]></description>
     </item>
     <item>
       <name>cover-featured</name>
       <label><![CDATA[피처드]]></label>
-      <description><![CDATA[TOP POSTS 2×2 그리드]]></description>
+      <description><![CDATA[FEATURED 그리드 + 프로필·카테고리·태그 사이드바]]></description>
     </item>
     <item>
       <name>cover-latest</name>
       <label><![CDATA[최신 피드]]></label>
-      <description><![CDATA[최신 글 피드 + 사이드바]]></description>
+      <description><![CDATA[넘버링 에디토리얼 최신 글 리스트]]></description>
+    </item>
+    <item>
+      <name>cover-footer</name>
+      <label><![CDATA[푸터]]></label>
+      <description><![CDATA[브랜드·소셜·메뉴·저작권 푸터 (홈 최하단 배치 권장)]]></description>
     </item>
   </cover>
   <default>

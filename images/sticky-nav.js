@@ -1,47 +1,38 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const nav = document.getElementById("sticky-nav");
-  const hero = document.getElementById("hero-section");
-  const searchModal = document.getElementById("search-modal");
-  const searchBtns = [
-    document.getElementById("hero-search-btn"),
-    document.getElementById("sticky-search-btn"),
-  ].filter(Boolean);
+/* sticky-nav.js — top nav behaviour.
+   • Home (has #hero-section): nav reveals after the hero scrolls away.
+   • Other pages (category / tag / search / article — no hero): nav is
+     shown permanently so the header is always visible. */
+(function () {
+  function start() {
+    var nav = document.getElementById("sticky-nav");
+    if (!nav) return;
+    var hero = document.getElementById("hero-section");
 
-  // Sticky nav: IntersectionObserver on hero section
-  if (nav && hero) {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) {
-          nav.style.transform = "translateY(0)";
-          nav.style.opacity = "1";
-        } else {
-          nav.style.transform = "translateY(-100%)";
-          nav.style.opacity = "0";
-        }
-      },
-      { threshold: 0 }
-    );
-    observer.observe(hero);
-  }
+    if (!hero) {
+      nav.style.transform = "translateY(0)";
+      nav.style.opacity = "1";
+      document.body.classList.add("nav-pinned");
+      return;
+    }
 
-  // 검색 모달 — hero + sticky nav 버튼 모두 연결
-  if (searchModal) {
-    searchBtns.forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        searchModal.classList.toggle("hidden");
-        if (!searchModal.classList.contains("hidden")) {
-          searchModal.querySelector("input")?.focus();
-        }
-      });
-    });
-    document.addEventListener("click", (e) => {
-      if (!searchModal.contains(e.target)) {
-        searchModal.classList.add("hidden");
+    function threshold() { return hero.offsetHeight - 60; }
+    var shown = false;
+    function update() {
+      var should = window.scrollY > threshold();
+      if (should === shown) return;
+      shown = should;
+      nav.style.transform = should ? "translateY(0)" : "translateY(-100%)";
+      nav.style.opacity = should ? "1" : "0";
+    }
+    var ticking = false;
+    window.addEventListener("scroll", function () {
+      if (!ticking) {
+        requestAnimationFrame(function () { update(); ticking = false; });
+        ticking = true;
       }
-    });
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") searchModal.classList.add("hidden");
-    });
+    }, { passive: true });
+    update();
   }
-});
+  if (document.readyState !== "loading") start();
+  else document.addEventListener("DOMContentLoaded", start);
+})();

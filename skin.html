@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html
-  lang="ko"
-  class="overflow-x-hidden overflow-y-scroll scroll-smooth min-w-[320px]"
->
+<html lang="ko" class="overflow-x-hidden overflow-y-scroll scroll-smooth min-w-[320px]">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,765 +8,511 @@
     <meta name="referrer" content="always" />
 
     <!-- #region Analysis Dependency -->
-    <meta
-      name="google-adsense-platform-account"
-      content="ca-pub-9700755749825783"
-    />
+    <meta name="google-adsense-platform-account" content="ca-pub-9700755749825783" />
     <meta name="google-adsense-platform-domain" content="tistory.com" />
-    <meta
-      name="google-site-verification"
-      content="7jeGq0Yf579ltMDFrM0FtYhFZV_BNN6T4exVnCaiWbY"
-    />
-    <meta
-      name="naver-site-verification"
-      content="552c4be52e89ef199bd7eded6307eac8f7741110"
-    />
+    <meta name="google-site-verification" content="7jeGq0Yf579ltMDFrM0FtYhFZV_BNN6T4exVnCaiWbY" />
+    <meta name="naver-site-verification" content="552c4be52e89ef199bd7eded6307eac8f7741110" />
     <meta name="robots" content="index, follow" />
     <!-- #endregion -->
 
     <!-- #region Title & Description & RSS -->
     <title>[##_page_title_##]</title>
-    <meta
-      name="description"
-      content="개발 시행착오, 그리고 프로젝트를를 다루는 블로그입니다. 초보자부터 전문가까지 모두를 위한 유용한 정보를 제공합니다."
-    />
-    <meta name="keywords" content="Python, Java, project, 자율주행, 프로젝트" />
+    <meta name="description" content="개발 시행착오와 프로젝트를 기록하는 다크 미니멀 블로그입니다." />
+    <meta name="keywords" content="개발, 프로젝트, 기록, 회고, 백엔드" />
     <meta name="author" content="Seungbeom Kim" />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="[##_title_##]"
-      href="[##_rss_url_##]"
-    />
+    <link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
     <!-- #endregion -->
 
     <!-- #region Font Dependency -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap&family=Moirai+One"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/2394eff9da.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Moirai+One&family=Montserrat+Alternates:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/2394eff9da.js" crossorigin="anonymous"></script>
     <!-- #endregion -->
 
     <!-- #region prefetch / preconnect -->
-    <link
-      rel="dns-prefetch"
-      href="https://img1.daumcdn.net/"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="dns-prefetch"
-      href="https://tistory1.daumcdn.net/"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="dns-prefetch"
-      href="https://tistory2.daumcdn.net/"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="dns-prefetch"
-      href="https://tistory3.daumcdn.net/"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="dns-prefetch"
-      href="https://tistory4.daumcdn.net/"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="dns-prefetch"
-      href="https://stat.tiara.tistory.com/track"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="dns-prefetch"
-      href="https://blog.kakaocdn.net/"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="dns-prefetch"
-      href="https://cdn.jsdelivr.net"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="dns-prefetch"
-      href="https://cdnjs.cloudflare.com"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="dns-prefetch"
-      href="https://images.pexels.com"
-      crossorigin="anonymous"
-    />
-
-    <!-- hreflang 태그 -->
-    <link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://codezaram.tistory.com"
-    />
-    <link
-      rel="alternate"
-      hreflang="ko"
-      href="https://codezaram.tistory.com/ko"
-    />
+    <link rel="dns-prefetch" href="https://img1.daumcdn.net/" crossorigin="anonymous" />
+    <link rel="dns-prefetch" href="https://tistory1.daumcdn.net/" crossorigin="anonymous" />
+    <link rel="dns-prefetch" href="https://blog.kakaocdn.net/" crossorigin="anonymous" />
+    <link rel="dns-prefetch" href="https://stat.tiara.tistory.com/track" crossorigin="anonymous" />
+    <link rel="alternate" hreflang="x-default" href="https://codezaram.tistory.com" />
+    <link rel="alternate" hreflang="ko" href="https://codezaram.tistory.com/ko" />
     <!-- #endregion -->
 
     <!-- #region Tailwind CSS Dependency -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: { extend: { fontFamily: {
+          welcome: ["Moirai One", "cursive"],
+          highlight: ["HSSanTokki", "Space Grotesk", "sans-serif"],
+          ko: ["WooJu", "Pretendard", "sans-serif"],
+          english: ["Montserrat Alternates", "sans-serif"],
+          mono: ["Space Grotesk", "ui-monospace", "monospace"],
+        } } },
+      };
+    </script>
     <link rel="stylesheet" href="./style.css" />
     <!-- #endregion -->
 
-    <!-- #region JS & Gsap Dependency -->
-
-    <script
-      defer
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
-    ></script>
-    <script
-      defer
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"
-    ></script>
+    <!-- #region JS Dependency (deferred) -->
     <script defer src="./images/blink-type-writer.js"></script>
     <script defer src="./images/sticky-nav.js"></script>
-    <script defer src="./images/reading-progress.js"></script>
     <script defer src="./images/reading-time.js"></script>
-    <script defer src="./images/toc-generator.js"></script>
+    <script defer src="./images/chapter-bar.js"></script>
+    <script defer src="./images/search-modal.js"></script>
+    <script defer src="./images/fab.js"></script>
     <!-- #endregion -->
 
-    <!-- #region 카테고리url 제거 시작 -->
+    <!-- #region 카테고리 url 정리 -->
     <script type="text/javascript">
       if (typeof history.pushState == "function") {
-        var CatagoryURL = location.href;
-        CatagoryURL = CatagoryURL.replace(/\?category=([0-9]+)/gi, "");
+        var CatagoryURL = location.href.replace(/\?category=([0-9]+)/gi, "");
         history.pushState(null, null, CatagoryURL);
       }
     </script>
-    <!-- #endregion 카테고리url 제거 끝 -->
+    <!-- #endregion -->
   </head>
-  <body id="[##_body_id_##]" class="m-0 p-0 bg-[#121212]">
 
-    <!-- 읽기 진행 바 (아티클 페이지에서만 표시) -->
-    <div
-      id="reading-progress"
-      class="fixed top-0 left-0 h-0.5 z-50 w-0 hidden"
-      style="background: linear-gradient(to right, #f9a8d4, #fde047); transition: width 0.1s linear;"
-    ></div>
+  <body id="[##_body_id_##]" class="grain m-0 p-0 font-ko text-gray-200 antialiased" style="background:#0b0b0d;">
 
-    <!-- Sticky Navigation (히어로 스크롤 후 등장) -->
-    <nav
-      id="sticky-nav"
-      class="fixed top-0 left-0 right-0 z-40 h-12 flex items-center justify-between px-5 border-b border-gray-800"
-      style="background: rgba(17,17,17,0.97); backdrop-filter: blur(8px); transform: translateY(-100%); opacity: 0; transition: transform 0.3s ease, opacity 0.3s ease;"
-    >
-      <a href="/" class="font-english font-bold text-pink-300 tracking-widest text-sm">CHOCOLAT</a>
+    <!-- 스티키 네비게이션 (히어로가 없는 페이지에서는 항상 노출) -->
+    <nav id="sticky-nav" class="fixed top-0 left-0 right-0 z-40 h-14 flex items-center justify-between px-5 md:px-8 border-b"
+         style="transform: translateY(-100%); opacity: 0; transition: transform .3s ease, opacity .3s ease;">
+      <a href="/" class="flex items-center gap-2.5">
+        <span class="grid place-items-center rounded-md font-welcome text-[15px]" style="width:28px;height:28px;background:var(--pink);color:#16141a;">C</span>
+        <span class="font-english font-bold tracking-[0.25em] text-sm" style="color:var(--pink);">CHOCOLAT</span>
+      </a>
       <div class="flex items-center gap-5">
-        <div class="blog-nav">[##_blog_menu_##]</div>
-        <button id="sticky-search-btn" class="text-gray-400 hover:text-pink-300 transition duration-200" aria-label="검색">
+        <div class="blog-nav hidden sm:block">[##_blog_menu_##]</div>
+        <button id="sticky-search-btn" class="grid place-items-center w-9 h-9 rounded-full text-gray-400 hover:text-pink-300 transition" style="border:1px solid var(--line);" aria-label="검색">
           <i class="fa fa-search text-sm"></i>
         </button>
       </div>
     </nav>
 
-    <!-- Search Modal -->
-    <div
-      id="search-modal"
-      class="fixed inset-0 flex items-center justify-center hidden"
-    >
-      <div
-        class="relative w-3/4 md:w-1/2 lg:w-1/3 bg-gray-800 border border-gray-700 p-3 rounded-lg flex items-center"
-      >
-        <i class="fa fa-search text-gray-400 mr-3"></i>
-        <input
-          type="text"
-          class="w-full bg-transparent border-none outline-none text-gray-200 placeholder-gray-500"
-          placeholder="검색어를 입력하세요..."
-        />
+    <!-- 검색 모달 -->
+    <div id="search-modal" class="fixed inset-0 items-start justify-center px-4 pt-[12vh] hidden">
+      <div class="search-card relative w-full max-w-xl overflow-hidden rise">
+        <div class="flex items-center gap-3 px-5 py-4 border-b" style="border-color:var(--line);">
+          <i class="fa fa-search" style="color:var(--pink);"></i>
+          <form class="flex-1" onsubmit="var v=this.q.value.trim(); if(v){location.href='/search/'+encodeURIComponent(v);} return false;">
+            <input name="q" type="text" class="w-full bg-transparent border-none outline-none font-ko text-base text-gray-100 placeholder-gray-500" placeholder="글 제목, 카테고리, 태그 검색…" />
+          </form>
+          <kbd class="rounded px-2 py-1 text-[10px] font-mono" style="background:rgba(255,255,255,.06);color:var(--muted);">ESC</kbd>
+        </div>
+        <div class="px-5 py-4 font-ko text-sm text-gray-500">엔터를 누르면 블로그 전체에서 검색합니다.</div>
       </div>
     </div>
 
-
+    <!-- 플로팅 액션 버튼 -->
+    <div id="fab-root" class="fixed right-5 bottom-5 flex flex-col items-end gap-3" style="opacity:0;transition:opacity .3s;">
+      <div id="fab-actions" class="flex flex-col items-end gap-3" style="opacity:0;transition:opacity .25s,transform .25s;">
+        <button id="fab-search-btn" class="flex items-center gap-2.5"><span class="font-ko text-xs px-2.5 py-1 rounded-md" style="background:rgba(20,20,24,.92);color:var(--text);border:1px solid var(--line);">검색</span><span class="fab-action"><i class="fa fa-search" style="color:var(--pink);"></i></span></button>
+        <a href="[##_taglog_link_##]" class="flex items-center gap-2.5"><span class="font-ko text-xs px-2.5 py-1 rounded-md" style="background:rgba(20,20,24,.92);color:var(--text);border:1px solid var(--line);">태그</span><span class="fab-action"><i class="fa fa-hashtag" style="color:var(--amber);"></i></span></a>
+        <button id="fab-top-btn" class="flex items-center gap-2.5"><span class="font-ko text-xs px-2.5 py-1 rounded-md" style="background:rgba(20,20,24,.92);color:var(--text);border:1px solid var(--line);">위로</span><span class="fab-action"><i class="fa fa-arrow-up text-gray-200"></i></span></button>
+      </div>
+      <button id="fab-main" class="fab-main" aria-label="빠른 메뉴" style="transition:transform .3s;"><i class="fa fa-plus text-lg"></i></button>
+    </div>
 
     <s_t3>
-      <div id="wrap">
-        <!-- Home Cover -->
+      <div id="wrap" class="relative z-2">
+
+        <!-- ════════════════════ HOME (커버) ════════════════════ -->
         <s_cover_group>
-          <!-- Scrollable Container[Fin](1.5.2025) -->
-          <!-- Slider Container[Fin](1.5.2025) -->
           <s_cover_rep>
+
+            <!-- ── 커버 1: 히어로 ── -->
             <s_cover name="cover-hero">
-              <section
-                id="hero-section"
-                class="relative w-full min-h-[62vh] flex flex-col py-6 bg-gradient-to-b from-gray-800 to-[#0d0d0d]"
-              >
-                <div class="page-container flex flex-col flex-1">
-                  <!-- 인라인 네비게이션 -->
-                  <div class="flex items-center justify-between">
-                    <a href="/" class="font-english font-bold text-pink-300 tracking-widest text-sm select-none">
-                      CHOCOLAT
+              <section id="hero-section" class="relative w-full min-h-[78vh] flex flex-col overflow-hidden"
+                       style="background:linear-gradient(180deg,#1b1622 0%,#0f0d12 55%,#0b0b0d 100%);">
+                <!-- accent orbs -->
+                <div class="absolute top-24 right-[8%] w-72 h-72 rounded-full blur-[90px] opacity-30 animate-floaty pointer-events-none" style="background:var(--pink);"></div>
+                <div class="absolute top-48 right-[26%] w-44 h-44 rounded-full blur-[80px] opacity-20 pointer-events-none" style="background:var(--amber);"></div>
+
+                <div class="page-container flex flex-col flex-1 relative">
+                  <!-- 인라인 상단 네비 -->
+                  <div class="flex items-center justify-between py-5">
+                    <a href="/" class="flex items-center gap-2.5">
+                      <span class="grid place-items-center rounded-md font-welcome text-[15px]" style="width:30px;height:30px;background:var(--pink);color:#16141a;">C</span>
+                      <span class="font-english font-bold tracking-[0.25em] text-sm" style="color:var(--pink);">CHOCOLAT</span>
                     </a>
                     <nav class="flex items-center gap-5">
-                      <div class="blog-nav">[##_blog_menu_##]</div>
-                      <button id="hero-search-btn" class="text-gray-400 hover:text-pink-300 transition duration-200" aria-label="검색">
-                        <i class="fa fa-search text-sm"></i>
-                      </button>
+                      <div class="blog-nav hidden sm:block">[##_blog_menu_##]</div>
+                      <button id="hero-search-btn" class="grid place-items-center w-9 h-9 rounded-full text-gray-400 hover:text-pink-300 transition" style="border:1px solid var(--line);" aria-label="검색"><i class="fa fa-search text-sm"></i></button>
                     </nav>
                   </div>
-                  <!-- 가운데 텍스트 블록 -->
-                  <div class="flex-1 flex flex-col items-center justify-center text-center gap-5 py-8">
-                    <!-- 타이프라이터 -->
-                    <div class="flex items-center gap-4 select-none">
-                      <span
-                        id="typewriter"
-                        class="font-welcome text-white break-words text-6xl sm:text-7xl md:text-8xl lg:text-9xl"
-                      >
-                        [##_cover_title_##]
-                      </span>
-                      <span class="w-[3px] h-[1.1em] bg-pink-300 animate-blink flex-shrink-0"></span>
-                    </div>
-                    <!-- 서브 태그라인 -->
-                    <div class="font-ko text-gray-400 text-sm tracking-[0.25em]">
-                      Python · Java · 자율주행 · 프로젝트
+                  <!-- 본문 -->
+                  <div class="flex-1 flex flex-col justify-center py-10">
+                    <span class="eyebrow rise" style="color:var(--amber);">Developer Notes</span>
+                    <h1 class="font-welcome text-white leading-[0.95] mt-6 rise break-keep flex items-center gap-2" style="font-size:clamp(3rem,11vw,8.5rem);">
+                      <span id="typewriter" data-phrases="안녕, 세계|Code, 자람|기록하는 개발자">[##_cover_title_##]</span>
+                      <span class="inline-block animate-blink flex-shrink-0" style="width:.06em;height:.82em;background:var(--pink);"></span>
+                    </h1>
+                    <p class="font-ko text-gray-400 text-base md:text-lg mt-7 max-w-lg leading-relaxed rise break-keep" style="animation-delay:.1s;">
+                      삽질도 자산이 된다고 믿으며, 개발하며 만난 시행착오와 프로젝트를 차곡차곡 적어둡니다.
+                    </p>
+                    <div class="mt-9 flex items-center gap-4 rise" style="animation-delay:.18s;">
+                      <s_cover_url><a href="[##_cover_url_##]" class="inline-flex items-center gap-2 rounded-full px-6 py-3 font-ko font-bold text-sm transition-transform hover:-translate-y-0.5" style="background:var(--pink);color:#16141a;">최신 글 읽기 <span>→</span></a></s_cover_url>
+                      <a href="[##_taglog_link_##]" class="font-ko text-sm text-gray-300 hover:text-white transition">태그로 둘러보기</a>
                     </div>
                   </div>
                 </div>
               </section>
             </s_cover>
 
-
+            <!-- ── 커버 2: FEATURED (베토 그리드) + 사이드바 ── -->
             <s_cover name="cover-featured">
-              <section id="section-featured" class="bg-[#0d0d0d] py-10">
+              <section id="section-featured" class="py-12" style="background:#0b0b0d;">
                 <div class="page-container">
-                <div class="flex gap-8 items-start">
+                  <div class="flex flex-col lg:flex-row gap-10 items-start">
 
-                  <!-- 그리드 컬럼 -->
-                  <div class="flex-1 min-w-0">
-                    <div class="flex items-center gap-3 mb-5">
-                      <span class="font-english text-sm font-bold tracking-widest text-yellow-300">FEATURED</span>
-                      <div class="flex-1 h-px bg-gray-800"></div>
+                    <!-- 그리드 컬럼 -->
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-3 mb-5">
+                        <span class="eyebrow" style="color:var(--amber);">Featured</span>
+                        <div class="flex-1 h-px" style="background:var(--line);"></div>
+                      </div>
+                      <!-- 첫 항목이 큰 카드가 되도록 grid auto-flow + 첫 자식 span -->
+                      <div class="featured-bento grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <s_cover_item>
+                          <a href="[##_cover_item_url_##]" class="group custom-card overflow-hidden block flex flex-col">
+                            <s_cover_item_thumbnail>
+                              <div class="duo aspect-square w-full"><img loading="lazy" src="//i1.daumcdn.net/thumb/C460x460.fwebp.q85/?fname=[##_cover_item_thumbnail_##]" alt="" /></div>
+                            </s_cover_item_thumbnail>
+                            <div class="p-4 flex flex-col gap-1.5 flex-1">
+                              <s_cover_item_article_info>
+                                <span class="chip-soft self-start">[##_cover_item_category_##]</span>
+                              </s_cover_item_article_info>
+                              <h3 class="font-highlight font-bold text-gray-100 text-sm md:text-base leading-snug line-clamp-2 group-hover:text-white transition break-keep">[##_cover_item_title_##]</h3>
+                            </div>
+                          </a>
+                        </s_cover_item>
+                      </div>
                     </div>
-                    <div class="grid grid-cols-2 gap-4">
-                      <s_cover_item>
-                        <a href="[##_cover_item_url_##]" class="custom-card bg-gray-800 group overflow-hidden rounded-xl block">
-                          <s_cover_item_thumbnail>
-                            <div class="aspect-square overflow-hidden">
-                              <img
-                                class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                                loading="lazy"
-                                src="//i1.daumcdn.net/thumb/C400x400.fwebp.q85/?fname=[##_cover_item_thumbnail_##]"
-                                alt=""
-                              />
-                            </div>
-                          </s_cover_item_thumbnail>
-                          <div class="p-4">
-                            <s_cover_item_article_info>
-                              <span class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2.5 py-0.5 mb-2">
-                                [##_cover_item_category_##]
-                              </span>
-                            </s_cover_item_article_info>
-                            <div class="font-highlight font-bold text-base text-yellow-300 line-clamp-2">
-                              [##_cover_item_title_##]
-                            </div>
+
+                    <!-- 사이드바 -->
+                    <aside id="home-sidebar" class="hidden lg:flex flex-col gap-8 w-[260px] flex-shrink-0">
+                      <!-- 프로필 -->
+                      <div class="custom-card p-5 flex flex-col items-center text-center gap-3">
+                        <div class="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 grid place-items-center text-2xl" style="background:linear-gradient(135deg,var(--pink),var(--amber));">
+                          <img src="https://github.com/BBAAMM.png" alt="프로필" class="w-full h-full object-cover" onerror="this.outerHTML='🍫';" />
+                        </div>
+                        <div>
+                          <div class="font-highlight font-bold text-gray-100">[##_blogger_##]</div>
+                          <div class="font-ko text-gray-400 text-xs mt-1 leading-relaxed">개발 시행착오와 프로젝트를 기록합니다.</div>
+                        </div>
+                        <div class="flex gap-3 mt-1">
+                          <a href="https://github.com/BBAAMM" target="_blank" rel="noopener" class="text-gray-400 hover:text-pink-300 transition" aria-label="GitHub"><i class="fa-brands fa-github text-lg"></i></a>
+                          <a href="/cdn-cgi/l/email-protection#3e5a5b485b52514e5b4c10554d5c7e59535f5752105d5153" class="text-gray-400 hover:text-pink-300 transition" aria-label="이메일"><i class="fa fa-envelope text-lg"></i></a>
+                        </div>
+                      </div>
+                      <!-- 카테고리 (홈에서는 대분류만 노출) -->
+                      <div>
+                        <div class="flex items-center gap-3 mb-4"><span class="eyebrow" style="color:var(--muted);">Categories</span><div class="flex-1 h-px" style="background:var(--line);"></div></div>
+                        <div class="sidebar-widget-body cat-top-only">[##_category_list_##]</div>
+                      </div>
+                      <!-- s_sidebar 위젯 (태그 등) -->
+                      <s_sidebar>
+                        <s_sidebar_element>
+                          <div class="sidebar-widget" data-type="[##_sidebar_element_type_##]">
+                            <div class="flex items-center gap-3 mb-4"><span class="eyebrow" style="color:var(--muted);">[##_sidebar_element_title_##]</span><div class="flex-1 h-px" style="background:var(--line);"></div></div>
+                            <div class="sidebar-widget-body">[##_sidebar_element_content_##]</div>
                           </div>
+                        </s_sidebar_element>
+                      </s_sidebar>
+                    </aside>
+
+                  </div>
+                </div>
+              </section>
+            </s_cover>
+
+            <!-- ── 커버 3: LATEST (넘버링 에디토리얼) ── -->
+            <s_cover name="cover-latest">
+              <section id="section-latest" class="pb-16" style="background:#0b0b0d;">
+                <div class="page-container">
+                  <div class="flex items-center gap-3 mb-5">
+                    <span class="eyebrow" style="color:var(--amber);">Latest</span>
+                    <div class="flex-1 h-px" style="background:var(--line);"></div>
+                  </div>
+                  <ul class="flex flex-col">
+                    <s_cover_item>
+                      <li class="group">
+                        <a href="[##_cover_item_url_##]" class="flex items-center gap-4 md:gap-6 py-5 border-b transition-colors hover:bg-white/[0.02] -mx-3 px-3 rounded-xl" style="border-color:var(--line);">
+                          <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2 mb-1.5">
+                              <s_cover_item_article_info><span class="chip-soft">[##_cover_item_category_##]</span></s_cover_item_article_info>
+                              <s_cover_item_article_info><span class="font-mono text-[0.7rem] text-gray-600">[##_cover_item_simple_date_##]</span></s_cover_item_article_info>
+                            </div>
+                            <div class="font-highlight font-bold text-gray-100 text-lg md:text-xl leading-snug line-clamp-1 group-hover:text-white transition break-keep">[##_cover_item_title_##]</div>
+                            <div class="font-ko text-sm text-gray-500 line-clamp-1 mt-1 break-keep">[##_cover_item_summary_##]</div>
+                          </div>
+                          <s_cover_item_thumbnail>
+                            <div class="duo hidden sm:block flex-shrink-0 w-20 h-20 rounded-xl"><img loading="lazy" src="//i1.daumcdn.net/thumb/C200x200.fwebp.q85/?fname=[##_cover_item_thumbnail_##]" alt="" /></div>
+                          </s_cover_item_thumbnail>
+                          <i class="fa fa-arrow-right flex-shrink-0 opacity-0 group-hover:opacity-100 transition" style="color:var(--pink);"></i>
                         </a>
-                      </s_cover_item>
+                      </li>
+                    </s_cover_item>
+                  </ul>
+                </div>
+              </section>
+            </s_cover>
+
+            <!-- ── 커버 4: FOOTER (브랜드 · 소셜 · 메뉴 · 저작권) ── -->
+            <s_cover name="cover-footer">
+              <footer class="relative w-full overflow-hidden border-t" style="border-color:var(--line);background:linear-gradient(180deg,#0b0b0d 0%,#100c14 100%);">
+                <div class="absolute -bottom-24 left-1/2 -translate-x-1/2 w-[120%] h-64 rounded-full blur-[110px] opacity-20 pointer-events-none" style="background:var(--pink);"></div>
+                <div class="page-container relative py-16">
+                  <div class="flex flex-col lg:flex-row gap-12 lg:gap-8 justify-between lg:items-start">
+                    <!-- 브랜드 -->
+                    <div class="max-w-sm">
+                      <a href="/" class="flex items-center gap-2.5 mb-5">
+                        <span class="grid place-items-center rounded-md font-welcome text-[15px]" style="width:30px;height:30px;background:var(--pink);color:#16141a;">C</span>
+                        <span class="font-english font-bold tracking-[0.25em] text-sm" style="color:var(--pink);">CHOCOLAT</span>
+                      </a>
+                      <p class="font-ko text-gray-400 text-sm leading-relaxed break-keep">삽질도 자산이 된다고 믿으며, 개발하며 만난 시행착오와 프로젝트를 차곡차곡 적어둡니다.</p>
+                      <div class="flex items-center gap-3 mt-6">
+                        <a href="https://github.com/BBAAMM" target="_blank" rel="noopener" class="footer-social" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="/cdn-cgi/l/email-protection#e2868794878e8d928790cc899180a2858f838b8ecc818d8f" class="footer-social" aria-label="이메일"><i class="fa fa-envelope"></i></a>
+                        <a href="[##_rss_url_##]" class="footer-social" aria-label="RSS"><i class="fa fa-rss"></i></a>
+                      </div>
+                    </div>
+                    <!-- 메뉴 + 위로 -->
+                    <div class="flex items-start gap-12">
+                      <div>
+                        <div class="eyebrow mb-4" style="color:var(--muted);">Menu</div>
+                        <nav class="footer-nav">[##_blog_menu_##]</nav>
+                      </div>
+                      <button type="button" class="footer-top" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+                        <i class="fa fa-arrow-up"></i>
+                        <span class="font-english text-[0.6rem] tracking-widest uppercase">Top</span>
+                      </button>
                     </div>
                   </div>
-
-                  <!-- 사이드바 -->
-                  <aside id="home-sidebar" class="hidden lg:flex flex-col gap-5 w-72 flex-shrink-0">
-
-                    <!-- 프로필 카드 -->
-                    <div class="bg-gray-800 rounded-xl p-6 flex flex-col items-center gap-3 text-center border border-gray-700">
-                      <div class="w-20 h-20 rounded-full overflow-hidden bg-gradient-to-br from-pink-300 to-yellow-300 flex-shrink-0">
-                        <img
-                          src="https://github.com/BBAAMM.png"
-                          alt="프로필"
-                          class="w-full h-full object-cover"
-                          onerror="this.parentElement.innerHTML='<span style=\'font-size:2rem\'>🍫</span>'"
-                        />
-                      </div>
-                      <div>
-                        <div class="font-highlight font-bold text-gray-200 text-base">김승범</div>
-                        <div class="font-ko text-gray-400 text-sm mt-1 leading-relaxed">
-                          개발 시행착오와 프로젝트를 기록합니다
-                        </div>
-                      </div>
-                      <div class="flex gap-3">
-                        <a
-                          href="https://github.com/BBAAMM"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          class="text-gray-400 hover:text-pink-300 transition duration-200"
-                          aria-label="GitHub"
-                        >
-                          <i class="fa-brands fa-github text-xl"></i>
-                        </a>
-                        <a
-                          href="mailto:developer.ksb@gmail.com"
-                          class="text-gray-400 hover:text-pink-300 transition duration-200"
-                          aria-label="이메일"
-                        >
-                          <i class="fa fa-envelope text-xl"></i>
-                        </a>
-                      </div>
-                    </div>
-
-                    <!-- 카테고리 목록 -->
-                    <div class="bg-gray-800 rounded-xl p-5 border border-gray-700">
-                      <div class="flex items-center gap-3 mb-4">
-                        <span class="font-english text-xs font-bold tracking-widest text-yellow-300 uppercase">Category</span>
-                        <div class="flex-1 h-px bg-gray-700"></div>
-                      </div>
-                      <div class="sidebar-widget-body">
-                        [##_category_list_##]
-                      </div>
-                    </div>
-
-                    <!-- s_sidebar 위젯 -->
-                    <s_sidebar>
-                      <s_sidebar_element>
-                        <div class="bg-gray-800 rounded-xl p-5 border border-gray-700 sidebar-widget" data-type="[##_sidebar_element_type_##]">
-                          <div class="flex items-center gap-3 mb-4">
-                            <span class="font-english text-xs font-bold tracking-widest text-yellow-300 uppercase">
-                              [##_sidebar_element_title_##]
-                            </span>
-                            <div class="flex-1 h-px bg-gray-700"></div>
-                          </div>
-                          <div class="sidebar-widget-body">
-                            [##_sidebar_element_content_##]
-                          </div>
-                        </div>
-                      </s_sidebar_element>
-                    </s_sidebar>
-
-                  </aside>
-
+                  <div class="mt-12 pt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-t" style="border-color:var(--line);">
+                    <span class="font-mono text-xs text-gray-600">© [##_blogger_##] — Developer Notes</span>
+                    <span class="font-mono text-xs text-gray-600">Powered by TISTORY</span>
+                  </div>
                 </div>
-                </div>
-              </section>
+              </footer>
             </s_cover>
 
-            <s_cover name="cover-latest">
-              <section id="section-latest" class="bg-[#0d0d0d] py-8">
-                <div class="page-container">
-                <div class="flex items-center gap-3 mb-5">
-                  <span class="font-english text-sm font-bold tracking-widest text-yellow-300">LATEST</span>
-                  <div class="flex-1 h-px bg-gray-800"></div>
-                </div>
-                <ul class="flex flex-col gap-4">
-                  <s_cover_item>
-                    <li class="custom-card custom-card-recent hover:bg-gray-700 transition duration-200 rounded-xl overflow-hidden">
-                      <a href="[##_cover_item_url_##]">
-                        <figure class="flex gap-5 p-5 items-center">
-                          <s_cover_item_thumbnail>
-                            <div class="flex-shrink-0 w-28 h-28 rounded-lg overflow-hidden">
-                              <img
-                                class="w-full h-full object-cover"
-                                loading="lazy"
-                                src="//i1.daumcdn.net/thumb/C280x280.fwebp.q85/?fname=[##_cover_item_thumbnail_##]"
-                                alt=""
-                              />
-                            </div>
-                          </s_cover_item_thumbnail>
-                          <div class="flex-1 min-w-0">
-                            <s_cover_item_article_info>
-                              <span class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2.5 py-0.5 mb-2">
-                                [##_cover_item_category_##]
-                              </span>
-                            </s_cover_item_article_info>
-                            <div class="font-highlight font-bold text-base sm:text-lg text-yellow-300 line-clamp-2 mb-1.5">
-                              [##_cover_item_title_##]
-                            </div>
-                            <div class="font-ko text-sm text-gray-400 line-clamp-2">
-                              [##_cover_item_summary_##]
-                            </div>
-                          </div>
-                        </figure>
-                      </a>
-                    </li>
-                  </s_cover_item>
-                </ul>
-                </div>
-              </section>
-            </s_cover>
           </s_cover_rep>
         </s_cover_group>
 
-        <!-- Article Definition[90%](1.14.2025) -->
-        <article
-          class="w-full h-auto min-w-[320px] flex flex-col justify-center items-center tracking-wider font-ko bg-gray-700"
-        >
+        <!-- ════════════════════ ARTICLE / LIST ════════════════════ -->
+        <article class="w-full min-w-[320px] font-ko">
+
+          <!-- 페이지 -->
           <s_page_rep>
-            <div class="hgroup">
-              <h1>[##_article_rep_title_##]</h1>
-            </div>
-            <div class="entry-content" id="article-view">
-              [##_article_rep_desc_##]
+            <div class="page-container max-w-3xl mx-auto pt-32 pb-16">
+              <h1 class="font-highlight font-bold text-white text-3xl mb-6">[##_article_rep_title_##]</h1>
+              <div class="post-content content-details" id="article-view">[##_article_rep_desc_##]</div>
             </div>
           </s_page_rep>
 
+          <!-- 공지 -->
           <s_notice_rep>
-            <div class="hgroup">
-              <h1>[##_notice_rep_title_##]</h1>
-              <div class="post-meta">
-                <span class="author">[##__notice_rep_author_##]</span>
-                <span class="date">[##_notice_rep_date_##]</span>
-                [##_s_ad_isolation_##]
-              </div>
-            </div>
-            <div class="entry-content" id="article-view">
-              [##_notice_rep_desc_##]
+            <div class="page-container max-w-3xl mx-auto pt-32 pb-16">
+              <span class="chip-soft mb-3">공지</span>
+              <h1 class="font-highlight font-bold text-white text-3xl mb-2">[##_notice_rep_title_##]</h1>
+              <div class="font-mono text-xs text-gray-500 mb-6">[##__notice_rep_author_##] · [##_notice_rep_date_##]</div>
+              <div class="post-content content-details" id="article-view">[##_notice_rep_desc_##]</div>
             </div>
           </s_notice_rep>
 
-          <!-- Protected Article -->
+          <!-- 보호글 -->
           <s_article_protected>
-            <s_index_article_rep>
-              <div class="post-item">
-                <a
-                  href="[##_article_rep_link_##]"
-                  data-tiara-action-name="블로그글_클릭"
-                  data-tiara-action-kind="ClickContent"
-                  data-tiara-copy="[##_article_rep_title_text_##]"
-                  data-tiara-image="[##_article_rep_thumbnail_url_##]"
-                  data-tiara-click_url="[##_blog_link_##][##_article_rep_link_##]"
-                  data-tiara-name="[##_article_rep_title_text_##]"
-                  data-tiara-provider="[##_title_##]"
-                  data-tiara-plink="[##_article_rep_link_##]"
-                  data-tiara-id="[##_article_rep_link_##]"
-                >
-                  <span class="thum"></span>
-                  <span class="title">[##_article_rep_title_##]</span>
-                  <span class="excerpt protected">보호되어 있는 글입니다.</span>
-                </a>
-              </div>
-            </s_index_article_rep>
             <s_permalink_article_rep>
-              <div class="hgroup">
-                <div class="category">보호글</div>
-                <h1>[##_article_rep_title_##]</h1>
-                <div class="post-meta">
-                  <span class="author">[##_article_rep_author_##]</span>
-                  <span class="date">[##_article_rep_date_##]</span>
-                </div>
-              </div>
-              <div class="entry-content">
-                [##_article_rep_desc_##]
-                <form
-                  class="protected_form"
-                  onsubmit="[##_article_dissolve_##]"
-                >
-                  <p>
-                    보호되어 있는 글입니다.<br />
-                    내용을 보시려면 비밀번호를 입력하세요.
-                  </p>
-                  <fieldset>
-                    <input
-                      type="password"
-                      id="[##_article_password_##]"
-                      name="[##_article_password_##]"
-                      value=""
-                      placeholder="비밀번호"
-                    />
-                    <button type="submit" class="btn">입력</button>
-                  </fieldset>
+              <div class="max-w-md mx-auto px-5 pt-40 pb-20 text-center">
+                <div class="text-4xl mb-4">🔒</div>
+                <h1 class="font-highlight font-bold text-white text-2xl mb-6">[##_article_rep_title_##]</h1>
+                <form class="custom-card p-6 flex flex-col gap-3" onsubmit="[##_article_dissolve_##]">
+                  <p class="font-ko text-sm text-gray-400">보호되어 있는 글입니다. 비밀번호를 입력하세요.</p>
+                  <input type="password" id="[##_article_password_##]" name="[##_article_password_##]" value="" placeholder="비밀번호"
+                         class="bg-transparent rounded-xl px-4 py-2.5 font-ko text-sm outline-none text-gray-200 placeholder-gray-600" style="border:1px solid var(--line);" />
+                  <button type="submit" class="rounded-xl py-2.5 font-ko text-sm font-bold" style="background:var(--pink);color:#16141a;">입력</button>
                 </form>
               </div>
             </s_permalink_article_rep>
           </s_article_protected>
 
-          <!-- Normal Article[Fin](1.14.2025) -->
+          <!-- 일반 아티클 (퍼머링크) -->
           <s_article_rep>
-            <!-- <s_index_article_rep>
-              <div class="post-item flex-col">
-                <ul class="flex flex-col gap-5 px-5 py-3">
-                  <li class="custom-card custom-card-recent bg-gray-800">
-                    <a
-                      href="[##_article_rep_link_##]"
-                      data-tiara-action-name="블로그글_클릭"
-                      data-tiara-action-kind="ClickContent"
-                      data-tiara-copy="[##_article_rep_title_text_##]"
-                      data-tiara-image="[##_article_rep_thumbnail_url_##]"
-                      data-tiara-click_url="[##_blog_link_##][##_article_rep_link_##]"
-                      data-tiara-name="[##_article_rep_title_text_##]"
-                      data-tiara-provider="[##_title_##]"
-                      data-tiara-plink="[##_article_rep_link_##]"
-                      data-tiara-id="[##_article_rep_link_##]"
-                    >
-                      <figure class="flex">
-                        <div class="text w-full sm:w-3/4 p-2 sm:p-5">
-                          <div
-                            class="category w-fit font-ko font-bold text-sm rounded-3xl bg-pink-300 p-2 mt-3 ml-5 text-sm"
-                          >
-                            [##_article_rep_category_##]
-                          </div>
-                          <div
-                            class="title w-full h-fit font-highlight font-bold text-md sm:text-2xl p-5 text-yellow-300"
-                          >
-                            [##_article_rep_title_##]
-                          </div>
-                          <div
-                            class="desc font-ko text-sm lg:text-md p-5 text-gray-200"
-                          >
-                            [##_article_rep_summary_##]
-                          </div>
-                        </div>
-                        <s_article_rep_thumbnail>
-                          <div class="image w-1/4 hidden sm:block">
-                            <img
-                              class="rounded-r-lg w-full h-full object-cover object-center"
-                              loading="lazy"
-                              src="//i1.daumcdn.net/thumb/C300x300.fwebp.q85/?fname=[##_article_rep_thumbnail_raw_url_##]"
-                              alt=""
-                            />
-                          </div>
-                        </s_article_rep_thumbnail>
-                      </figure>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </s_index_article_rep> -->
             <s_permalink_article_rep>
-              <main class="w-screen flex flex-col">
-                <div
-                  class="title-header w-full min-h-[40vh] flex flex-col justify-end pb-8 px-5 md:px-10 bg-gradient-to-br from-yellow-900 via-gray-800 to-gray-900"
-                >
-                  <!-- 브레드크럼 -->
-                  <nav class="flex items-center gap-2 text-xs text-gray-500 mb-4 font-ko" aria-label="breadcrumb">
-                    <a href="/" class="hover:text-gray-300 transition duration-200">홈</a>
-                    <span class="text-gray-700">/</span>
-                    <a href="[##_article_rep_category_link_##]" class="hover:text-pink-300 transition duration-200">
-                      [##_article_rep_category_##]
-                    </a>
-                  </nav>
-                  <!-- 제목 -->
-                  <h1 class="text-responsive font-bold text-yellow-300 mb-4 leading-tight">
-                    [##_article_rep_title_##]
-                  </h1>
-                  <!-- 메타 -->
-                  <div class="flex flex-wrap items-center gap-3">
-                    <a
-                      class="w-fit p-2 rounded-3xl text-sm text-gray-200 font-semibold bg-gray-800 hover:text-yellow-200 hover:bg-pink-300 transition duration-200"
-                      href="[##_article_rep_category_link_##]"
-                    >[##_article_rep_category_##]</a>
-                    <span class="font-ko text-sm text-gray-400">[##_article_rep_author_##]</span>
-                    <span class="font-ko text-sm text-gray-400">[##_article_rep_date_##]</span>
-                    <span class="font-ko text-sm text-gray-500 flex items-center gap-1">
-                      <i class="fa fa-clock text-xs"></i>
-                      <span id="reading-time">--</span> 읽기
-                    </span>
-                  </div>
-                </div>
-                <!-- 2컬럼: 본문 + 스티키 TOC -->
-                <div class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 flex gap-8 mt-10 mb-10 items-start">
+              <main class="w-full flex flex-col">
 
-                  <!-- 본문 컬럼 -->
-                  <div class="flex-1 min-w-0 flex flex-col gap-6">
+                <!-- 챕터 진행 바 (스티키 · 데스크탑·모바일 공용) — chapter-bar.js 가 채움 -->
+                <div id="chapter-bar" class="chapter-bar" hidden></div>
 
-                    <!-- 모바일 접이식 TOC (lg 미만에서 표시) -->
-                    <details id="toc-mobile-container" class="lg:hidden bg-gray-800 rounded-xl p-4 border border-gray-700">
-                      <summary class="font-english text-xs font-bold tracking-widest text-yellow-300 cursor-pointer select-none">
-                        목차
-                      </summary>
-                      <nav id="toc-mobile-nav" class="mt-3 flex flex-col gap-1"></nav>
-                    </details>
-
-                    <!-- 아티클 본문 -->
-                    <section class="p-7 md:p-10 lg:p-16 rounded-t-3xl rounded-b-xl bg-gray-800 text-gray-200 shadow-2xl shadow-black">
-                      <div
-                        class="post-content content-details text-base lg:text-lg"
-                        id="article-view"
-                      >
-                        [##_article_rep_desc_##]
-                      </div>
-                      <s_tag_label>
-                        <div class="tags mt-8 pt-6 border-t border-gray-700">
-                          <div class="flex flex-wrap gap-2 items-center">
-                            [##_tag_label_rep_##]
-                          </div>
-                        </div>
-                      </s_tag_label>
-                    </section>
-
-                  </div>
-                  <!-- 본문 컬럼 끝 -->
-
-                  <!-- 스티키 TOC (lg 이상에서 표시) -->
-                  <aside id="article-toc" class="hidden lg:block w-56 flex-shrink-0">
-                    <div class="sticky top-20">
-                      <div class="font-english text-xs font-bold tracking-widest text-yellow-300 mb-4">목차</div>
-                      <nav id="toc-desktop-nav" class="toc-nav flex flex-col gap-1"></nav>
+                <!-- 그라디언트 헤더 -->
+                <header class="relative w-full min-h-[42vh] flex flex-col justify-end pb-10 overflow-hidden"
+                        style="background:radial-gradient(110% 90% at 15% 0%, rgba(249,168,212,0.12) 0%, #14101a 45%, #0b0b0d 100%);">
+                  <div class="article-shell w-full">
+                    <nav class="flex items-center gap-2 font-mono text-xs text-gray-500 mb-5 pt-28" aria-label="breadcrumb">
+                      <a href="/" class="hover:text-gray-300 transition">홈</a>
+                      <span class="text-gray-700">/</span>
+                      <a href="[##_article_rep_category_link_##]" class="transition" style="color:var(--pink);">[##_article_rep_category_##]</a>
+                    </nav>
+                    <h1 class="font-highlight font-bold text-white text-responsive break-keep">[##_article_rep_title_##]</h1>
+                    <div class="flex flex-wrap items-center gap-x-4 gap-y-2 mt-6 font-ko text-sm text-gray-400">
+                      <span class="flex items-center gap-2"><span class="w-7 h-7 rounded-full grid place-items-center text-sm flex-shrink-0" style="background:linear-gradient(135deg,var(--pink),var(--amber));">🍫</span>[##_article_rep_author_##]</span>
+                      <span>[##_article_rep_date_##]</span>
+                      <span class="flex items-center gap-1.5"><i class="fa fa-clock text-xs"></i><span id="reading-time">--</span> 읽기</span>
                     </div>
-                  </aside>
+                  </div>
+                </header>
 
+                <!-- 본문 (단일 컬럼 · 좁아진 좌우 여백) -->
+                <div class="article-shell py-12">
+                  <!-- 본문 -->
+                  <div class="dropcap">
+                    <div class="post-content content-details" id="article-view">[##_article_rep_desc_##]</div>
+                  </div>
+
+                  <!-- 태그 -->
+                  <s_tag_label>
+                    <div class="mt-12 pt-6 flex flex-wrap gap-2 border-t" style="border-color:var(--line);">[##_tag_label_rep_##]</div>
+                  </s_tag_label>
+
+                  <!-- 작성자 카드 -->
+                  <div class="mt-10 custom-card p-6 flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-full grid place-items-center text-2xl flex-shrink-0" style="background:linear-gradient(135deg,var(--pink),var(--amber));">🍫</div>
+                    <div class="flex-1">
+                      <div class="font-highlight font-bold text-gray-100">[##_article_rep_author_##]</div>
+                      <div class="font-ko text-sm text-gray-500 mt-0.5">개발 시행착오와 프로젝트를 기록합니다.</div>
+                    </div>
+                    <a href="https://github.com/BBAAMM" target="_blank" rel="noopener" class="font-english text-[0.65rem] tracking-widest uppercase px-3.5 py-2 rounded-full flex-shrink-0" style="color:var(--pink);border:1px solid rgba(249,168,212,.34);">GitHub</a>
+                  </div>
                 </div>
-                <!-- 2컬럼 끝 -->
 
                 <!-- 관련 글 -->
                 <s_article_related>
-                  <div class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 mb-10">
-                    <div class="related-articles p-7 md:p-10 rounded-t-3xl rounded-b-xl bg-gray-800 text-gray-200 shadow-2xl shadow-black">
-                      <h2>
-                        <strong class="text-xl font-highlight">'[##_article_rep_category_##]'</strong>
-                      </h2>
-                      <ul class="flex flex-col gap-3 mt-4">
-                        <s_article_related_rep>
-                          <li class="w-full flex flex-col justify-center items-center rounded-2xl bg-gray-700">
-                            <a
-                              class="w-full flex text-md items-center justify-between p-5 font-ko text-gray-200"
-                              href="[##_article_related_rep_link_##]"
-                            >
-                              <span class="text-md font-ko font-bold">[##_article_related_rep_title_##]</span>
-                              <span class="thum">
-                                <s_article_related_rep_thumbnail>
-                                  <img
-                                    class="rounded-3xl"
-                                    loading="lazy"
-                                    src="//i1.daumcdn.net/thumb/C50x50.fwebp.q85/?fname=[##_article_related_rep_thumbnail_link_##]"
-                                    alt=""
-                                  />
-                                </s_article_related_rep_thumbnail>
-                              </span>
-                            </a>
-                          </li>
-                        </s_article_related_rep>
-                      </ul>
-                    </div>
-                  </div>
+                  <section class="article-shell pb-6">
+                    <div class="flex items-center gap-3 mb-5"><span class="eyebrow" style="color:var(--amber);">'[##_article_rep_category_##]' 의 다른 글</span><div class="flex-1 h-px" style="background:var(--line);"></div></div>
+                    <ul class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <s_article_related_rep>
+                        <li class="group custom-card overflow-hidden">
+                          <a href="[##_article_related_rep_link_##]" class="flex flex-col h-full">
+                            <s_article_related_rep_thumbnail>
+                              <div class="duo aspect-square w-full"><img loading="lazy" src="//i1.daumcdn.net/thumb/C300x300.fwebp.q85/?fname=[##_article_related_rep_thumbnail_link_##]" alt="" /></div>
+                            </s_article_related_rep_thumbnail>
+                            <div class="p-4 flex-1 flex items-center">
+                              <span class="font-highlight font-bold text-gray-100 text-sm leading-snug line-clamp-2 group-hover:text-white transition break-keep">[##_article_related_rep_title_##]</span>
+                            </div>
+                          </a>
+                        </li>
+                      </s_article_related_rep>
+                    </ul>
+                  </section>
                 </s_article_related>
 
                 <!-- 댓글 -->
                 <s_rp>
-                  <section class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 mb-10">
-                    [##_comment_group_##]
+                  <section class="article-shell pb-16">
+                    <div class="tt-comment-cont">[##_comment_group_##]</div>
                   </section>
                 </s_rp>
+
               </main>
             </s_permalink_article_rep>
           </s_article_rep>
 
-          <!-- Category page[Fin](3.2.2025) -->
-          <!-- (3.2.2025)[Fin] : Edit <h1> -->
+          <!-- 카테고리 / 태그 / 검색 목록 -->
           <s_list>
-            <section class="w-full min-h-screen bg-[#0d0d0d] text-gray-200">
-
-              <!-- 카테고리 헤더 -->
-              <header class="w-full bg-gradient-to-br from-gray-800 to-gray-900 px-6 py-10">
-                <h1 class="font-highlight text-2xl md:text-3xl text-pink-200 mb-1">
-                  [##_list_conform_##]
-                </h1>
-                <p id="list-count" class="font-ko text-sm text-gray-500"></p>
+            <section class="w-full min-h-screen" style="background:#0b0b0d;">
+              <!-- 헤더 -->
+              <header class="relative w-full pt-32 md:pt-40 pb-12 overflow-hidden"
+                      style="background:radial-gradient(100% 90% at 80% 0%, rgba(253,224,71,0.1) 0%, #14111a 45%, #0b0b0d 100%);">
+                <div class="page-container">
+                  <span class="eyebrow" style="color:var(--amber);">Archive</span>
+                  <h1 class="font-highlight font-bold text-white mt-3 break-keep" style="font-size:clamp(2rem,6vw,3.5rem);">[##_list_conform_##]</h1>
+                  <p id="list-count" class="font-mono text-sm text-gray-500 mt-3"></p>
+                </div>
               </header>
 
-              <!-- 2컬럼: 글 목록 + 필터 사이드바 -->
-              <div class="flex flex-col lg:flex-row gap-5 p-5 max-w-screen-xl mx-auto">
-
-                <!-- 글 목록 -->
+              <div class="page-container py-10 flex flex-col lg:flex-row gap-10">
+                <!-- 목록 -->
                 <div class="flex-1 min-w-0">
-                  <ul class="flex flex-col gap-3" id="list-items">
+                  <ul id="list-items" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <s_list_rep>
-                      <li class="custom-card custom-card-recent bg-gray-800 hover:bg-gray-700 transition duration-200 rounded-lg overflow-hidden">
-                        <a
-                          href="[##_list_rep_link_##]"
-                          data-tiara-action-name="블로그글_클릭"
-                          data-tiara-action-kind="ClickContent"
-                          data-tiara-copy="[##_list_rep_title_text_##]"
-                          data-tiara-image="[##_list_rep_thumbnail_url_##]"
-                          data-tiara-click_url="[##_blog_link_##][##_list_rep_link_##]"
-                          data-tiara-name="[##_list_rep_title_text_##]"
-                          data-tiara-provider="[##_title_##]"
-                          data-tiara-plink="[##_list_rep_link_##]"
-                          data-tiara-id="[##_list_rep_link_##]"
-                        >
-                          <figure class="flex gap-3 p-3 items-center">
-                            <div class="flex-1 min-w-0">
-                              <div class="inline-block font-ko font-bold text-xs rounded-3xl bg-pink-300 text-gray-900 px-2 py-0.5 mb-1">
-                                [##_list_rep_category_##]
-                              </div>
-                              <div class="font-highlight font-bold text-sm sm:text-xl text-yellow-300 line-clamp-2 mb-1">
-                                [##_list_rep_title_##]
-                              </div>
-                              <div class="font-ko text-xs sm:text-sm text-gray-400 line-clamp-2">
-                                [##_list_rep_summary_##]
-                              </div>
-                            </div>
-                            <s_list_rep_thumbnail>
-                              <div class="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-md overflow-hidden">
-                                <img
-                                  class="w-full h-full object-cover"
-                                  loading="lazy"
-                                  src="//i1.daumcdn.net/thumb/C300x300.fwebp.q85/?fname=[##_list_rep_thumbnail_raw_url_##]"
-                                  alt=""
-                                />
-                              </div>
-                            </s_list_rep_thumbnail>
-                          </figure>
+                      <li class="group custom-card overflow-hidden flex flex-col">
+                        <a href="[##_list_rep_link_##]" class="flex flex-col h-full"
+                           data-tiara-action-name="블로그글_클릭" data-tiara-action-kind="ClickContent"
+                           data-tiara-copy="[##_list_rep_title_text_##]" data-tiara-image="[##_list_rep_thumbnail_url_##]">
+                          <s_list_rep_thumbnail>
+                            <div class="duo aspect-square w-full"><img loading="lazy" src="//i1.daumcdn.net/thumb/C460x460.fwebp.q85/?fname=[##_list_rep_thumbnail_raw_url_##]" alt="" /></div>
+                          </s_list_rep_thumbnail>
+                          <div class="p-4 flex flex-col gap-2 flex-1">
+                            <span class="chip-soft self-start">[##_list_rep_category_##]</span>
+                            <h4 class="font-highlight font-bold text-gray-100 text-base leading-snug line-clamp-2 group-hover:text-white transition break-keep">[##_list_rep_title_##]</h4>
+                            <p class="font-ko text-xs text-gray-500 line-clamp-2 break-keep">[##_list_rep_summary_##]</p>
+                            <div class="mt-auto pt-1 font-mono text-[0.7rem] text-gray-600">[##_list_rep_date_##]</div>
+                          </div>
                         </a>
                       </li>
                     </s_list_rep>
                   </ul>
+
+                  <!-- 페이징 (Tistory 리스트 치환자 — _prev_page_ · _paging_rep_link_ · _next_page_ 는 href 속성 전체로 치환된다) -->
+                  <s_paging>
+                    <nav id="list-paging" class="flex items-center justify-center gap-2 mt-12" aria-label="페이지 목록">
+                      <a [##_prev_page_##] class="paging-link paging-arrow [##_no_more_prev_##]" aria-label="이전 페이지"><i class="fa fa-chevron-left text-xs"></i></a>
+                      <s_paging_rep>
+                        <a [##_paging_rep_link_##] class="paging-link paging-num">[##_paging_rep_link_num_##]</a>
+                      </s_paging_rep>
+                      <a [##_next_page_##] class="paging-link paging-arrow [##_no_more_next_##]" aria-label="다음 페이지"><i class="fa fa-chevron-right text-xs"></i></a>
+                    </nav>
+                  </s_paging>
                 </div>
-                <!-- 글 목록 끝 -->
 
-                <!-- 필터 사이드바 (홈 사이드바와 동일 컴포넌트, 프로필 제외) -->
-                <aside class="hidden lg:flex flex-col gap-6 w-64 flex-shrink-0">
-
-                  <!-- 카테고리 목록 -->
-                  <div class="bg-gray-800 rounded-xl p-5 border border-gray-700">
-                    <div class="flex items-center gap-3 mb-3">
-                      <span class="font-english text-xs font-bold tracking-widest text-yellow-300 uppercase">Category</span>
-                      <div class="flex-1 h-px bg-gray-700"></div>
-                    </div>
-                    <div class="sidebar-widget-body">
-                      [##_category_list_##]
-                    </div>
+                <!-- 사이드바 -->
+                <aside class="hidden lg:flex flex-col gap-8 w-[260px] flex-shrink-0">
+                  <div>
+                    <div class="flex items-center gap-3 mb-4"><span class="eyebrow" style="color:var(--muted);">Categories</span><div class="flex-1 h-px" style="background:var(--line);"></div></div>
+                    <div class="sidebar-widget-body">[##_category_list_##]</div>
                   </div>
-
-                  <!-- s_sidebar 위젯 -->
                   <s_sidebar>
                     <s_sidebar_element>
                       <div class="sidebar-widget" data-type="[##_sidebar_element_type_##]">
-                        <div class="flex items-center gap-3 mb-3">
-                          <span class="font-english text-xs font-bold tracking-widest text-yellow-300 uppercase">
-                            [##_sidebar_element_title_##]
-                          </span>
-                          <div class="flex-1 h-px bg-gray-800"></div>
-                        </div>
-                        <div class="sidebar-widget-body">
-                          [##_sidebar_element_content_##]
-                        </div>
+                        <div class="flex items-center gap-3 mb-4"><span class="eyebrow" style="color:var(--muted);">[##_sidebar_element_title_##]</span><div class="flex-1 h-px" style="background:var(--line);"></div></div>
+                        <div class="sidebar-widget-body">[##_sidebar_element_content_##]</div>
                       </div>
                     </s_sidebar_element>
                   </s_sidebar>
-
                 </aside>
-
               </div>
             </section>
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+              (function () {
+                var items = document.querySelectorAll("#list-items > li");
+                var el = document.getElementById("list-count");
+                if (el && items.length) el.textContent = "글 " + items.length + "개";
 
-            <!-- 글 개수 카운트 (JS) -->
-            <script>
-              document.addEventListener("DOMContentLoaded", function () {
-                var items = document.querySelectorAll("#list-items li");
-                var countEl = document.getElementById("list-count");
-                if (countEl && items.length > 0) {
-                  countEl.textContent = "글 " + items.length + "개";
+                // 페이징: 현재 페이지 강조 + 더 이상 없는 화살표 숨김
+                var nav = document.getElementById("list-paging");
+                if (nav) {
+                  var m = location.search.match(/[?&]page=(\d+)/);
+                  var cur = m ? m[1] : "1";
+                  nav.querySelectorAll(".paging-num").forEach(function (a) {
+                    if (a.textContent.trim() === cur) a.classList.add("current");
+                  });
+                  nav.querySelectorAll(".paging-arrow").forEach(function (a) {
+                    var href = a.getAttribute("href");
+                    var cls = (a.className || "").toLowerCase();
+                    if (!href || href === "#" || /nomore|no_more/.test(cls)) a.style.display = "none";
+                  });
                 }
-              });
+              })();
             </script>
           </s_list>
+
         </article>
 
-        <!-- Tag Definition[0%] -->
-        <!-- TODO(1.14.2025) : Making Tag area -->
-        <!-- TODO(1.14.2025) : Link to Slide 2 -->
       </div>
     </s_t3>
+
   </body>
 </html>
