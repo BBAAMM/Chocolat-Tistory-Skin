@@ -500,3 +500,57 @@ body {
 }
 .footer-top:hover { color: var(--pink); border-color: var(--pink); }
 .footer-top .fa-arrow-up { font-size: 1rem; }
+
+/* ============================================================
+    Google Adsense
+    .choco-ad           베이스: 액센트 라인 + 라벨만. 레이아웃 간섭 없음.
+                        → custom-card 위에 스택 가능 (그리드·카드 셀)
+    .choco-ad--block    블록 모디파이어: 자체 카드 + 여백 (본문 인라인 단독 광고용)
+    .choco-ad--wide     와이드 모디파이어: 멀티플렉스 좌우 여백 축소
+   ============================================================ */
+.ad-cell:has(ins[data-ad-status="unfilled"]) { display: none; }
+.choco-ad {
+  position: relative;
+  overflow: hidden;
+}
+.choco-ad::before {                        /* "Advertisement" 라벨 */
+  content: "Advertisement";
+  position: absolute; top: .75rem; left: 1.1rem; z-index: 1;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600; font-size: .6rem; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--muted);
+}
+.choco-ad::after {                         /* 상단 핑크→앰버 액센트 라인 */
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; z-index: 1;
+  background: linear-gradient(90deg, var(--pink), var(--amber)); opacity: .55;
+}
+.choco-ad .adsbygoogle { display: block; margin: 0 auto; }
+
+/* ── 블록 모디파이어 (본문 인라인 단독) ──────────────────── */
+.choco-ad--block {
+  margin: 2.6rem auto;
+  padding: 2.1rem 1.1rem 1.2rem;          /* 위쪽 여백은 라벨 자리 */
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+/* ── 와이드 모디파이어 (멀티플렉스 autorelaxed) ───────────── */
+.choco-ad--wide { padding-left: .75rem; padding-right: .75rem; }
+
+/* ── 홈 커버 상단, 하단 자동 광고 ────────────────────────────────── */
+.late-ad .adsbygoogle { display: block; }
+
+.late-ad:has(ins[data-ad-status="filled"]) {          /* 광고 있을 때만 리스트 행처럼 */
+  position: relative;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.late-ad:has(ins[data-ad-status="filled"])::before {  /* 'Sponsored' 칩 (chip-soft 동일) */
+  content: "Sponsored";
+  display: inline-block; margin-bottom: .7rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600; font-size: .62rem; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--pink); background: rgba(255,255,255,.04);
+  border: 1px solid var(--line); border-radius: 999px; padding: .28rem .55rem;
+}
