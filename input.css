@@ -100,10 +100,6 @@ body {
   .rise { animation: riseIn 0.7s cubic-bezier(0.22,1,0.36,1) both; }
 }
 
-/* Marquee (alt hero) */
-@keyframes marquee { from { transform: translateX(0);} to { transform: translateX(-50%);} }
-.marquee-track { display: inline-flex; white-space: nowrap; animation: marquee 26s linear infinite; }
-
 /* ---------- Cards ---------- */
 .custom-card {
   background: var(--surface);
@@ -114,8 +110,10 @@ body {
 .custom-card:hover { border-color: #3a3a42; }
 .custom-card-feature:hover { transform: translateY(-3px); }
 
-/* duotone cover wrapper — overlays a brand tint on any thumbnail */
-.duo { position: relative; overflow: hidden; background: #161619; }
+/* duotone cover wrapper — overlays a brand tint on any thumbnail.
+   Background falls back to the brand poster for image-less posts;
+   a real <img> (object-fit:cover, opaque) hides it when present. */
+.duo { position: relative; overflow: hidden; background: #161619 url("./images/post-fallback.png") center/cover no-repeat; }
 .duo > img {
   position: relative; z-index: 1; width: 100%; height: 100%;
   object-fit: cover; filter: grayscale(0.12);
@@ -208,29 +206,14 @@ body {
 .tok-com { color:#6b6b75; font-style:italic; } .tok-num { color:#c9a07a; }
 
 /* ============================================================
-   TOC  (sticky, scroll-spy) + reading progress
+   Article shell — single centered column (tighter side margins)
    ============================================================ */
-.toc-nav .toc-link { position: relative; padding-left: 0; }
-.toc-link {
-  display: flex; align-items: center; gap: .55rem;
-  font-family: "WooJu","Pretendard",sans-serif; font-size: .85rem; line-height: 1.4;
-  color: var(--muted); padding: .35rem 0; transition: color .2s ease, transform .2s ease;
+.article-shell {
+  width: 100%; max-width: 900px;
+  margin-left: auto; margin-right: auto;
+  padding-left: 1rem; padding-right: 1rem;
 }
-.toc-link::before {
-  content: ""; width: 6px; height: 6px; border-radius: 999px;
-  background: var(--line); flex-shrink: 0; transition: all .2s ease;
-}
-.toc-link.pl-4 { padding-left: 1rem; font-size: .8rem; }
-.toc-link:hover { color: #d4d2cf; }
-.toc-link.active { color: var(--pink); font-weight: 600; transform: translateX(3px); }
-.toc-link.active::before { background: var(--pink); transform: scale(1.5); }
-
-/* reading-progress top bar */
-#reading-progress { background: linear-gradient(90deg, var(--pink), var(--amber)); }
-
-/* reading % readout in the sticky TOC */
-.toc-meter-track { height: 4px; border-radius: 999px; background: var(--line); overflow: hidden; }
-.toc-meter-fill { height: 100%; background: var(--pink); width: 0%; transition: width .1s linear; }
+@media (min-width: 768px) { .article-shell { padding-left: 2rem; padding-right: 2rem; } }
 
 /* ============================================================
    Search modal
@@ -276,6 +259,29 @@ body {
 .cloud3 { font-size: 1.15rem; opacity: .9; }
 .cloud4 { font-size: 1.4rem; }
 .cloud5 { font-size: 1.7rem; color: var(--pink); }
+
+/* Tag cloud page container (s_tag → .taglog) */
+.taglog { display: flex; flex-wrap: wrap; gap: .55rem .7rem; align-items: baseline; }
+.taglog a {
+  font-family: "HSSanTokki","Space Grotesk",sans-serif; line-height: 1;
+  color: #c7c6cd; padding: .5rem .9rem; border-radius: 999px;
+  border: 1px solid var(--line); background: rgba(255,255,255,.02);
+  transition: color .2s ease, border-color .2s ease, background .2s ease, transform .2s ease;
+}
+.taglog a:hover { color: #16141a; background: var(--pink); border-color: var(--pink); transform: translateY(-2px); }
+.taglog a.cloud5 { border-color: rgba(249,168,212,.4); }
+.taglog a.cloud4:hover, .taglog a.cloud5:hover { color: #16141a; }
+
+/* Compact tag cloud for the 260px sidebar (s_random_tags → .taglog-mini) */
+.taglog-mini { gap: .4rem .45rem; }
+.taglog-mini ul { display: contents; list-style: none; margin: 0; padding: 0; }
+.taglog-mini li { display: contents; }
+.taglog-mini a { padding: .28rem .6rem; }
+.taglog-mini a.cloud1 { font-size: .72rem; opacity: .65; }
+.taglog-mini a.cloud2 { font-size: .8rem;  opacity: .8; }
+.taglog-mini a.cloud3 { font-size: .9rem;  opacity: .92; }
+.taglog-mini a.cloud4 { font-size: 1.02rem; }
+.taglog-mini a.cloud5 { font-size: 1.15rem; color: var(--pink); }
 
 /* Utility */
 .z-2 { position: relative; z-index: 2; }
@@ -334,16 +340,13 @@ body {
 .sidebar-widget[data-type="tags"] .sidebar-widget-body a:hover { color: var(--pink); border-color: var(--pink); }
 
 /* ============================================================
-   Tistory namecard ([##_btn_subscription_##] / .tt_box_namecard)
+   Tistory namecard (.tt_box_namecard)
+   댓글 위에 자동 삽입되는 기본 프로필/명함 박스 — 숨김 처리
    ============================================================ */
-.tt_box_namecard {
-  width: 100%; display: flex; justify-content: center; align-items: center;
-  border-radius: 16px; background: var(--surface); border: 1px solid var(--line);
-}
-.tt_box_namecard .tt_cont { padding-top: 0; }
-.tt_box_namecard .tt_tit_cont { font-family: "WooJu",sans-serif; font-weight: 700; font-size: 1.4rem; color: #fff; }
-.tt_box_namecard .tt_desc { color: #c7c6cd; font-size: .9rem; padding-right: 2rem; }
-.tt_box_namecard .tt_btn_subscribe { border: none; background: var(--pink); color: #16141a; font-family: "WooJu",sans-serif; font-weight: 700; border-radius: 999px; }
+.tt_box_namecard,
+#mArticle .tt_box_namecard,
+.area_namecard,
+.box_namecard { display: none !important; }
 
 /* ============================================================
    Tistory comment widget (.tt-comment-cont) — dark restyle
@@ -357,7 +360,272 @@ body {
 .tt-comment-cont .tt-list-reply-comment .tt-wrap-cmt { border-radius: 16px; background: #232329; }
 .tt-area-write .tt-inner-g { border: none; color: #fff; border-radius: 12px; background: var(--surface-2); }
 
+/* 댓글/방명록 입력 필드 */
+.tt-comment-cont input,
+.tt-comment-cont textarea,
+.tt-comment-cont [contenteditable],
+.tt-area-reply input,
+.tt-area-reply textarea,
+.tt-area-reply [contenteditable],
+#s-guestbook input,
+#s-guestbook textarea,
+#s-guestbook [contenteditable] {
+  background: var(--surface-2) !important;
+  color: var(--text) !important;
+  -webkit-text-fill-color: var(--text) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 10px;
+  padding: .55rem .8rem;
+  font-family: "WooJu","Pretendard",sans-serif;
+  font-size: .95rem;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color .2s ease;
+}
+.tt-comment-cont input::placeholder,
+.tt-comment-cont textarea::placeholder,
+.tt-area-reply input::placeholder,
+.tt-area-reply textarea::placeholder,
+#s-guestbook input::placeholder,
+#s-guestbook textarea::placeholder { color: var(--muted) !important; }
+.tt-comment-cont input:focus,
+.tt-comment-cont textarea:focus,
+.tt-comment-cont [contenteditable]:focus,
+.tt-area-reply input:focus,
+.tt-area-reply textarea:focus,
+#s-guestbook input:focus,
+#s-guestbook textarea:focus,
+#s-guestbook [contenteditable]:focus { border-color: var(--pink) !important; box-shadow: 0 0 0 3px rgba(249,168,212,.12); }
+/* webkit autofill — 배경색 덮어쓰기 */
+.tt-comment-cont input:-webkit-autofill,
+#s-guestbook input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px var(--surface-2) inset !important;
+  -webkit-text-fill-color: var(--text) !important;
+}
+/* 댓글/방명록 제출 버튼 — 쓰기 폼 안 submit 한정 */
+.tt-area-write input[type="submit"],
+.tt-area-write input[type="button"],
+.tt-area-write button[type="submit"],
+#s-guestbook input[type="submit"],
+#s-guestbook input[type="button"],
+#s-guestbook button[type="submit"] {
+  background: var(--pink) !important;
+  color: #16141a !important;
+  -webkit-text-fill-color: #16141a !important;
+  border: none !important;
+  border-radius: 10px;
+  padding: .55rem 1.2rem;
+  font-family: "HSSanTokki","Space Grotesk",sans-serif;
+  font-size: .9rem;
+  cursor: pointer;
+  transition: opacity .2s ease;
+}
+.tt-area-write input[type="submit"]:hover,
+.tt-area-write button[type="submit"]:hover,
+#s-guestbook input[type="submit"]:hover,
+#s-guestbook button[type="submit"]:hover { opacity: .85; }
+
+/* 댓글 옵션(수정·삭제) 더보기 버튼 */
+.tt-wrap-link-comment { position: relative; }
+.tt-wrap-link-comment button,
+.tt-wrap-link-comment .tt-btn-more,
+.tt_img_area_reply,
+.tt-button-modify {
+  background: rgba(255,255,255,.07) !important;
+  color: var(--text) !important;
+  -webkit-text-fill-color: var(--text) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 999px;
+  width: 28px; height: 28px;
+  display: grid !important; place-items: center;
+  padding: 0; cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+}
+.tt-wrap-link-comment button:hover,
+.tt-wrap-link-comment .tt-btn-more:hover,
+.tt_img_area_reply:hover,
+.tt-button-modify:hover {
+  background: rgba(255,255,255,.18) !important;
+}
+/* 깨진 img 숨기고 ··· 텍스트로 대체 */
+.tt-wrap-link-comment img,
+.tt-wrap-link-comment .tt-btn-more img,
+.tt_img_area_reply img,
+.tt-button-modify img { display: none !important; }
+.tt-wrap-link-comment button::after,
+.tt-wrap-link-comment .tt-btn-more::after,
+.tt_img_area_reply::after,
+.tt-button-modify::after {
+  content: "···";
+  font-size: .8rem; font-family: "Space Grotesk",monospace;
+  letter-spacing: .05em; line-height: 1;
+  color: var(--text);
+}
+/* 드롭다운 목록 */
+.tt-list-link-comment {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px -6px rgba(0,0,0,.6);
+  overflow: hidden;
+}
+.tt-list-link-comment a,
+.tt-list-link-comment button {
+  font-family: "WooJu","Pretendard",sans-serif !important;
+  font-size: .85rem !important;
+  color: var(--text) !important;
+  -webkit-text-fill-color: var(--text) !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: .5rem .9rem !important;
+  display: block; width: 100%; text-align: left; cursor: pointer;
+  transition: background .15s ease;
+}
+.tt-list-link-comment a:hover,
+.tt-list-link-comment button:hover { background: rgba(255,255,255,.06) !important; }
+
 /* article body keeps both classes (post-content content-details); neutralize legacy */
 .content-details ul { background: transparent; color: inherit; padding: 0 0 0 1.4rem; box-shadow: none; }
 .content-details p { margin-left: 0; margin-right: 0; }
 .content-details p b { background: transparent; padding: 0; color: #fff; }
+
+/* ============================================================
+   Pagination — arrows + no-more state
+   ============================================================ */
+.paging-link.paging-arrow.noMorePrev,
+.paging-link.paging-arrow.noMoreNext,
+.paging-link.paging-arrow.no_more_prev,
+.paging-link.paging-arrow.no_more_next { display: none; }
+
+/* ============================================================
+   Home sidebar — show only top-level categories (.cat-top-only)
+   hides every nested sub-category <ul> rendered by [##_category_list_##]
+   ============================================================ */
+.cat-top-only ul ul ul{ display: none !important; }
+
+/* ============================================================
+   Direction C — sticky chapter bar (article pages)
+   ============================================================ */
+.chapter-bar {
+  position: fixed; top: 56px; left: 0; right: 0; z-index: 45;
+  background: rgba(14,13,17,.92); backdrop-filter: blur(12px) saturate(140%);
+  border-bottom: 1px solid var(--line);
+}
+.chapter-bar[hidden] { display: none; }
+.cb-inner {
+  max-width: 900px; margin: 0 auto; height: 46px;
+  display: flex; align-items: center; gap: 1rem; padding: 0 1.5rem;
+}
+.cb-now {
+  display: flex; align-items: center; gap: .5rem; min-width: 0;
+  background: none; border: none; padding: 0; cursor: pointer;
+  font-family: "WooJu","Pretendard",sans-serif; color: var(--text);
+}
+.cb-now > .fa-list-ul { color: var(--pink); font-size: .8rem; }
+.cb-now-idx { font-family: "Space Grotesk", monospace; font-size: .72rem; color: var(--amber); letter-spacing: .04em; }
+.cb-now-title { font-size: .9rem; color: #e8e6e3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 40vw; }
+.cb-caret { font-size: .6rem; color: var(--muted); transition: transform .2s ease; }
+.chapter-bar.open .cb-caret { transform: rotate(180deg); }
+.cb-segs { display: flex; gap: 5px; flex: 1; margin-left: auto; max-width: 360px; }
+.cb-seg {
+  position: relative; flex: 1; height: 5px; border-radius: 999px;
+  background: var(--line); overflow: hidden; border: none; padding: 0; cursor: pointer;
+}
+.cb-seg-fill { position: absolute; inset: 0; width: 0; border-radius: 999px; background: linear-gradient(90deg, var(--pink), var(--amber)); transition: width .12s linear; }
+.cb-seg.active { box-shadow: 0 0 0 1px rgba(249,168,212,.35); }
+.cb-seg:hover { box-shadow: 0 0 0 1px rgba(249,168,212,.55); }
+.cb-pct { font-family: "Space Grotesk", monospace; font-size: .75rem; color: var(--pink); flex-shrink: 0; width: 3.1rem; text-align: right; font-variant-numeric: tabular-nums; }
+/* dropdown */
+.cb-menu { display: none; max-width: 900px; margin: 0 auto; padding: .5rem 1.25rem 1rem; max-height: 56vh; overflow-y: auto; }
+.chapter-bar.open .cb-menu { display: flex; flex-direction: column; }
+.cb-menu-link {
+  font-family: "WooJu","Pretendard",sans-serif; font-size: .9rem; color: var(--muted);
+  padding: .45rem .5rem; border-radius: .55rem; display: flex; align-items: center; gap: .55rem;
+  transition: color .15s ease, background .15s ease;
+}
+.cb-menu-num { font-family: "Space Grotesk", monospace; font-size: .72rem; color: var(--amber); flex-shrink: 0; min-width: 1.9rem; letter-spacing: .02em; }
+.cb-menu-link.sub .cb-menu-num { color: var(--muted); }
+.cb-menu-link.sub { padding-left: 1.6rem; font-size: .82rem; }
+.cb-menu-link:hover { color: #fff; background: rgba(255,255,255,.04); }
+.cb-menu-link.active { color: var(--pink); font-weight: 600; }
+.cb-menu-link.active .cb-menu-num { color: var(--pink); }
+@media (max-width: 1023px) { .cb-now-title { max-width: 34vw; } .cb-segs { max-width: 220px; } }
+@media (max-width: 640px)  { .cb-segs { display: none; } .cb-now-title { max-width: 52vw; } }
+
+/* ============================================================
+   Footer cover (cover-footer)
+   ============================================================ */
+.footer-social {
+  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 999px;
+  border: 1px solid var(--line); color: var(--muted);
+  transition: color .2s ease, border-color .2s ease, transform .2s ease;
+}
+.footer-social:hover { color: var(--pink); border-color: var(--pink); transform: translateY(-2px); }
+.footer-nav ul { display: flex; flex-direction: column; gap: .55rem; list-style: none; padding: 0; margin: 0; }
+.footer-nav ul li a { font-family: "WooJu","Pretendard",sans-serif; font-size: .875rem; color: var(--muted); transition: color .2s ease; }
+.footer-nav ul li a:hover { color: #fff; }
+.footer-top {
+  display: flex; flex-direction: column; align-items: center; gap: .35rem;
+  background: none; border: 1px solid var(--line); border-radius: 14px;
+  padding: .85rem 1rem; color: var(--text); cursor: pointer;
+  transition: color .2s ease, border-color .2s ease;
+}
+.footer-top:hover { color: var(--pink); border-color: var(--pink); }
+.footer-top .fa-arrow-up { font-size: 1rem; }
+
+/* ============================================================
+    Google Adsense
+    .choco-ad           베이스: 액센트 라인 + 라벨만. 레이아웃 간섭 없음.
+                        → custom-card 위에 스택 가능 (그리드·카드 셀)
+    .choco-ad--block    블록 모디파이어: 자체 카드 + 여백 (본문 인라인 단독 광고용)
+    .choco-ad--wide     와이드 모디파이어: 멀티플렉스 좌우 여백 축소
+   ============================================================ */
+.ad-cell:not(:has(ins[data-ad-status="filled"]), :has(ins[data-adsbygoogle-status="done"])) { display: none; }
+.choco-ad {
+  position: relative;
+  overflow: hidden;
+}
+.choco-ad::before {                        /* "Advertisement" 라벨 */
+  content: "Advertisement";
+  position: absolute; top: .75rem; left: 1.1rem; z-index: 1;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600; font-size: .6rem; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--muted);
+}
+.choco-ad::after {                         /* 상단 핑크→앰버 액센트 라인 */
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; z-index: 1;
+  background: linear-gradient(90deg, var(--pink), var(--amber)); opacity: .55;
+}
+.choco-ad .adsbygoogle { display: block; margin: 0 auto; }
+
+/* ── 블록 모디파이어 (본문 인라인 단독) ──────────────────── */
+.choco-ad--block {
+  margin: 2.6rem auto;
+  padding: 2.1rem 1.1rem 1.2rem;          /* 위쪽 여백은 라벨 자리 */
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+/* ── 와이드 모디파이어 (멀티플렉스 autorelaxed) ───────────── */
+.choco-ad--wide { padding-left: .75rem; padding-right: .75rem; }
+
+/* ── 홈 커버 상단, 하단 자동 광고 ────────────────────────────────── */
+.late-ad .adsbygoogle { display: block; }
+
+.late-ad:has(ins[data-ad-status="filled"]),
+.late-ad:has(ins[data-adsbygoogle-status="done"]) {   /* 광고 있을 때만 리스트 행처럼 */
+  position: relative;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.late-ad:has(ins[data-ad-status="filled"])::before {
+  content: "Sponsored";
+  display: inline-block; margin-bottom: .7rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600; font-size: .62rem; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--pink); background: rgba(255,255,255,.04);
+  border: 1px solid var(--line); border-radius: 999px; padding: .28rem .55rem;
+}
