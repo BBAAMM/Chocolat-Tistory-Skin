@@ -2,3 +2,4 @@ node_modules/
 images/RecordForBlog.txt
 .claude/phases/
 .superpowers/
+.worktrees/
