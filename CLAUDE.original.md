@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Claude Code용 가이드.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## 레퍼런스
 - 내 블로그: https://codezaram.tistory.com
@@ -12,16 +12,16 @@ Claude Code용 가이드.
 npx tailwindcss -i ./input.css -o ./style.css --watch    # 개발
 npx tailwindcss -i ./input.css -o ./style.css --minify   # 빌드
 ```
-빌드 후 `style.css` → Tistory CSS 필드 붙여넣기. `style.css` 직접 편집 금지.
+빌드 후 `style.css` 내용을 Tistory 스킨 편집기 CSS 필드에 붙여넣기. `style.css` 직접 편집 금지.
 
 ## 스택
-- **CSS**: `input.css` → Tailwind 소스. 커스텀은 `@layer utilities`. `style.css` → 컴파일 출력(`skin.html` 참조). `index.html`은 CDN(`cdn.tailwindcss.com`) 병용 — 클래스 불일치 주의.
-- **JS**: Vanilla ES6, `defer`. `import/export` 불가(Tistory 제약). GSAP·FontAwesome CDN.
+- **CSS**: `input.css` → Tailwind 소스. 커스텀은 `@layer utilities`에 추가. `style.css` → 컴파일 출력 (`skin.html`이 참조). `index.html`은 CDN(`cdn.tailwindcss.com`) 병용 — 클래스 불일치 주의.
+- **JS**: Vanilla ES6, `defer` 로드. `import/export` 사용 불가(Tistory 제약). GSAP·FontAwesome CDN 사용.
 - **폰트** (`tailwind.config.js`): `font-welcome`=Moirai One, `font-highlight`=HSSanTokki, `font-ko`=WooJu, `font-english`=Montserrat Alternates
 
 ## Tistory 치환자
 - 그룹/조건: `<s_NAME>...</s_NAME>` — 값: `[##_NAME_##]`
-- **`<s_t3>`로 `#wrap` 전체 감쌀 것**
+- **`<s_t3>`로 `#wrap` 전체를 반드시 감쌀 것**
 
 ```
 <s_t3> > #wrap
