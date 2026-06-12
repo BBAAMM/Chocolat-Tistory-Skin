@@ -224,7 +224,7 @@ body {
   .article-ad-layout { display: flex; }
   .article-left-ad {
     display: block;
-    width: 160px;
+    width: 250px;
     flex-shrink: 0;
     padding-right: 0.75rem;
   }
