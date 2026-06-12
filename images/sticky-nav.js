@@ -15,7 +15,12 @@
       return;
     }
 
-    function threshold() { return hero.offsetHeight - 60; }
+    var _threshold = null;
+    function threshold() {
+      if (_threshold === null) _threshold = hero.offsetHeight - 60;
+      return _threshold;
+    }
+    window.addEventListener('resize', function () { _threshold = null; }, { passive: true });
     var shown = false;
     function update() {
       var should = window.scrollY > threshold();
