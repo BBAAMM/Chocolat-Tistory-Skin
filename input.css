@@ -216,6 +216,21 @@ body {
 @media (min-width: 768px) { .article-shell { padding-left: 2rem; padding-right: 2rem; } }
 
 /* ============================================================
+   Article left sticky ad column (xl+ desktop only)
+   ============================================================ */
+.article-left-ad { display: none; }
+
+@media (min-width: 1280px) {
+  .article-ad-layout { display: flex; }
+  .article-left-ad {
+    display: block;
+    width: 160px;
+    flex-shrink: 0;
+    padding-right: 0.75rem;
+  }
+}
+
+/* ============================================================
    Search modal
    ============================================================ */
 #search-modal { z-index: 60; background: rgba(5,5,7,.7); backdrop-filter: blur(6px); }
