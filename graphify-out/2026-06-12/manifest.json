@@ -1,0 +1,337 @@
+{
+  "images/article-left-ad.js": {
+    "mtime": 1781255801.3872824,
+    "ast_hash": "19a6a0f68a49172af32a7f731b5de243",
+    "semantic_hash": "19a6a0f68a49172af32a7f731b5de243"
+  },
+  "images/blink-type-writer.js": {
+    "mtime": 1780970197.8656805,
+    "ast_hash": "80e6cc52eda5950d05c4d52322778d56",
+    "semantic_hash": "80e6cc52eda5950d05c4d52322778d56"
+  },
+  "images/chapter-bar.js": {
+    "mtime": 1780970197.8656805,
+    "ast_hash": "22d3cfd4c955e5aac3862b7dcb5b88ef",
+    "semantic_hash": "22d3cfd4c955e5aac3862b7dcb5b88ef"
+  },
+  "images/defer-analytics.js": {
+    "mtime": 1781161378.7642174,
+    "ast_hash": "853a9386c25d02876a71fc4bf453c931",
+    "semantic_hash": "853a9386c25d02876a71fc4bf453c931"
+  },
+  "images/fab.js": {
+    "mtime": 1780970197.8656805,
+    "ast_hash": "d75f8419455aa3bbfa9e4d182ef5b254",
+    "semantic_hash": "d75f8419455aa3bbfa9e4d182ef5b254"
+  },
+  "images/reading-time.js": {
+    "mtime": 1780970197.8696806,
+    "ast_hash": "504e969d764bac9fe96b81b176875596",
+    "semantic_hash": "504e969d764bac9fe96b81b176875596"
+  },
+  "images/search-modal.js": {
+    "mtime": 1780970197.8696806,
+    "ast_hash": "b5af0caf89a7b09a43d0a065f71bda3f",
+    "semantic_hash": "b5af0caf89a7b09a43d0a065f71bda3f"
+  },
+  "images/sticky-nav.js": {
+    "mtime": 1781252738.4441137,
+    "ast_hash": "1be07945a910720a74daeadc284a44a8",
+    "semantic_hash": "1be07945a910720a74daeadc284a44a8"
+  },
+  "package.json": {
+    "mtime": 1781270091.6920469,
+    "ast_hash": "4a676759835f3a05d80d8b5ff60bde61",
+    "semantic_hash": "4a676759835f3a05d80d8b5ff60bde61"
+  },
+  "postcss.config.js": {
+    "mtime": 1780970197.8706806,
+    "ast_hash": "96e4eef6187d652abc04595e19bcc9c8",
+    "semantic_hash": "96e4eef6187d652abc04595e19bcc9c8"
+  },
+  "tailwind.config.js": {
+    "mtime": 1780970197.8706806,
+    "ast_hash": "494d078d5f1073dab5aa33a319bbd18e",
+    "semantic_hash": "494d078d5f1073dab5aa33a319bbd18e"
+  },
+  "tailwind.config.ts": {
+    "mtime": 1780970197.8706806,
+    "ast_hash": "1970efd5e5dd2fbf3dfcca47a288cc3f",
+    "semantic_hash": "1970efd5e5dd2fbf3dfcca47a288cc3f"
+  },
+  "tailwind.tsconfig.json": {
+    "mtime": 1780970197.8706806,
+    "ast_hash": "c85e0c2be933b85056350d3595de1595",
+    "semantic_hash": "c85e0c2be933b85056350d3595de1595"
+  },
+  "CLAUDE.md": {
+    "mtime": 1780970197.8656805,
+    "ast_hash": "2962ffebfaf5316f7d45605537edc0f8",
+    "semantic_hash": "2962ffebfaf5316f7d45605537edc0f8"
+  },
+  "DESIGN.md": {
+    "mtime": 1780296306.457824,
+    "ast_hash": "331e416bebab7d6a5ef5f650580193bf",
+    "semantic_hash": "331e416bebab7d6a5ef5f650580193bf"
+  },
+  "README.md": {
+    "mtime": 1780294040.7034225,
+    "ast_hash": "5674e11ca466bbae6a0263302b892008",
+    "semantic_hash": "5674e11ca466bbae6a0263302b892008"
+  },
+  "codezaram.tistory.com-20260609T002829.html": {
+    "mtime": 1781148106.6044242,
+    "ast_hash": "663cab259eb9fd53d9d71a2576300234",
+    "semantic_hash": "663cab259eb9fd53d9d71a2576300234"
+  },
+  "docs/refactoring-proposal.md": {
+    "mtime": 1780970532.9657927,
+    "ast_hash": "b6ea0678446d7a0afcba520bd09df5b7",
+    "semantic_hash": "b6ea0678446d7a0afcba520bd09df5b7"
+  },
+  "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md": {
+    "mtime": 1780326960.4881976,
+    "ast_hash": "d72c8d85ba182d720f67e2a8eb1d13aa",
+    "semantic_hash": "d72c8d85ba182d720f67e2a8eb1d13aa"
+  },
+  "docs/superpowers/plans/2026-06-01-design-polish.md": {
+    "mtime": 1780301163.9453042,
+    "ast_hash": "8bdb451fbe0b8bbce49be10a6e728a03",
+    "semantic_hash": "8bdb451fbe0b8bbce49be10a6e728a03"
+  },
+  "docs/superpowers/plans/2026-06-02-cover-refactor.md": {
+    "mtime": 1780329531.0854497,
+    "ast_hash": "da9613890a1e93d88a32fa2730a1a64f",
+    "semantic_hash": "da9613890a1e93d88a32fa2730a1a64f"
+  },
+  "docs/superpowers/plans/2026-06-12-article-left-sticky-ad.md": {
+    "mtime": 1781254307.7488215,
+    "ast_hash": "e89cc84f951a602c823f45840da62325",
+    "semantic_hash": "e89cc84f951a602c823f45840da62325"
+  },
+  "docs/superpowers/plans/2026-06-12-performance-refactor.md": {
+    "mtime": 1781252451.212649,
+    "ast_hash": "34de4e9a6044c6978bb34f6bc49beae2",
+    "semantic_hash": "34de4e9a6044c6978bb34f6bc49beae2"
+  },
+  "docs/superpowers/specs/2026-06-01-chocolat-skin-redesign.md": {
+    "mtime": 1780326960.4881976,
+    "ast_hash": "fa2499c25aa05e1e7e7025fa3ab7e121",
+    "semantic_hash": "fa2499c25aa05e1e7e7025fa3ab7e121"
+  },
+  "docs/superpowers/specs/2026-06-01-design-polish-design.md": {
+    "mtime": 1780300729.3257804,
+    "ast_hash": "64ae3e201e14a851da8762e68f65501e",
+    "semantic_hash": "64ae3e201e14a851da8762e68f65501e"
+  },
+  "docs/superpowers/specs/2026-06-02-cover-refactor-design.md": {
+    "mtime": 1780329200.1381817,
+    "ast_hash": "52b82400df29c89e13670cad1b1d98b0",
+    "semantic_hash": "52b82400df29c89e13670cad1b1d98b0"
+  },
+  "docs/superpowers/specs/2026-06-12-article-left-sticky-ad-design.md": {
+    "mtime": 1781254155.0323856,
+    "ast_hash": "de45871d90d050c95f6f5960336d0511",
+    "semantic_hash": "de45871d90d050c95f6f5960336d0511"
+  },
+  "skin.html": {
+    "mtime": 1781255808.2153885,
+    "ast_hash": "99d2083cd288e97bc3ed3e4d63e06d01",
+    "semantic_hash": "99d2083cd288e97bc3ed3e4d63e06d01"
+  },
+  ".agents/skills/caveman-compress/scripts/__init__.py": {
+    "mtime": 1780970197.8636804,
+    "ast_hash": "4bfea67395a7ba04f363df51355d1ef8",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman-compress/scripts/__main__.py": {
+    "mtime": 1780970197.8636804,
+    "ast_hash": "746aff14c3a098a28fe9d01d54f174a9",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman-compress/scripts/benchmark.py": {
+    "mtime": 1780970197.8646805,
+    "ast_hash": "b4a8fd8070777a15f1f183d7c9992dcd",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman-compress/scripts/cli.py": {
+    "mtime": 1780970197.8646805,
+    "ast_hash": "e52ddb86f61b5d2095fa2b25f1ae73a7",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman-compress/scripts/compress.py": {
+    "mtime": 1780970197.8646805,
+    "ast_hash": "52630355324ce6788883c43139f992e0",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman-compress/scripts/detect.py": {
+    "mtime": 1780970197.8646805,
+    "ast_hash": "b0fe8099be4fae2bade0de8253c950f1",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman-compress/scripts/validate.py": {
+    "mtime": 1780970197.8646805,
+    "ast_hash": "b4f283bc53e5d352fb0120827fd4fafa",
+    "semantic_hash": ""
+  },
+  ".claude/hooks/phase-gate.sh": {
+    "mtime": 1780298738.0071812,
+    "ast_hash": "e09570eb4edccac2a8d96e3f29add824",
+    "semantic_hash": ""
+  },
+  ".claude/hooks/phase-guide.sh": {
+    "mtime": 1780298741.672231,
+    "ast_hash": "1573e874d0e5af8aac20050b1ccddaaf",
+    "semantic_hash": ""
+  },
+  ".claude/settings.json": {
+    "mtime": 1780970162.236137,
+    "ast_hash": "ba34050100c62c838324f188f7b40c40",
+    "semantic_hash": ""
+  },
+  ".claude/settings.local.json": {
+    "mtime": 1780318010.3091938,
+    "ast_hash": "345db380846deb076a981fa0b28579d0",
+    "semantic_hash": ""
+  },
+  "skills-lock.json": {
+    "mtime": 1780970197.8706806,
+    "ast_hash": "df28ae81777a500019a06368089ea62d",
+    "semantic_hash": ""
+  },
+  ".agents/skills/cavecrew/README.md": {
+    "mtime": 1780970197.8636804,
+    "ast_hash": "d24b6cd745e2fe7136a236e063717376",
+    "semantic_hash": ""
+  },
+  ".agents/skills/cavecrew/SKILL.md": {
+    "mtime": 1780970197.8636804,
+    "ast_hash": "f184873cd9c507fa872cc86fd36722e3",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman-commit/README.md": {
+    "mtime": 1780970197.8636804,
+    "ast_hash": "15f57347c5b5449b79fdf24fdab21f31",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman-commit/SKILL.md": {
+    "mtime": 1780970197.8636804,
+    "ast_hash": "fe4fea8312d0799857a3e9f93fe27b3c",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman-compress/README.md": {
+    "mtime": 1780970197.8636804,
+    "ast_hash": "3bda4de7432953bceb7f230da97f2c12",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman-compress/SECURITY.md": {
+    "mtime": 1780970197.8636804,
+    "ast_hash": "ab7d04be07bb9b8e851fb2758040432b",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman-compress/SKILL.md": {
+    "mtime": 1780970197.8636804,
+    "ast_hash": "7f0c9f11595a612a536954c6be767910",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman-help/README.md": {
+    "mtime": 1780970197.8646805,
+    "ast_hash": "9c9cf8de78df2a8831c57d6bc88d942b",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman-help/SKILL.md": {
+    "mtime": 1780970197.8646805,
+    "ast_hash": "f9207c207cfd1f7fc24152f40530fe1a",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman-review/README.md": {
+    "mtime": 1780970197.8646805,
+    "ast_hash": "ae3bdc81125037690fc50504e2917c83",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman-review/SKILL.md": {
+    "mtime": 1780970197.8646805,
+    "ast_hash": "fbb47ffb83198a1ed37a453417e691e2",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman-stats/README.md": {
+    "mtime": 1780970197.8646805,
+    "ast_hash": "ad1001beaabf7ab16a0113b2efc8b720",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman-stats/SKILL.md": {
+    "mtime": 1780970197.8646805,
+    "ast_hash": "5c195635a9349369df34699f8d3b3445",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman/README.md": {
+    "mtime": 1780970197.8646805,
+    "ast_hash": "72a5c06aa99126d55573e87721c37ab4",
+    "semantic_hash": ""
+  },
+  ".agents/skills/caveman/SKILL.md": {
+    "mtime": 1780970197.8656805,
+    "ast_hash": "5c43ca000385e41e9d9dd02c8574dfa0",
+    "semantic_hash": ""
+  },
+  ".claude/skills/tistory-replacer/SKILL.md": {
+    "mtime": 1780970162.236137,
+    "ast_hash": "ed5a5e6997ac0eae52742ddacf20c996",
+    "semantic_hash": ""
+  },
+  ".claude/skills/tistory-replacer/replacer-reference.md": {
+    "mtime": 1780970162.236137,
+    "ast_hash": "8645e1823b93532e10b9906d635856c5",
+    "semantic_hash": ""
+  },
+  ".claude/skills/tw-component/SKILL.md": {
+    "mtime": 1780297043.7650704,
+    "ast_hash": "2446e4797f018539e836a0ca2d73614c",
+    "semantic_hash": ""
+  },
+  "CLAUDE.original.md": {
+    "mtime": 1780970197.8656805,
+    "ast_hash": "5a92bf85e4609a39b90e3fd485f0958b",
+    "semantic_hash": ""
+  },
+  "images/favicons/README.txt": {
+    "mtime": 1780970197.8656805,
+    "ast_hash": "c7b60f5c187586dbeceacbbbf544ad3a",
+    "semantic_hash": ""
+  },
+  "images/favicons/favicon-16.png": {
+    "mtime": 1780970197.8656805,
+    "ast_hash": "ae6ed7b42952d0c253e4c58ae3e76626",
+    "semantic_hash": ""
+  },
+  "images/favicons/favicon-180.png": {
+    "mtime": 1780970197.8656805,
+    "ast_hash": "850f296425d9f8ae7495c8b19af8103b",
+    "semantic_hash": ""
+  },
+  "images/favicons/favicon-32.png": {
+    "mtime": 1780970197.8656805,
+    "ast_hash": "076073067208774d52b47f8ce53ea502",
+    "semantic_hash": ""
+  },
+  "images/favicons/favicon-48.png": {
+    "mtime": 1780970197.8656805,
+    "ast_hash": "1990d9a0ecd23f2b9d692dda4869c759",
+    "semantic_hash": ""
+  },
+  "images/favicons/favicon-512.png": {
+    "mtime": 1780970197.8666806,
+    "ast_hash": "4dc63aeb9ca3c626dfcaf5880bdd55ad",
+    "semantic_hash": ""
+  },
+  "images/favicons/favicon.svg": {
+    "mtime": 1780970197.8666806,
+    "ast_hash": "0b8ff19a4e4b2b93ce43489b8ef530bc",
+    "semantic_hash": ""
+  },
+  "images/post-fallback.webp": {
+    "mtime": 1781009824.564414,
+    "ast_hash": "bc844cb3a1be869c4156b18bf77fef11",
+    "semantic_hash": ""
+  }
+}

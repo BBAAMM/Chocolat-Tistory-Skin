@@ -1,0 +1,2678 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "redesign_article_js_components",
+        "label": "Redesign Article-page JS Components",
+        "nodes": [
+          "plans_chocolat_skin_redesign_reading_progress",
+          "plans_chocolat_skin_redesign_reading_time",
+          "plans_chocolat_skin_redesign_toc_generator",
+          "plans_chocolat_skin_redesign_sticky_nav"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md"
+      },
+      {
+        "id": "adsense_250px_error_mitigation",
+        "label": "AdSense Width/Hidden-init Error Mitigation",
+        "nodes": [
+          "refactoring_proposal_adsense_width",
+          "plans_performance_refactor_featured_ad_width",
+          "plans_performance_refactor_sidebar_ad_defer",
+          "plans_article_left_sticky_ad_matchmedia_init"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md"
+      },
+      {
+        "id": "three_cover_split",
+        "label": "Three-Cover Home Split (hero/featured/latest)",
+        "nodes": [
+          "plans_chocolat_skin_redesign_cover_grid",
+          "plans_cover_refactor_cover_featured",
+          "plans_cover_refactor_cover_latest",
+          "claude_cover_tree"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "docs/superpowers/specs/2026-06-02-cover-refactor-design.md"
+      },
+      {
+        "id": "all_cover_sections",
+        "label": "Home Cover Sections",
+        "nodes": [
+          "skin_cover_hero",
+          "skin_cover_featured",
+          "skin_cover_latest",
+          "skin_cover_footer"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "skin.html"
+      },
+      {
+        "id": "all_js_widgets",
+        "label": "Deferred JS Widgets",
+        "nodes": [
+          "skin_js_stickynav",
+          "skin_js_readingtime",
+          "skin_js_chapterbar",
+          "skin_js_searchmodal",
+          "skin_js_fab",
+          "skin_js_articleleftad",
+          "skin_js_typewriter"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "skin.html"
+      },
+      {
+        "id": "search_triggers",
+        "label": "Search Modal Triggers",
+        "nodes": [
+          "skin_sticky_nav",
+          "skin_cover_hero",
+          "skin_fab",
+          "skin_search_modal"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "skin.html"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "refactoring-proposal.md",
+      "file_type": "document",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_refactoring_proposal",
+      "community": 4,
+      "norm_label": "refactoring-proposal.md"
+    },
+    {
+      "label": "\ub9ac\ud329\ud130\ub9c1 \uc81c\uc548\uc11c",
+      "file_type": "document",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_refactoring_proposal_\ub9ac\ud329\ud130\ub9c1_\uc81c\uc548\uc11c",
+      "community": 4,
+      "norm_label": "\u1105\u1175\u1111\u1162\u11a8\u1110\u1165\u1105\u1175\u11bc \u110c\u1166\u110b\u1161\u11ab\u1109\u1165"
+    },
+    {
+      "label": "\ud604\uc7ac \uc810\uc218",
+      "file_type": "document",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "docs_refactoring_proposal_\ud604\uc7ac_\uc810\uc218",
+      "community": 4,
+      "norm_label": "\u1112\u1167\u11ab\u110c\u1162 \u110c\u1165\u11b7\u1109\u116e"
+    },
+    {
+      "label": "\uc218\uc815 \uac00\ub2a5\ud55c \ubb38\uc81c (\uc6b0\uc120\uc21c\uc704 \uc21c)",
+      "file_type": "document",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "docs_refactoring_proposal_\uc218\uc815_\uac00\ub2a5\ud55c_\ubb38\uc81c_\uc6b0\uc120\uc21c\uc704_\uc21c",
+      "community": 4,
+      "norm_label": "\u1109\u116e\u110c\u1165\u11bc \u1100\u1161\u1102\u1173\u11bc\u1112\u1161\u11ab \u1106\u116e\u11ab\u110c\u1166 (\u110b\u116e\u1109\u1165\u11ab\u1109\u116e\u11ab\u110b\u1171 \u1109\u116e\u11ab)"
+    },
+    {
+      "label": "\ud83d\udd34 P0 \u2014 `cdn.tailwindcss.com` \uc81c\uac70 (126KB + \ub80c\ub354 \ube14\ub85c\ud0b9)",
+      "file_type": "document",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "docs_refactoring_proposal_p0_cdn_tailwindcss_com_\uc81c\uac70_126kb_\ub80c\ub354_\ube14\ub85c\ud0b9",
+      "community": 4,
+      "norm_label": "\ud83d\udd34 p0 \u2014 `cdn.tailwindcss.com` \u110c\u1166\u1100\u1165 (126kb + \u1105\u1166\u11ab\u1103\u1165 \u1107\u1173\u11af\u1105\u1169\u110f\u1175\u11bc)"
+    },
+    {
+      "label": "\ud83d\udd34 P0 \u2014 FontAwesome JS Kit \u2192 \uc778\ub77c\uc778 SVG \uad50\uccb4 (549KB \u2192 ~2KB)",
+      "file_type": "document",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "docs_refactoring_proposal_p0_fontawesome_js_kit_\uc778\ub77c\uc778_svg_\uad50\uccb4_549kb_2kb",
+      "community": 4,
+      "norm_label": "\ud83d\udd34 p0 \u2014 fontawesome js kit \u2192 \u110b\u1175\u11ab\u1105\u1161\u110b\u1175\u11ab svg \u1100\u116d\u110e\u1166 (549kb \u2192 ~2kb)"
+    },
+    {
+      "label": "\ud83d\udd34 P0 \u2014 `post-fallback.png` \u2192 WebP \ubcc0\ud658 (575KB \u2192 ~30KB)",
+      "file_type": "document",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "docs_refactoring_proposal_p0_post_fallback_png_webp_\ubcc0\ud658_575kb_30kb",
+      "community": 4,
+      "norm_label": "\ud83d\udd34 p0 \u2014 `post-fallback.png` \u2192 webp \u1107\u1167\u11ab\u1112\u116a\u11ab (575kb \u2192 ~30kb)"
+    },
+    {
+      "label": "\ud83d\udfe0 P1 \u2014 jQuery `$ is not a function` \uc5d0\ub7ec \uc218\uc815",
+      "file_type": "document",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "docs_refactoring_proposal_p1_jquery_is_not_a_function_\uc5d0\ub7ec_\uc218\uc815",
+      "community": 4,
+      "norm_label": "\ud83d\udfe0 p1 \u2014 jquery `$ is not a function` \u110b\u1166\u1105\u1165 \u1109\u116e\u110c\u1165\u11bc"
+    },
+    {
+      "label": "\ud83d\udfe0 P1 \u2014 AdSense \uad11\uace0 \ucee8\ud14c\uc774\ub108 \ub108\ube44 \uc5d0\ub7ec \uc218\uc815",
+      "file_type": "document",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L109",
+      "_origin": "ast",
+      "id": "docs_refactoring_proposal_p1_adsense_\uad11\uace0_\ucee8\ud14c\uc774\ub108_\ub108\ube44_\uc5d0\ub7ec_\uc218\uc815",
+      "community": 4,
+      "norm_label": "\ud83d\udfe0 p1 \u2014 adsense \u1100\u116a\u11bc\u1100\u1169 \u110f\u1165\u11ab\u1110\u1166\u110b\u1175\u1102\u1165 \u1102\u1165\u1107\u1175 \u110b\u1166\u1105\u1165 \u1109\u116e\u110c\u1165\u11bc"
+    },
+    {
+      "label": "\ud83d\udfe1 P2 \u2014 Google Fonts \ubbf8\uc0ac\uc6a9 CSS \uc81c\uac70 (13KB)",
+      "file_type": "document",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L126",
+      "_origin": "ast",
+      "id": "docs_refactoring_proposal_p2_google_fonts_\ubbf8\uc0ac\uc6a9_css_\uc81c\uac70_13kb",
+      "community": 4,
+      "norm_label": "\ud83d\udfe1 p2 \u2014 google fonts \u1106\u1175\u1109\u1161\u110b\u116d\u11bc css \u110c\u1166\u1100\u1165 (13kb)"
+    },
+    {
+      "label": "\ud83d\udfe1 P2 \u2014 429 \uc5d0\ub7ec \uc6d0\uc778 \uc870\uc0ac",
+      "file_type": "document",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L135",
+      "_origin": "ast",
+      "id": "docs_refactoring_proposal_p2_429_\uc5d0\ub7ec_\uc6d0\uc778_\uc870\uc0ac",
+      "community": 4,
+      "norm_label": "\ud83d\udfe1 p2 \u2014 429 \u110b\u1166\u1105\u1165 \u110b\u116f\u11ab\u110b\u1175\u11ab \u110c\u1169\u1109\u1161"
+    },
+    {
+      "label": "\ud1b5\uc81c \ubd88\uac00 \ud56d\ubaa9 (\ucc38\uace0)",
+      "file_type": "document",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L144",
+      "_origin": "ast",
+      "id": "docs_refactoring_proposal_\ud1b5\uc81c_\ubd88\uac00_\ud56d\ubaa9_\ucc38\uace0",
+      "community": 4,
+      "norm_label": "\u1110\u1169\u11bc\u110c\u1166 \u1107\u116e\u11af\u1100\u1161 \u1112\u1161\u11bc\u1106\u1169\u11a8 (\u110e\u1161\u11b7\u1100\u1169)"
+    },
+    {
+      "label": "\uc608\uc0c1 \ud6a8\uacfc",
+      "file_type": "document",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L155",
+      "_origin": "ast",
+      "id": "docs_refactoring_proposal_\uc608\uc0c1_\ud6a8\uacfc",
+      "community": 4,
+      "norm_label": "\u110b\u1168\u1109\u1161\u11bc \u1112\u116d\u1100\u116a"
+    },
+    {
+      "label": "\uc791\uc5c5 \uc21c\uc11c (\uad8c\uc7a5)",
+      "file_type": "document",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L169",
+      "_origin": "ast",
+      "id": "docs_refactoring_proposal_\uc791\uc5c5_\uc21c\uc11c_\uad8c\uc7a5",
+      "community": 4,
+      "norm_label": "\u110c\u1161\u11a8\u110b\u1165\u11b8 \u1109\u116e\u11ab\u1109\u1165 (\u1100\u116f\u11ab\u110c\u1161\u11bc)"
+    },
+    {
+      "label": "2026-06-12-performance-refactor.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor",
+      "community": 1,
+      "norm_label": "2026-06-12-performance-refactor.md"
+    },
+    {
+      "label": "Performance Refactoring Implementation Plan",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor_performance_refactoring_implementation_plan",
+      "community": 1,
+      "norm_label": "performance refactoring implementation plan"
+    },
+    {
+      "label": "\ud604\uc7ac \uae30\uc900\uc120",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor_\ud604\uc7ac_\uae30\uc900\uc120",
+      "community": 1,
+      "norm_label": "\u1112\u1167\u11ab\u110c\u1162 \u1100\u1175\u110c\u116e\u11ab\u1109\u1165\u11ab"
+    },
+    {
+      "label": "\uc774\ubbf8 \uc644\ub8cc\ub41c \ud56d\ubaa9 (\uc791\uc5c5 \ubd88\ud544\uc694)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor_\uc774\ubbf8_\uc644\ub8cc\ub41c_\ud56d\ubaa9_\uc791\uc5c5_\ubd88\ud544\uc694",
+      "community": 1,
+      "norm_label": "\u110b\u1175\u1106\u1175 \u110b\u116a\u11ab\u1105\u116d\u1103\u116c\u11ab \u1112\u1161\u11bc\u1106\u1169\u11a8 (\u110c\u1161\u11a8\u110b\u1165\u11b8 \u1107\u116e\u11af\u1111\u1175\u11af\u110b\u116d)"
+    },
+    {
+      "label": "\ud1b5\uc81c \ubd88\uac00 \ud56d\ubaa9 (\uc774 \uacc4\ud68d\uc5d0 \ubbf8\ud3ec\ud568)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor_\ud1b5\uc81c_\ubd88\uac00_\ud56d\ubaa9_\uc774_\uacc4\ud68d\uc5d0_\ubbf8\ud3ec\ud568",
+      "community": 1,
+      "norm_label": "\u1110\u1169\u11bc\u110c\u1166 \u1107\u116e\u11af\u1100\u1161 \u1112\u1161\u11bc\u1106\u1169\u11a8 (\u110b\u1175 \u1100\u1168\u1112\u116c\u11a8\u110b\u1166 \u1106\u1175\u1111\u1169\u1112\u1161\u11b7)"
+    },
+    {
+      "label": "\ud30c\uc77c \ub9f5",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor_\ud30c\uc77c_\ub9f5",
+      "community": 1,
+      "norm_label": "\u1111\u1161\u110b\u1175\u11af \u1106\u1162\u11b8"
+    },
+    {
+      "label": "Task 1: \ube44\ucc28\ub2e8 Google Fonts \ub85c\ub4dc",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor_task_1_\ube44\ucc28\ub2e8_google_fonts_\ub85c\ub4dc",
+      "community": 1,
+      "norm_label": "task 1: \u1107\u1175\u110e\u1161\u1103\u1161\u11ab google fonts \u1105\u1169\u1103\u1173"
+    },
+    {
+      "label": "\ud604\uc7ac \ucf54\ub4dc (`skin.html:26-32`)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor_\ud604\uc7ac_\ucf54\ub4dc_skin_html_26_32",
+      "community": 1,
+      "norm_label": "\u1112\u1167\u11ab\u110c\u1162 \u110f\u1169\u1103\u1173 (`skin.html:26-32`)"
+    },
+    {
+      "label": "Task 2: sticky-nav.js \uac15\uc81c \ub9ac\ud50c\ub85c\uc6b0 \uce90\uc2f1",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L109",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor_task_2_sticky_nav_js_\uac15\uc81c_\ub9ac\ud50c\ub85c\uc6b0_\uce90\uc2f1",
+      "community": 1,
+      "norm_label": "task 2: sticky-nav.js \u1100\u1161\u11bc\u110c\u1166 \u1105\u1175\u1111\u1173\u11af\u1105\u1169\u110b\u116e \u110f\u1162\u1109\u1175\u11bc"
+    },
+    {
+      "label": "\ud604\uc7ac \ucf54\ub4dc",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L116",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor_\ud604\uc7ac_\ucf54\ub4dc",
+      "community": 1,
+      "norm_label": "\u1112\u1167\u11ab\u110c\u1162 \u110f\u1169\u1103\u1173"
+    },
+    {
+      "label": "Task 3: Featured \uadf8\ub9ac\ub4dc \uad11\uace0 \u2014 \ubaa8\ubc14\uc77c \ub108\ube44 250px \ubbf8\ub9cc \uc218\uc815",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L170",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor_task_3_featured_\uadf8\ub9ac\ub4dc_\uad11\uace0_\ubaa8\ubc14\uc77c_\ub108\ube44_250px_\ubbf8\ub9cc_\uc218\uc815",
+      "community": 1,
+      "norm_label": "task 3: featured \u1100\u1173\u1105\u1175\u1103\u1173 \u1100\u116a\u11bc\u1100\u1169 \u2014 \u1106\u1169\u1107\u1161\u110b\u1175\u11af \u1102\u1165\u1107\u1175 250px \u1106\u1175\u1106\u1161\u11ab \u1109\u116e\u110c\u1165\u11bc"
+    },
+    {
+      "label": "\ud604\uc7ac \ucf54\ub4dc (`skin.html:182-191`)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L177",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor_\ud604\uc7ac_\ucf54\ub4dc_skin_html_182_191",
+      "community": 1,
+      "norm_label": "\u1112\u1167\u11ab\u110c\u1162 \u110f\u1169\u1103\u1173 (`skin.html:182-191`)"
+    },
+    {
+      "label": "Task 4: \ud648 \uc0ac\uc774\ub4dc\ubc14 Fluid \uad11\uace0 \u2014 hidden \uc0c1\ud0dc \ucd08\uae30\ud654 \ubc29\uc9c0",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L219",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor_task_4_\ud648_\uc0ac\uc774\ub4dc\ubc14_fluid_\uad11\uace0_hidden_\uc0c1\ud0dc_\ucd08\uae30\ud654_\ubc29\uc9c0",
+      "community": 1,
+      "norm_label": "task 4: \u1112\u1169\u11b7 \u1109\u1161\u110b\u1175\u1103\u1173\u1107\u1161 fluid \u1100\u116a\u11bc\u1100\u1169 \u2014 hidden \u1109\u1161\u11bc\u1110\u1162 \u110e\u1169\u1100\u1175\u1112\u116a \u1107\u1161\u11bc\u110c\u1175"
+    },
+    {
+      "label": "\ud604\uc7ac \ucf54\ub4dc (`skin.html:241-250`)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L226",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor_\ud604\uc7ac_\ucf54\ub4dc_skin_html_241_250",
+      "community": 1,
+      "norm_label": "\u1112\u1167\u11ab\u110c\u1162 \u110f\u1169\u1103\u1173 (`skin.html:241-250`)"
+    },
+    {
+      "label": "Task 5: \ud504\ub85c\ud544 \uc774\ubbf8\uc9c0 CLS \ubc29\uc9c0",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L282",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor_task_5_\ud504\ub85c\ud544_\uc774\ubbf8\uc9c0_cls_\ubc29\uc9c0",
+      "community": 1,
+      "norm_label": "task 5: \u1111\u1173\u1105\u1169\u1111\u1175\u11af \u110b\u1175\u1106\u1175\u110c\u1175 cls \u1107\u1161\u11bc\u110c\u1175"
+    },
+    {
+      "label": "\ud604\uc7ac \ucf54\ub4dc (`skin.html:213`)",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L289",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor_\ud604\uc7ac_\ucf54\ub4dc_skin_html_213",
+      "community": 1,
+      "norm_label": "\u1112\u1167\u11ab\u110c\u1162 \u110f\u1169\u1103\u1173 (`skin.html:213`)"
+    },
+    {
+      "label": "Self-Review",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L320",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor_self_review",
+      "community": 1,
+      "norm_label": "self-review"
+    },
+    {
+      "label": "Spec coverage \uac80\ud1a0",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L322",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor_spec_coverage_\uac80\ud1a0",
+      "community": 1,
+      "norm_label": "spec coverage \u1100\u1165\u11b7\u1110\u1169"
+    },
+    {
+      "label": "\uc608\uc0c1 \ud6a8\uacfc",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L339",
+      "_origin": "ast",
+      "id": "plans_2026_06_12_performance_refactor_\uc608\uc0c1_\ud6a8\uacfc",
+      "community": 1,
+      "norm_label": "\u110b\u1168\u1109\u1161\u11bc \u1112\u116d\u1100\u116a"
+    },
+    {
+      "label": "phase-gate.sh",
+      "file_type": "code",
+      "source_file": ".claude/hooks/phase-gate.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "hooks_phase_gate",
+      "community": 5,
+      "norm_label": "phase-gate.sh"
+    },
+    {
+      "label": "phase-gate.sh script",
+      "file_type": "code",
+      "source_file": ".claude/hooks/phase-gate.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "home_ksb_dev_chocolat_tistory_skin_claude_hooks_phase_gate_sh__entry",
+      "community": 5,
+      "norm_label": "phase-gate.sh script"
+    },
+    {
+      "label": "phase-guide.sh",
+      "file_type": "code",
+      "source_file": ".claude/hooks/phase-guide.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "hooks_phase_guide",
+      "community": 23,
+      "norm_label": "phase-guide.sh"
+    },
+    {
+      "label": "phase-guide.sh script",
+      "file_type": "code",
+      "source_file": ".claude/hooks/phase-guide.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "home_ksb_dev_chocolat_tistory_skin_claude_hooks_phase_guide_sh__entry",
+      "community": 23,
+      "norm_label": "phase-guide.sh script"
+    },
+    {
+      "label": "2026-06-12-article-left-sticky-ad.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-article-left-sticky-ad.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "2026-06-12-article-left-sticky-ad.md",
+      "id": "plans_2026_06_12_article_left_sticky_ad"
+    },
+    {
+      "label": "Article Left Sticky Ad Implementation Plan",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-article-left-sticky-ad.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "article left sticky ad implementation plan",
+      "id": "plans_2026_06_12_article_left_sticky_ad_article_left_sticky_ad_implementation_plan"
+    },
+    {
+      "label": "Files",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-article-left-sticky-ad.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "files",
+      "id": "plans_2026_06_12_article_left_sticky_ad_files"
+    },
+    {
+      "label": "Task 1: Add CSS to `input.css`",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-article-left-sticky-ad.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "task 1: add css to `input.css`",
+      "id": "plans_2026_06_12_article_left_sticky_ad_task_1_add_css_to_input_css"
+    },
+    {
+      "label": "Task 2: Modify `skin.html` \u2014 wrap `<main>` and add aside",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-article-left-sticky-ad.md",
+      "source_location": "L65",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "task 2: modify `skin.html` \u2014 wrap `<main>` and add aside",
+      "id": "plans_2026_06_12_article_left_sticky_ad_task_2_modify_skin_html_wrap_main_and_add_aside"
+    },
+    {
+      "label": "Task 3: Final build + verify",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-12-article-left-sticky-ad.md",
+      "source_location": "L142",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "task 3: final build + verify",
+      "id": "plans_2026_06_12_article_left_sticky_ad_task_3_final_build_verify"
+    },
+    {
+      "label": "article-left-ad.js",
+      "file_type": "code",
+      "source_file": "images/article-left-ad.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 19,
+      "norm_label": "article-left-ad.js",
+      "id": "images_article_left_ad"
+    },
+    {
+      "label": "blink-type-writer.js",
+      "file_type": "code",
+      "source_file": "images/blink-type-writer.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 11,
+      "norm_label": "blink-type-writer.js",
+      "id": "images_blink_type_writer"
+    },
+    {
+      "label": "start()",
+      "file_type": "code",
+      "source_file": "images/blink-type-writer.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 11,
+      "norm_label": "start()",
+      "id": "images_blink_type_writer_start"
+    },
+    {
+      "label": "chapter-bar.js",
+      "file_type": "code",
+      "source_file": "images/chapter-bar.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 12,
+      "norm_label": "chapter-bar.js",
+      "id": "images_chapter_bar"
+    },
+    {
+      "label": "start()",
+      "file_type": "code",
+      "source_file": "images/chapter-bar.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 12,
+      "norm_label": "start()",
+      "id": "images_chapter_bar_start"
+    },
+    {
+      "label": "defer-analytics.js",
+      "file_type": "code",
+      "source_file": "images/defer-analytics.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 13,
+      "norm_label": "defer-analytics.js",
+      "id": "images_defer_analytics"
+    },
+    {
+      "label": "loadGtag()",
+      "file_type": "code",
+      "source_file": "images/defer-analytics.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 13,
+      "norm_label": "loadgtag()",
+      "id": "images_defer_analytics_loadgtag"
+    },
+    {
+      "label": "fab.js",
+      "file_type": "code",
+      "source_file": "images/fab.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 14,
+      "norm_label": "fab.js",
+      "id": "images_fab"
+    },
+    {
+      "label": "start()",
+      "file_type": "code",
+      "source_file": "images/fab.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 14,
+      "norm_label": "start()",
+      "id": "images_fab_start"
+    },
+    {
+      "label": "reading-time.js",
+      "file_type": "code",
+      "source_file": "images/reading-time.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 15,
+      "norm_label": "reading-time.js",
+      "id": "images_reading_time"
+    },
+    {
+      "label": "start()",
+      "file_type": "code",
+      "source_file": "images/reading-time.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 15,
+      "norm_label": "start()",
+      "id": "images_reading_time_start"
+    },
+    {
+      "label": "search-modal.js",
+      "file_type": "code",
+      "source_file": "images/search-modal.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 16,
+      "norm_label": "search-modal.js",
+      "id": "images_search_modal"
+    },
+    {
+      "label": "start()",
+      "file_type": "code",
+      "source_file": "images/search-modal.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 16,
+      "norm_label": "start()",
+      "id": "images_search_modal_start"
+    },
+    {
+      "label": "sticky-nav.js",
+      "file_type": "code",
+      "source_file": "images/sticky-nav.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 17,
+      "norm_label": "sticky-nav.js",
+      "id": "images_sticky_nav"
+    },
+    {
+      "label": "start()",
+      "file_type": "code",
+      "source_file": "images/sticky-nav.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 17,
+      "norm_label": "start()",
+      "id": "images_sticky_nav_start"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "package.json",
+      "id": "package"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "dependencies",
+      "id": "package_dependencies"
+    },
+    {
+      "label": "autoprefixer",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "autoprefixer",
+      "id": "package_dependencies_autoprefixer"
+    },
+    {
+      "label": "postcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "postcss",
+      "id": "package_dependencies_postcss"
+    },
+    {
+      "label": "tailwindcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "tailwindcss",
+      "id": "package_dependencies_tailwindcss"
+    },
+    {
+      "label": "postcss.config.js",
+      "file_type": "code",
+      "source_file": "postcss.config.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 20,
+      "norm_label": "postcss.config.js",
+      "id": "postcss_config"
+    },
+    {
+      "label": "tailwind.config.js",
+      "file_type": "code",
+      "source_file": "tailwind.config.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 22,
+      "norm_label": "tailwind.config.js",
+      "id": "tailwind_config_js_tailwind_config"
+    },
+    {
+      "label": "tailwind.config.ts",
+      "file_type": "code",
+      "source_file": "tailwind.config.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 18,
+      "norm_label": "tailwind.config.ts",
+      "id": "tailwind_config_ts_tailwind_config"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "tailwind.config.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 18,
+      "norm_label": "config",
+      "id": "tailwind_config_config"
+    },
+    {
+      "label": "tailwind.tsconfig.json",
+      "file_type": "code",
+      "source_file": "tailwind.tsconfig.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "tailwind.tsconfig.json",
+      "id": "tailwind_tsconfig"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": "tailwind.tsconfig.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "$schema",
+      "id": "tailwind_tsconfig_schema"
+    },
+    {
+      "label": "extends",
+      "file_type": "code",
+      "source_file": "tailwind.tsconfig.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "extends",
+      "id": "tailwind_tsconfig_extends"
+    },
+    {
+      "label": "compilerOptions",
+      "file_type": "code",
+      "source_file": "tailwind.tsconfig.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "compileroptions",
+      "id": "tailwind_tsconfig_compileroptions"
+    },
+    {
+      "label": "noEmit",
+      "file_type": "code",
+      "source_file": "tailwind.tsconfig.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "noemit",
+      "id": "tailwind_tsconfig_compileroptions_noemit"
+    },
+    {
+      "label": "module",
+      "file_type": "code",
+      "source_file": "tailwind.tsconfig.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "module",
+      "id": "tailwind_tsconfig_compileroptions_module"
+    },
+    {
+      "label": "include",
+      "file_type": "code",
+      "source_file": "tailwind.tsconfig.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "include",
+      "id": "tailwind_tsconfig_include"
+    },
+    {
+      "label": "exclude",
+      "file_type": "code",
+      "source_file": "tailwind.tsconfig.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "exclude",
+      "id": "tailwind_tsconfig_exclude"
+    },
+    {
+      "label": "Chocolat Skin Claude Guide",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 3,
+      "norm_label": "chocolat skin claude guide",
+      "id": "claude_chocolat_skin_guide"
+    },
+    {
+      "label": "Tistory Replacer Tag System",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 3,
+      "norm_label": "tistory replacer tag system",
+      "id": "claude_tistory_replacers"
+    },
+    {
+      "label": "Cover Tree Structure (s_cover_rep)",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 3,
+      "norm_label": "cover tree structure (s_cover_rep)",
+      "id": "claude_cover_tree"
+    },
+    {
+      "label": "Color Palette (Dark Chocolat)",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 3,
+      "norm_label": "color palette (dark chocolat)",
+      "id": "claude_color_palette"
+    },
+    {
+      "label": "Z-index Layering Scale",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 3,
+      "norm_label": "z-index layering scale",
+      "id": "claude_zindex_scale"
+    },
+    {
+      "label": "Tailwind Build Workflow (input.css to style.css)",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 3,
+      "norm_label": "tailwind build workflow (input.css to style.css)",
+      "id": "claude_build_workflow"
+    },
+    {
+      "label": "Aesthetic Direction (Dark Minimal x Warm Accent)",
+      "file_type": "rationale",
+      "source_file": "DESIGN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 3,
+      "norm_label": "aesthetic direction (dark minimal x warm accent)",
+      "id": "design_aesthetic_direction"
+    },
+    {
+      "label": "DESIGN.md Color Palette",
+      "file_type": "concept",
+      "source_file": "DESIGN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 3,
+      "norm_label": "design.md color palette",
+      "id": "design_color_palette"
+    },
+    {
+      "label": "Typography System",
+      "file_type": "concept",
+      "source_file": "DESIGN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 3,
+      "norm_label": "typography system",
+      "id": "design_typography"
+    },
+    {
+      "label": "Motion / Animation Patterns",
+      "file_type": "concept",
+      "source_file": "DESIGN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 3,
+      "norm_label": "motion / animation patterns",
+      "id": "design_motion"
+    },
+    {
+      "label": "Component Inventory",
+      "file_type": "concept",
+      "source_file": "DESIGN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 10,
+      "norm_label": "component inventory",
+      "id": "design_component_inventory"
+    },
+    {
+      "label": "HeroSlider Component",
+      "file_type": "concept",
+      "source_file": "DESIGN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 10,
+      "norm_label": "heroslider component",
+      "id": "design_heroslider"
+    },
+    {
+      "label": "FloatingFAB Component",
+      "file_type": "concept",
+      "source_file": "DESIGN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 10,
+      "norm_label": "floatingfab component",
+      "id": "design_floatingfab"
+    },
+    {
+      "label": "Chocolat-Tistory-Skin README",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 21,
+      "norm_label": "chocolat-tistory-skin readme",
+      "id": "readme_chocolat_skin"
+    },
+    {
+      "label": "Chocolat Skin Redesign Plan",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 2,
+      "norm_label": "chocolat skin redesign plan",
+      "id": "plans_chocolat_skin_redesign_plan"
+    },
+    {
+      "label": "sticky-nav.js (Redesign Plan)",
+      "file_type": "code",
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 2,
+      "norm_label": "sticky-nav.js (redesign plan)",
+      "id": "plans_chocolat_skin_redesign_sticky_nav"
+    },
+    {
+      "label": "reading-progress.js",
+      "file_type": "code",
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 2,
+      "norm_label": "reading-progress.js",
+      "id": "plans_chocolat_skin_redesign_reading_progress"
+    },
+    {
+      "label": "reading-time.js",
+      "file_type": "code",
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 2,
+      "norm_label": "reading-time.js",
+      "id": "plans_chocolat_skin_redesign_reading_time"
+    },
+    {
+      "label": "toc-generator.js",
+      "file_type": "code",
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 2,
+      "norm_label": "toc-generator.js",
+      "id": "plans_chocolat_skin_redesign_toc_generator"
+    },
+    {
+      "label": "Half Hero + Inline Nav (cover-hero)",
+      "file_type": "concept",
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 2,
+      "norm_label": "half hero + inline nav (cover-hero)",
+      "id": "plans_chocolat_skin_redesign_half_hero"
+    },
+    {
+      "label": "Home cover-grid 2-col Layout",
+      "file_type": "concept",
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 6,
+      "norm_label": "home cover-grid 2-col layout",
+      "id": "plans_chocolat_skin_redesign_cover_grid"
+    },
+    {
+      "label": "Sticky TOC Article Layout",
+      "file_type": "concept",
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 2,
+      "norm_label": "sticky toc article layout",
+      "id": "plans_chocolat_skin_redesign_sticky_toc"
+    },
+    {
+      "label": "Design Polish Plan",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 7,
+      "norm_label": "design polish plan",
+      "id": "plans_design_polish_plan"
+    },
+    {
+      "label": "CSS Global Pollution Fix (content-details h2)",
+      "file_type": "rationale",
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 7,
+      "norm_label": "css global pollution fix (content-details h2)",
+      "id": "plans_design_polish_css_scope_fix"
+    },
+    {
+      "label": "Search Modal Darkening",
+      "file_type": "concept",
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 7,
+      "norm_label": "search modal darkening",
+      "id": "plans_design_polish_search_modal_dark"
+    },
+    {
+      "label": "Category Modal Darkening + Close Button",
+      "file_type": "concept",
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 7,
+      "norm_label": "category modal darkening + close button",
+      "id": "plans_design_polish_category_modal_dark"
+    },
+    {
+      "label": "FAB Icon Toggle (bars/xmark)",
+      "file_type": "concept",
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 7,
+      "norm_label": "fab icon toggle (bars/xmark)",
+      "id": "plans_design_polish_fab_icon_toggle"
+    },
+    {
+      "label": "Article Header Warm Dark Gradient",
+      "file_type": "concept",
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 2,
+      "norm_label": "article header warm dark gradient",
+      "id": "plans_design_polish_article_header_gradient"
+    },
+    {
+      "label": "Slider Number Indicator",
+      "file_type": "concept",
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 7,
+      "norm_label": "slider number indicator",
+      "id": "plans_design_polish_slide_indicator"
+    },
+    {
+      "label": "hamburger-button.js",
+      "file_type": "code",
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 7,
+      "norm_label": "hamburger-button.js",
+      "id": "plans_design_polish_hamburger_js"
+    },
+    {
+      "label": "slider-changer.js",
+      "file_type": "code",
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 7,
+      "norm_label": "slider-changer.js",
+      "id": "plans_design_polish_slider_changer_js"
+    },
+    {
+      "label": "Cover Refactor Plan",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-06-02-cover-refactor.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 6,
+      "norm_label": "cover refactor plan",
+      "id": "plans_cover_refactor_plan"
+    },
+    {
+      "label": "cover-featured (2x2 Grid)",
+      "file_type": "concept",
+      "source_file": "docs/superpowers/plans/2026-06-02-cover-refactor.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 6,
+      "norm_label": "cover-featured (2x2 grid)",
+      "id": "plans_cover_refactor_cover_featured"
+    },
+    {
+      "label": "cover-latest (Feed + Sidebar)",
+      "file_type": "concept",
+      "source_file": "docs/superpowers/plans/2026-06-02-cover-refactor.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 6,
+      "norm_label": "cover-latest (feed + sidebar)",
+      "id": "plans_cover_refactor_cover_latest"
+    },
+    {
+      "label": "sidebar-widget (s_sidebar CSS)",
+      "file_type": "concept",
+      "source_file": "docs/superpowers/plans/2026-06-02-cover-refactor.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 6,
+      "norm_label": "sidebar-widget (s_sidebar css)",
+      "id": "plans_cover_refactor_sidebar_widget"
+    },
+    {
+      "label": "s_sidebar Replacer Migration",
+      "file_type": "concept",
+      "source_file": "docs/superpowers/plans/2026-06-02-cover-refactor.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 6,
+      "norm_label": "s_sidebar replacer migration",
+      "id": "plans_cover_refactor_s_sidebar"
+    },
+    {
+      "label": "Chocolat Skin Redesign Spec",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 2,
+      "norm_label": "chocolat skin redesign spec",
+      "id": "specs_chocolat_skin_redesign_spec"
+    },
+    {
+      "label": "Inline-Hero to Sticky Nav Transition",
+      "file_type": "concept",
+      "source_file": "docs/superpowers/specs/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 2,
+      "norm_label": "inline-hero to sticky nav transition",
+      "id": "specs_chocolat_skin_redesign_sticky_nav_transition"
+    },
+    {
+      "label": "Reading Progress Bar Spec",
+      "file_type": "concept",
+      "source_file": "docs/superpowers/specs/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 2,
+      "norm_label": "reading progress bar spec",
+      "id": "specs_chocolat_skin_redesign_reading_progress_spec"
+    },
+    {
+      "label": "Home 2-Column Layout Spec",
+      "file_type": "concept",
+      "source_file": "docs/superpowers/specs/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 6,
+      "norm_label": "home 2-column layout spec",
+      "id": "specs_chocolat_skin_redesign_two_col_home"
+    },
+    {
+      "label": "Sticky TOC Spec",
+      "file_type": "concept",
+      "source_file": "docs/superpowers/specs/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 2,
+      "norm_label": "sticky toc spec",
+      "id": "specs_chocolat_skin_redesign_toc_spec"
+    },
+    {
+      "label": "Design Polish Spec",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-06-01-design-polish-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 3,
+      "norm_label": "design polish spec",
+      "id": "specs_design_polish_design_spec"
+    },
+    {
+      "label": "Cover Refactor Design Spec",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-06-02-cover-refactor-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 6,
+      "norm_label": "cover refactor design spec",
+      "id": "specs_cover_refactor_design_spec"
+    },
+    {
+      "label": "Article Left Sticky Ad Design Spec",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-06-12-article-left-sticky-ad-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 2,
+      "norm_label": "article left sticky ad design spec",
+      "id": "specs_article_left_sticky_ad_design_spec"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_refactoring_proposal",
+      "target": "docs_refactoring_proposal_\ub9ac\ud329\ud130\ub9c1_\uc81c\uc548\uc11c",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "docs_refactoring_proposal_\ub9ac\ud329\ud130\ub9c1_\uc81c\uc548\uc11c",
+      "target": "docs_refactoring_proposal_\uc218\uc815_\uac00\ub2a5\ud55c_\ubb38\uc81c_\uc6b0\uc120\uc21c\uc704_\uc21c",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "docs_refactoring_proposal_\ub9ac\ud329\ud130\ub9c1_\uc81c\uc548\uc11c",
+      "target": "docs_refactoring_proposal_\uc608\uc0c1_\ud6a8\uacfc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "docs_refactoring_proposal_\ub9ac\ud329\ud130\ub9c1_\uc81c\uc548\uc11c",
+      "target": "docs_refactoring_proposal_\uc791\uc5c5_\uc21c\uc11c_\uad8c\uc7a5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "docs_refactoring_proposal_\ub9ac\ud329\ud130\ub9c1_\uc81c\uc548\uc11c",
+      "target": "docs_refactoring_proposal_\ud1b5\uc81c_\ubd88\uac00_\ud56d\ubaa9_\ucc38\uace0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "docs_refactoring_proposal_\ub9ac\ud329\ud130\ub9c1_\uc81c\uc548\uc11c",
+      "target": "docs_refactoring_proposal_\ud604\uc7ac_\uc810\uc218",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "docs_refactoring_proposal_\uc218\uc815_\uac00\ub2a5\ud55c_\ubb38\uc81c_\uc6b0\uc120\uc21c\uc704_\uc21c",
+      "target": "docs_refactoring_proposal_p0_cdn_tailwindcss_com_\uc81c\uac70_126kb_\ub80c\ub354_\ube14\ub85c\ud0b9",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "docs_refactoring_proposal_\uc218\uc815_\uac00\ub2a5\ud55c_\ubb38\uc81c_\uc6b0\uc120\uc21c\uc704_\uc21c",
+      "target": "docs_refactoring_proposal_p0_fontawesome_js_kit_\uc778\ub77c\uc778_svg_\uad50\uccb4_549kb_2kb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "docs_refactoring_proposal_\uc218\uc815_\uac00\ub2a5\ud55c_\ubb38\uc81c_\uc6b0\uc120\uc21c\uc704_\uc21c",
+      "target": "docs_refactoring_proposal_p0_post_fallback_png_webp_\ubcc0\ud658_575kb_30kb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "docs_refactoring_proposal_\uc218\uc815_\uac00\ub2a5\ud55c_\ubb38\uc81c_\uc6b0\uc120\uc21c\uc704_\uc21c",
+      "target": "docs_refactoring_proposal_p1_adsense_\uad11\uace0_\ucee8\ud14c\uc774\ub108_\ub108\ube44_\uc5d0\ub7ec_\uc218\uc815",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "docs_refactoring_proposal_\uc218\uc815_\uac00\ub2a5\ud55c_\ubb38\uc81c_\uc6b0\uc120\uc21c\uc704_\uc21c",
+      "target": "docs_refactoring_proposal_p1_jquery_is_not_a_function_\uc5d0\ub7ec_\uc218\uc815",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "docs_refactoring_proposal_\uc218\uc815_\uac00\ub2a5\ud55c_\ubb38\uc81c_\uc6b0\uc120\uc21c\uc704_\uc21c",
+      "target": "docs_refactoring_proposal_p2_429_\uc5d0\ub7ec_\uc6d0\uc778_\uc870\uc0ac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/refactoring-proposal.md",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "docs_refactoring_proposal_\uc218\uc815_\uac00\ub2a5\ud55c_\ubb38\uc81c_\uc6b0\uc120\uc21c\uc704_\uc21c",
+      "target": "docs_refactoring_proposal_p2_google_fonts_\ubbf8\uc0ac\uc6a9_css_\uc81c\uac70_13kb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "plans_2026_06_12_performance_refactor",
+      "target": "plans_2026_06_12_performance_refactor_performance_refactoring_implementation_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L320",
+      "weight": 1.0,
+      "source": "plans_2026_06_12_performance_refactor_performance_refactoring_implementation_plan",
+      "target": "plans_2026_06_12_performance_refactor_self_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "plans_2026_06_12_performance_refactor_performance_refactoring_implementation_plan",
+      "target": "plans_2026_06_12_performance_refactor_task_1_\ube44\ucc28\ub2e8_google_fonts_\ub85c\ub4dc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "plans_2026_06_12_performance_refactor_performance_refactoring_implementation_plan",
+      "target": "plans_2026_06_12_performance_refactor_task_2_sticky_nav_js_\uac15\uc81c_\ub9ac\ud50c\ub85c\uc6b0_\uce90\uc2f1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "plans_2026_06_12_performance_refactor_performance_refactoring_implementation_plan",
+      "target": "plans_2026_06_12_performance_refactor_task_3_featured_\uadf8\ub9ac\ub4dc_\uad11\uace0_\ubaa8\ubc14\uc77c_\ub108\ube44_250px_\ubbf8\ub9cc_\uc218\uc815",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L219",
+      "weight": 1.0,
+      "source": "plans_2026_06_12_performance_refactor_performance_refactoring_implementation_plan",
+      "target": "plans_2026_06_12_performance_refactor_task_4_\ud648_\uc0ac\uc774\ub4dc\ubc14_fluid_\uad11\uace0_hidden_\uc0c1\ud0dc_\ucd08\uae30\ud654_\ubc29\uc9c0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L282",
+      "weight": 1.0,
+      "source": "plans_2026_06_12_performance_refactor_performance_refactoring_implementation_plan",
+      "target": "plans_2026_06_12_performance_refactor_task_5_\ud504\ub85c\ud544_\uc774\ubbf8\uc9c0_cls_\ubc29\uc9c0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "plans_2026_06_12_performance_refactor_performance_refactoring_implementation_plan",
+      "target": "plans_2026_06_12_performance_refactor_\uc774\ubbf8_\uc644\ub8cc\ub41c_\ud56d\ubaa9_\uc791\uc5c5_\ubd88\ud544\uc694",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "plans_2026_06_12_performance_refactor_performance_refactoring_implementation_plan",
+      "target": "plans_2026_06_12_performance_refactor_\ud1b5\uc81c_\ubd88\uac00_\ud56d\ubaa9_\uc774_\uacc4\ud68d\uc5d0_\ubbf8\ud3ec\ud568",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "plans_2026_06_12_performance_refactor_performance_refactoring_implementation_plan",
+      "target": "plans_2026_06_12_performance_refactor_\ud30c\uc77c_\ub9f5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "plans_2026_06_12_performance_refactor_performance_refactoring_implementation_plan",
+      "target": "plans_2026_06_12_performance_refactor_\ud604\uc7ac_\uae30\uc900\uc120",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "plans_2026_06_12_performance_refactor_task_1_\ube44\ucc28\ub2e8_google_fonts_\ub85c\ub4dc",
+      "target": "plans_2026_06_12_performance_refactor_\ud604\uc7ac_\ucf54\ub4dc_skin_html_26_32",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "plans_2026_06_12_performance_refactor_task_2_sticky_nav_js_\uac15\uc81c_\ub9ac\ud50c\ub85c\uc6b0_\uce90\uc2f1",
+      "target": "plans_2026_06_12_performance_refactor_\ud604\uc7ac_\ucf54\ub4dc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L177",
+      "weight": 1.0,
+      "source": "plans_2026_06_12_performance_refactor_task_3_featured_\uadf8\ub9ac\ub4dc_\uad11\uace0_\ubaa8\ubc14\uc77c_\ub108\ube44_250px_\ubbf8\ub9cc_\uc218\uc815",
+      "target": "plans_2026_06_12_performance_refactor_\ud604\uc7ac_\ucf54\ub4dc_skin_html_182_191",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L226",
+      "weight": 1.0,
+      "source": "plans_2026_06_12_performance_refactor_task_4_\ud648_\uc0ac\uc774\ub4dc\ubc14_fluid_\uad11\uace0_hidden_\uc0c1\ud0dc_\ucd08\uae30\ud654_\ubc29\uc9c0",
+      "target": "plans_2026_06_12_performance_refactor_\ud604\uc7ac_\ucf54\ub4dc_skin_html_241_250",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L289",
+      "weight": 1.0,
+      "source": "plans_2026_06_12_performance_refactor_task_5_\ud504\ub85c\ud544_\uc774\ubbf8\uc9c0_cls_\ubc29\uc9c0",
+      "target": "plans_2026_06_12_performance_refactor_\ud604\uc7ac_\ucf54\ub4dc_skin_html_213",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L322",
+      "weight": 1.0,
+      "source": "plans_2026_06_12_performance_refactor_self_review",
+      "target": "plans_2026_06_12_performance_refactor_spec_coverage_\uac80\ud1a0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md",
+      "source_location": "L339",
+      "weight": 1.0,
+      "source": "plans_2026_06_12_performance_refactor_self_review",
+      "target": "plans_2026_06_12_performance_refactor_\uc608\uc0c1_\ud6a8\uacfc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/hooks/phase-gate.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "hooks_phase_gate",
+      "target": "home_ksb_dev_chocolat_tistory_skin_claude_hooks_phase_gate_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/hooks/phase-guide.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "hooks_phase_guide",
+      "target": "home_ksb_dev_chocolat_tistory_skin_claude_hooks_phase_guide_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-article-left-sticky-ad.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plans_2026_06_12_article_left_sticky_ad",
+      "target": "plans_2026_06_12_article_left_sticky_ad_article_left_sticky_ad_implementation_plan"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-article-left-sticky-ad.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plans_2026_06_12_article_left_sticky_ad_article_left_sticky_ad_implementation_plan",
+      "target": "plans_2026_06_12_article_left_sticky_ad_files"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-article-left-sticky-ad.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plans_2026_06_12_article_left_sticky_ad_files",
+      "target": "plans_2026_06_12_article_left_sticky_ad_task_1_add_css_to_input_css"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-article-left-sticky-ad.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plans_2026_06_12_article_left_sticky_ad_files",
+      "target": "plans_2026_06_12_article_left_sticky_ad_task_2_modify_skin_html_wrap_main_and_add_aside"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-06-12-article-left-sticky-ad.md",
+      "source_location": "L142",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plans_2026_06_12_article_left_sticky_ad_files",
+      "target": "plans_2026_06_12_article_left_sticky_ad_task_3_final_build_verify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "images/blink-type-writer.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "images_blink_type_writer",
+      "target": "images_blink_type_writer_start"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "images/chapter-bar.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "images_chapter_bar",
+      "target": "images_chapter_bar_start"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "images/defer-analytics.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "images_defer_analytics",
+      "target": "images_defer_analytics_loadgtag"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "images/fab.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "images_fab",
+      "target": "images_fab_start"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "images/reading-time.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "images_reading_time",
+      "target": "images_reading_time_start"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "images/search-modal.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "images_search_modal",
+      "target": "images_search_modal_start"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "images/sticky-nav.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "images_sticky_nav",
+      "target": "images_sticky_nav_start"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_autoprefixer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_postcss"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_tailwindcss"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tailwind.config.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tailwind_config_ts_tailwind_config",
+      "target": "tailwind_config_config"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tailwind.config.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tailwind_config_ts_tailwind_config",
+      "target": "tailwind_config_ts_tailwind_config"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tailwind.tsconfig.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tailwind_tsconfig",
+      "target": "tailwind_tsconfig_compileroptions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tailwind.tsconfig.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tailwind_tsconfig",
+      "target": "tailwind_tsconfig_exclude"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tailwind.tsconfig.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tailwind_tsconfig",
+      "target": "tailwind_tsconfig_extends"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tailwind.tsconfig.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tailwind_tsconfig",
+      "target": "tailwind_tsconfig_include"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tailwind.tsconfig.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tailwind_tsconfig",
+      "target": "tailwind_tsconfig_schema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tailwind.tsconfig.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tailwind_tsconfig_compileroptions",
+      "target": "tailwind_tsconfig_compileroptions_module"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tailwind.tsconfig.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tailwind_tsconfig_compileroptions",
+      "target": "tailwind_tsconfig_compileroptions_noemit"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_chocolat_skin_guide",
+      "target": "claude_build_workflow"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_chocolat_skin_guide",
+      "target": "claude_color_palette"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_chocolat_skin_guide",
+      "target": "claude_cover_tree"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_chocolat_skin_guide",
+      "target": "claude_tistory_replacers"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_chocolat_skin_guide",
+      "target": "claude_zindex_scale"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "DESIGN.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "design_typography",
+      "target": "claude_chocolat_skin_guide"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_cover_tree",
+      "target": "claude_tistory_replacers"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-02-cover-refactor.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_cover_refactor_plan",
+      "target": "claude_cover_tree"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-06-02-cover-refactor-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "specs_cover_refactor_design_spec",
+      "target": "claude_cover_tree"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_color_palette",
+      "target": "design_color_palette"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DESIGN.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "design_color_palette",
+      "target": "design_aesthetic_direction"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DESIGN.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "design_motion",
+      "target": "design_aesthetic_direction"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DESIGN.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "design_typography",
+      "target": "design_aesthetic_direction"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "specs_chocolat_skin_redesign_spec",
+      "target": "design_aesthetic_direction"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-06-01-design-polish-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "specs_design_polish_design_spec",
+      "target": "design_aesthetic_direction"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DESIGN.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "design_component_inventory",
+      "target": "design_floatingfab"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DESIGN.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "design_component_inventory",
+      "target": "design_heroslider"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_chocolat_skin_redesign_plan",
+      "target": "plans_chocolat_skin_redesign_cover_grid"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_chocolat_skin_redesign_plan",
+      "target": "plans_chocolat_skin_redesign_half_hero"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_chocolat_skin_redesign_plan",
+      "target": "plans_chocolat_skin_redesign_reading_progress"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_chocolat_skin_redesign_plan",
+      "target": "plans_chocolat_skin_redesign_reading_time"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_chocolat_skin_redesign_plan",
+      "target": "plans_chocolat_skin_redesign_sticky_nav"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_chocolat_skin_redesign_plan",
+      "target": "plans_chocolat_skin_redesign_sticky_toc"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_chocolat_skin_redesign_plan",
+      "target": "plans_chocolat_skin_redesign_toc_generator"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_chocolat_skin_redesign_plan",
+      "target": "specs_chocolat_skin_redesign_spec"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_chocolat_skin_redesign_sticky_nav",
+      "target": "plans_chocolat_skin_redesign_half_hero"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_chocolat_skin_redesign_sticky_nav",
+      "target": "specs_chocolat_skin_redesign_sticky_nav_transition"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_chocolat_skin_redesign_reading_progress",
+      "target": "specs_chocolat_skin_redesign_reading_progress_spec"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_chocolat_skin_redesign_toc_generator",
+      "target": "plans_chocolat_skin_redesign_sticky_toc"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_design_polish_article_header_gradient",
+      "target": "plans_chocolat_skin_redesign_half_hero"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_chocolat_skin_redesign_cover_grid",
+      "target": "specs_chocolat_skin_redesign_two_col_home"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-02-cover-refactor.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_cover_refactor_cover_featured",
+      "target": "plans_chocolat_skin_redesign_cover_grid"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-02-cover-refactor.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_cover_refactor_cover_latest",
+      "target": "plans_chocolat_skin_redesign_cover_grid"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_chocolat_skin_redesign_sticky_toc",
+      "target": "specs_chocolat_skin_redesign_toc_spec"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_design_polish_plan",
+      "target": "plans_design_polish_article_header_gradient"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_design_polish_plan",
+      "target": "plans_design_polish_category_modal_dark"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_design_polish_plan",
+      "target": "plans_design_polish_css_scope_fix"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_design_polish_plan",
+      "target": "plans_design_polish_fab_icon_toggle"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_design_polish_plan",
+      "target": "plans_design_polish_search_modal_dark"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_design_polish_plan",
+      "target": "plans_design_polish_slide_indicator"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_design_polish_plan",
+      "target": "specs_design_polish_design_spec"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_design_polish_search_modal_dark",
+      "target": "plans_design_polish_category_modal_dark"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_design_polish_fab_icon_toggle",
+      "target": "plans_design_polish_hamburger_js"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-01-design-polish.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_design_polish_slide_indicator",
+      "target": "plans_design_polish_slider_changer_js"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-02-cover-refactor.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_cover_refactor_plan",
+      "target": "plans_cover_refactor_cover_featured"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-02-cover-refactor.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_cover_refactor_plan",
+      "target": "plans_cover_refactor_cover_latest"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-02-cover-refactor.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_cover_refactor_plan",
+      "target": "plans_cover_refactor_s_sidebar"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-02-cover-refactor.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_cover_refactor_plan",
+      "target": "plans_cover_refactor_sidebar_widget"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "docs/superpowers/plans/2026-06-02-cover-refactor.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_cover_refactor_plan",
+      "target": "specs_cover_refactor_design_spec"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/superpowers/plans/2026-06-02-cover-refactor.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_cover_refactor_cover_featured",
+      "target": "specs_cover_refactor_design_spec"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/superpowers/plans/2026-06-02-cover-refactor.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_cover_refactor_cover_latest",
+      "target": "specs_cover_refactor_design_spec"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/superpowers/plans/2026-06-02-cover-refactor.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "plans_cover_refactor_sidebar_widget",
+      "target": "plans_cover_refactor_s_sidebar"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "specs_chocolat_skin_redesign_spec",
+      "target": "specs_chocolat_skin_redesign_reading_progress_spec"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "specs_chocolat_skin_redesign_spec",
+      "target": "specs_chocolat_skin_redesign_sticky_nav_transition"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "specs_chocolat_skin_redesign_spec",
+      "target": "specs_chocolat_skin_redesign_toc_spec"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-06-01-chocolat-skin-redesign.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "specs_chocolat_skin_redesign_spec",
+      "target": "specs_chocolat_skin_redesign_two_col_home"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-06-12-article-left-sticky-ad-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "specs_article_left_sticky_ad_design_spec",
+      "target": "specs_chocolat_skin_redesign_sticky_nav_transition"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "redesign_article_js_components",
+      "label": "Redesign Article-page JS Components",
+      "nodes": [
+        "plans_chocolat_skin_redesign_reading_progress",
+        "plans_chocolat_skin_redesign_reading_time",
+        "plans_chocolat_skin_redesign_toc_generator",
+        "plans_chocolat_skin_redesign_sticky_nav"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-06-01-chocolat-skin-redesign.md"
+    },
+    {
+      "id": "adsense_250px_error_mitigation",
+      "label": "AdSense Width/Hidden-init Error Mitigation",
+      "nodes": [
+        "refactoring_proposal_adsense_width",
+        "plans_performance_refactor_featured_ad_width",
+        "plans_performance_refactor_sidebar_ad_defer",
+        "plans_article_left_sticky_ad_matchmedia_init"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/superpowers/plans/2026-06-12-performance-refactor.md"
+    },
+    {
+      "id": "three_cover_split",
+      "label": "Three-Cover Home Split (hero/featured/latest)",
+      "nodes": [
+        "plans_chocolat_skin_redesign_cover_grid",
+        "plans_cover_refactor_cover_featured",
+        "plans_cover_refactor_cover_latest",
+        "claude_cover_tree"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-06-02-cover-refactor-design.md"
+    },
+    {
+      "id": "all_cover_sections",
+      "label": "Home Cover Sections",
+      "nodes": [
+        "skin_cover_hero",
+        "skin_cover_featured",
+        "skin_cover_latest",
+        "skin_cover_footer"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skin.html"
+    },
+    {
+      "id": "all_js_widgets",
+      "label": "Deferred JS Widgets",
+      "nodes": [
+        "skin_js_stickynav",
+        "skin_js_readingtime",
+        "skin_js_chapterbar",
+        "skin_js_searchmodal",
+        "skin_js_fab",
+        "skin_js_articleleftad",
+        "skin_js_typewriter"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skin.html"
+    },
+    {
+      "id": "search_triggers",
+      "label": "Search Modal Triggers",
+      "nodes": [
+        "skin_sticky_nav",
+        "skin_cover_hero",
+        "skin_fab",
+        "skin_search_modal"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "skin.html"
+    }
+  ],
+  "built_at_commit": "f8f851536747789af76e3f5d5c0932daf8e3d874"
+}
