@@ -213,7 +213,7 @@
                       <!-- 프로필 -->
                       <div class="custom-card p-5 flex flex-col items-center text-center gap-3">
                         <div class="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 grid place-items-center text-2xl" style="background:linear-gradient(135deg,var(--pink),var(--amber));">
-                          <img src="https://github.com/BBAAMM.png" alt="프로필" width="64" height="64" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none';" />
+                          <img src="https://github.com/BBAAMM.png" alt="프로필" width="64" height="64" class="w-full h-full object-cover" onerror="this.outerHTML='🍫';" />
                         </div>
                         <div>
                           <div class="font-highlight font-bold text-gray-100">[##_blogger_##]</div>
@@ -254,9 +254,11 @@
                             if (ins.offsetParent !== null) {
                               init();
                             } else {
-                              new IntersectionObserver(function(entries, obs) {
-                                if (entries[0].isIntersecting) { init(); obs.disconnect(); }
-                              }).observe(ins);
+                              var mq = window.matchMedia('(min-width: 1024px)');
+                              function onMatch(e) {
+                                if (e.matches) { init(); mq.removeEventListener('change', onMatch); }
+                              }
+                              if (mq.matches) { init(); } else { mq.addEventListener('change', onMatch); }
                             }
                           })();
                         </script>
